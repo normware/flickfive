@@ -1,0 +1,25 @@
+name: Generate Weekly Puzzles
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run generate
+        env:
+          TMDB_KEY: ${{ secrets.TMDB_KEY }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      - run: |
+          git config user.name "slotflix-bot"
+          git config user.email "bot@slotflix.app"
+          git add data/archive.enc
+          git diff --cached --quiet || git commit -m "Generate weekly puzzles [skip ci]"
+          git push

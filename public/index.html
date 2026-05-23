@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f0f1a">
+<title>SlotFlix — Pick 5 Movies. Fit 5 Daily Rules.</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>SlotFlix</h1>
+    <p class="tagline">Pick <strong>5</strong> movies. Fit <strong>5</strong> daily rules. Chase the highest score.</p>
+  </header>
+
+  <div id="loading" class="loading">
+    <span class="loader"></span>
+    Loading today's game...
+  </div>
+
+  <div id="no-game" hidden>
+    <div class="empty-state">
+      <div class="empty-icon">🎬</div>
+      <h2>No Game Available</h2>
+      <p id="no-game-msg">New puzzles are generated every week. Check back soon!</p>
+    </div>
+  </div>
+
+  <div id="game-area" hidden>
+    <div id="how-to">
+      <div class="step step-1"><span class="step-num">1</span> Tap or drag a movie</div>
+      <div class="step-arrow">→</div>
+      <div class="step step-2"><span class="step-num">2</span> Drop on a slot</div>
+      <div class="step-arrow">→</div>
+      <div class="step step-3"><span class="step-num">3</span> Lock in</div>
+    </div>
+    <div id="past-puzzle-bar" hidden>
+      <span id="pp-bar-date"></span>
+      <button id="back-to-today-btn" class="btn btn-sm btn-secondary">Back to Today</button>
+    </div>
+
+    <div class="game-layout">
+      <section class="movies-panel">
+        <div class="panel-header">
+          <h2>Movies</h2>
+          <button id="scoring-btn" class="btn btn-ghost">How scoring works</button>
+        </div>
+        <div id="movie-list" class="movie-row"></div>
+      </section>
+
+      <section class="slots-panel">
+        <h2>Slots</h2>
+        <div id="slot-list" class="slot-list"></div>
+        <button id="lock-btn" class="btn btn-primary" disabled>Lock In</button>
+      </section>
+    </div>
+
+    <div id="status-bar" class="status-bar">
+      <span id="status-text">Tap a movie to get started</span>
+    </div>
+  </div>
+
+  <div id="results-area" hidden>
+    <div class="results-header">
+      <div class="rh-title">
+        <h2 id="rh-title-label">Today's Score</h2>
+        <div class="rh-date" id="result-date"></div>
+      </div>
+      <div id="total-score" class="total-score">0</div>
+      <div id="performance-tier" class="performance-tier"></div>
+      <div id="rh-best-possible" class="best-possible" hidden></div>
+      <div id="high-score-badge" class="badge" hidden>Daily High Score!</div>
+    </div>
+    <div id="results-list" class="results-list"></div>
+    <div class="results-actions">
+      <button id="reveal-best-btn" class="btn btn-secondary" hidden>Reveal Perfect Score</button>
+      <button id="share-btn" class="btn btn-share">Share Result</button>
+      <button id="try-again-btn" class="btn btn-secondary">Play Again</button>
+    </div>
+  </div>
+
+  <div id="scoring-ref" hidden>
+    <div class="scoring-overlay" onclick="toggleScoring()"></div>
+    <div class="scoring-panel">
+      <div class="sp-header">
+        <h2>How Scoring Works</h2>
+        <button class="btn btn-sm" onclick="toggleScoring()">&times;</button>
+      </div>
+      <table class="scoring-table">
+        <thead><tr><th>Slot</th><th>Rule</th><th>Max</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge-slot">1</span> Year Closer</td><td>Last digit of year (e.g. 2024→4)</td><td>9</td></tr>
+          <tr><td><span class="badge-slot">2</span> Critic Darling</td><td>Rating rounded down (e.g. 8.3→8)</td><td>10</td></tr>
+          <tr><td><span class="badge-slot">3</span> Box Office Muscle</td><td>1st digit of box office $M (e.g. $711M→7)</td><td>9</td></tr>
+          <tr><td><span class="badge-slot">4</span> Genre Blender</td><td>Number of genres listed (e.g. Action, Sci-Fi)</td><td>~8</td></tr>
+          <tr><td><span class="badge-slot">5</span> Runtime King</td><td>Runtime ÷ 10, rounded down (e.g. 166→16)</td><td>~30</td></tr>
+        </tbody>
+      </table>
+      <p class="scoring-total">Best possible score: <strong>~65</strong></p>
+    </div>
+  </div>
+
+  <div id="drag-ghost" class="drag-ghost" hidden></div>
+
+  <div id="past-puzzles-modal" hidden>
+    <div class="pp-overlay" id="pp-close-bg"></div>
+    <div class="pp-panel">
+      <div class="pp-header">
+        <h2>Past Puzzles</h2>
+        <button id="pp-close-btn" class="btn btn-sm">&times;</button>
+      </div>
+      <div id="pp-list" class="pp-list">
+        <p class="pp-loading">Loading...</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer-bar">
+    <span class="np-label">Next puzzle</span>
+    <span id="f-countdown" class="countdown">--:--:--</span>
+    <button id="past-puzzles-btn" class="btn btn-ghost-footer">Past Puzzles</button>
+  </footer>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "d31e234f0c90694a670222cdd1dafa853e051d7066beda389f1097c22dadd461"
+    },
+    "improve-game": {
+      "source": "opusgamelabs/game-creator",
+      "sourceType": "github",
+      "skillPath": "skills/improve-game/SKILL.md",
+      "computedHash": "4d4481cd11ec0cf232b790f5c88230d7dffa9ecf6319bd274d91ade955cbaab0"
+    }
+  }
+}
