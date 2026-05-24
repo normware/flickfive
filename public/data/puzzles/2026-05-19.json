@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-19",
+  "slots": [
+    "runtime",
+    "rating",
+    "boxOffice",
+    "genres",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1084242,
+      "title": "Zootopia 2",
+      "poster": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+      "year": 2025,
+      "rating": 7.633,
+      "revenue": 1868208796,
+      "genreCount": 5,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 502356,
+      "title": "The Super Mario Bros. Movie",
+      "poster": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "year": 2023,
+      "rating": 7.596,
+      "revenue": 1360879735,
+      "genreCount": 5,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 1327819,
+      "title": "Hoppers",
+      "poster": "/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
+      "year": 2026,
+      "rating": 8.039,
+      "revenue": 383146505,
+      "genreCount": 5,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 104
+    },
+    {
+      "id": 1038392,
+      "title": "The Conjuring: Last Rites",
+      "poster": "/byWgphT74ClOVa8EOGzYDkl8DVL.jpg",
+      "year": 2025,
+      "rating": 6.889,
+      "revenue": 499256445,
+      "genreCount": 1,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 136
+    },
+    {
+      "id": 1352874,
+      "title": "The Crucifix: Blood of the Exorcist",
+      "poster": "/u3qOxvlykoTpurg1G8VOcawoePI.jpg",
+      "year": 2025,
+      "rating": 5.837,
+      "revenue": 82873,
+      "genreCount": 1,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 92
+    }
+  ]
+}

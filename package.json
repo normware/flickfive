@@ -1,11 +1,13 @@
 {
-  "name": "slotflix",
+  "name": "flickfive",
   "version": "1.0.0",
   "private": true,
   "description": "Pick 5 movies. Fit 5 daily rules. Chase the highest score.",
   "scripts": {
     "start": "node server.js",
-    "generate": "node scripts/generate-movies.js"
+    "generate": "node scripts/generate-movies.js",
+    "export": "node scripts/export-static.js",
+    "build": "npm run export"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

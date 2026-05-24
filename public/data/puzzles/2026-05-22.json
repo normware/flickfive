@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-22",
+  "slots": [
+    "genres",
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1266127,
+      "title": "Ready or Not: Here I Come",
+      "poster": "/13ZcJzSGEqVgDSqsS9U5EkQwPkV.jpg",
+      "year": 2026,
+      "rating": 7.6,
+      "revenue": 42212563,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 27205,
+      "title": "Inception",
+      "poster": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+      "year": 2010,
+      "rating": 8.372,
+      "revenue": 839030630,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 148
+    },
+    {
+      "id": 249397,
+      "title": "Nymphomaniac: Vol. II",
+      "poster": "/iLUNqgNKuWn667kXCKztSxYbT3k.jpg",
+      "year": 2013,
+      "rating": 6.709,
+      "revenue": 4934725,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 1171145,
+      "title": "Crime 101",
+      "poster": "/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
+      "year": 2026,
+      "rating": 6.954,
+      "revenue": 72824188,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 1242898,
+      "title": "Predator: Badlands",
+      "poster": "/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
+      "year": 2025,
+      "rating": 7.718,
+      "revenue": 184500000,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 107
+    }
+  ]
+}

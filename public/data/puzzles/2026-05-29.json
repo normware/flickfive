@@ -1,0 +1,86 @@
+{
+  "date": "2026-05-29",
+  "slots": [
+    "boxOffice",
+    "year",
+    "runtime",
+    "rating",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1734,
+      "title": "The Mummy Returns",
+      "poster": "/kdJsW7hcy1lrj7tdMPycTAQPAiR.jpg",
+      "year": 2001,
+      "rating": 6.402,
+      "revenue": 443280904,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 680,
+      "title": "Pulp Fiction",
+      "poster": "/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+      "year": 1994,
+      "rating": 8.484,
+      "revenue": 213928762,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Comedy"
+      ],
+      "runtime": 154
+    },
+    {
+      "id": 980477,
+      "title": "Ne Zha 2",
+      "poster": "/cb5NyNrqiCNNoDkA8FfxHAtypdG.jpg",
+      "year": 2025,
+      "rating": 8.154,
+      "revenue": 2259822417,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Action",
+        "Fantasy",
+        "Adventure"
+      ],
+      "runtime": 144
+    },
+    {
+      "id": 840430,
+      "title": "The Holdovers",
+      "poster": "/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
+      "year": 2023,
+      "rating": 7.645,
+      "revenue": 42513270,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 133
+    },
+    {
+      "id": 1601797,
+      "title": "¿Quieres ser mi novia?",
+      "poster": "/oscW8xV8EhRYj7iAhyVlBohKqxo.jpg",
+      "year": 2026,
+      "rating": 8.628,
+      "revenue": 197388,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 97
+    }
+  ]
+}

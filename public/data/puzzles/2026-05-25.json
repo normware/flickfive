@@ -1,0 +1,84 @@
+{
+  "date": "2026-05-25",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "runtime",
+    "genres",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1075175,
+      "title": "How to Have Sex",
+      "poster": "/yQyoFCBLGJH5HXESmJAzaiXw9zU.jpg",
+      "year": 2023,
+      "rating": 6.236,
+      "revenue": 1216642,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 91
+    },
+    {
+      "id": 361743,
+      "title": "Top Gun: Maverick",
+      "poster": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+      "year": 2022,
+      "rating": 8.158,
+      "revenue": 1488732821,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 460465,
+      "title": "Mortal Kombat",
+      "poster": "/ybrX94xQm8lXYpZAPRmwD9iIbWP.jpg",
+      "year": 2021,
+      "rating": 7.029,
+      "revenue": 84426031,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Adventure"
+      ],
+      "runtime": 110
+    },
+    {
+      "id": 157336,
+      "title": "Interstellar",
+      "poster": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+      "year": 2014,
+      "rating": 8.474,
+      "revenue": 746606706,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Science Fiction"
+      ],
+      "runtime": 169
+    },
+    {
+      "id": 1246049,
+      "title": "Dracula",
+      "poster": "/dYRqA50yd0nB3qBR7AtWEJJQ8q.jpg",
+      "year": 2025,
+      "rating": 7.109,
+      "revenue": 42404858,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Fantasy",
+        "Romance"
+      ],
+      "runtime": 130
+    }
+  ]
+}

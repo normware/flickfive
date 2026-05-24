@@ -1,0 +1,85 @@
+{
+  "date": "2026-05-26",
+  "slots": [
+    "runtime",
+    "year",
+    "rating",
+    "genres",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 564,
+      "title": "The Mummy",
+      "poster": "/yhIsVvcUm7QxzLfT6HW2wLf5ajY.jpg",
+      "year": 1999,
+      "rating": 6.971,
+      "revenue": 415885488,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 11,
+      "title": "Star Wars",
+      "poster": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+      "year": 1977,
+      "rating": 8.2,
+      "revenue": 775398007,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 121
+    },
+    {
+      "id": 597,
+      "title": "Titanic",
+      "poster": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+      "year": 1997,
+      "rating": 7.902,
+      "revenue": 2264162353,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 194
+    },
+    {
+      "id": 671,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+      "year": 2001,
+      "rating": 7.899,
+      "revenue": 976475550,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 152
+    },
+    {
+      "id": 1272837,
+      "title": "28 Years Later: The Bone Temple",
+      "poster": "/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg",
+      "year": 2026,
+      "rating": 7.12,
+      "revenue": 58522222,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 109
+    }
+  ]
+}

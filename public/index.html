@@ -3,61 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0f0f1a">
-<title>SlotFlix — Pick 5 Movies. Fit 5 Daily Rules.</title>
-<link rel="stylesheet" href="/styles.css">
+<meta name="theme-color" content="#111113">
+<meta name="description" content="FlickFive is a daily movie puzzle. Pick five films, match five scoring rules, and chase the cleanest score.">
+<title>FlickFive - A Daily Movie Score Puzzle</title>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div id="app">
   <header>
-    <h1>SlotFlix</h1>
-    <p class="tagline">Pick <strong>5</strong> movies. Fit <strong>5</strong> daily rules. Chase the highest score.</p>
+    <div>
+      <p class="eyebrow">Daily movie score puzzle</p>
+      <h1>FlickFive</h1>
+    </div>
+    <div class="header-side">
+      <p class="tagline">Three tries. Five films. Match the rules and chase the top score.</p>
+    </div>
   </header>
 
   <div id="loading" class="loading">
     <span class="loader"></span>
-    Loading today's game...
+    Loading today's puzzle...
   </div>
 
   <div id="no-game" hidden>
     <div class="empty-state">
-      <div class="empty-icon">🎬</div>
+      <div class="empty-icon">FF</div>
       <h2>No Game Available</h2>
-      <p id="no-game-msg">New puzzles are generated every week. Check back soon!</p>
+      <p id="no-game-msg">No static puzzle data is available yet.</p>
     </div>
   </div>
 
   <div id="game-area" hidden>
     <div id="how-to">
-      <div class="step step-1"><span class="step-num">1</span> Tap or drag a movie</div>
-      <div class="step-arrow">→</div>
-      <div class="step step-2"><span class="step-num">2</span> Drop on a slot</div>
-      <div class="step-arrow">→</div>
-      <div class="step step-3"><span class="step-num">3</span> Lock in</div>
+      <div class="step step-1"><span class="step-num">1</span> Try one</div>
+      <div class="step step-2"><span class="step-num">2</span> Try two</div>
+      <div class="step step-3"><span class="step-num">3</span> Try three</div>
     </div>
     <div id="past-puzzle-bar" hidden>
       <span id="pp-bar-date"></span>
       <button id="back-to-today-btn" class="btn btn-sm btn-secondary">Back to Today</button>
     </div>
 
-    <div class="game-layout">
-      <section class="movies-panel">
-        <div class="panel-header">
-          <h2>Movies</h2>
-          <button id="scoring-btn" class="btn btn-ghost">How scoring works</button>
+    <section class="board-panel">
+      <div class="panel-header">
+        <div>
+          <h2>Today's Board</h2>
+          <p class="panel-note">Highest possible: <strong id="best-possible-inline">--</strong></p>
         </div>
-        <div id="movie-list" class="movie-row"></div>
-      </section>
+        <button id="scoring-btn" class="btn btn-scoring">Scoring Guide</button>
+      </div>
+      <div id="rule-list" class="rule-list"></div>
+      <div id="attempt-list" class="attempt-list"></div>
+      <div id="best-reveal" class="best-reveal" hidden></div>
+    </section>
 
-      <section class="slots-panel">
-        <h2>Slots</h2>
-        <div id="slot-list" class="slot-list"></div>
-        <button id="lock-btn" class="btn btn-primary" disabled>Lock In</button>
-      </section>
-    </div>
+    <section class="movies-panel">
+      <div class="panel-header">
+        <h2>Film Bench</h2>
+      </div>
+      <div id="movie-list" class="movie-row"></div>
+    </section>
 
-    <div id="status-bar" class="status-bar">
-      <span id="status-text">Tap a movie to get started</span>
+    <div id="play-bar" class="play-bar">
+      <div id="status-text">Choose a film to get started.</div>
+      <div class="action-row">
+        <button id="submit-btn" class="btn btn-primary" disabled>Submit Try 1</button>
+        <button id="reveal-best-btn" class="btn btn-secondary" hidden>Reveal Best</button>
+        <button id="share-btn" class="btn btn-share" hidden>Share Result</button>
+        <button id="try-again-btn" class="btn btn-secondary">Reset</button>
+      </div>
     </div>
   </div>
 
@@ -74,9 +88,6 @@
     </div>
     <div id="results-list" class="results-list"></div>
     <div class="results-actions">
-      <button id="reveal-best-btn" class="btn btn-secondary" hidden>Reveal Perfect Score</button>
-      <button id="share-btn" class="btn btn-share">Share Result</button>
-      <button id="try-again-btn" class="btn btn-secondary">Play Again</button>
     </div>
   </div>
 
@@ -90,13 +101,35 @@
       <table class="scoring-table">
         <thead><tr><th>Slot</th><th>Rule</th><th>Max</th></tr></thead>
         <tbody>
-          <tr><td><span class="badge-slot">1</span> Year Closer</td><td>Last digit of year (e.g. 2024→4)</td><td>9</td></tr>
-          <tr><td><span class="badge-slot">2</span> Critic Darling</td><td>Rating rounded down (e.g. 8.3→8)</td><td>10</td></tr>
-          <tr><td><span class="badge-slot">3</span> Box Office Muscle</td><td>1st digit of box office $M (e.g. $711M→7)</td><td>9</td></tr>
+          <tr><td><span class="badge-slot">1</span> Year Closer</td><td>Last digit of year (e.g. 2024 to 4)</td><td>9</td></tr>
+          <tr><td><span class="badge-slot">2</span> Critic Darling</td><td>Rating rounded down (e.g. 8.3 to 8)</td><td>10</td></tr>
+          <tr><td><span class="badge-slot">3</span> Box Office Muscle</td><td>1st digit of box office $M (e.g. $711M to 7)</td><td>9</td></tr>
           <tr><td><span class="badge-slot">4</span> Genre Blender</td><td>Number of genres listed (e.g. Action, Sci-Fi)</td><td>~8</td></tr>
-          <tr><td><span class="badge-slot">5</span> Runtime King</td><td>Runtime ÷ 10, rounded down (e.g. 166→16)</td><td>~30</td></tr>
+          <tr><td><span class="badge-slot">5</span> Runtime King</td><td>Runtime divided by 10, rounded down</td><td>~30</td></tr>
         </tbody>
       </table>
+      <div class="scoring-example">
+        <h3>Worked Example: Pulp Fiction</h3>
+        <div class="example-card">
+          <img
+            class="example-poster"
+            src="https://image.tmdb.org/t/p/w342/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+            alt="Pulp Fiction poster"
+            loading="lazy"
+          >
+          <div class="example-content">
+            <p><strong>TMDB values used:</strong> Year 1994, Rating 8.5, Gross $213M, Genres Crime + Drama, Runtime 154 min</p>
+            <ul>
+              <li><strong>Year Closer:</strong> 1994 <span class="ex-arrow">↠</span> 4</li>
+              <li><strong>Critic Darling:</strong> 8.5 <span class="ex-arrow">↠</span> 8</li>
+              <li><strong>Box Office Muscle:</strong> 213 <span class="ex-arrow">↠</span> 2</li>
+              <li><strong>Genre Blender:</strong> 2 genres <span class="ex-arrow">↠</span> 2</li>
+              <li><strong>Runtime King:</strong> 154/10 <span class="ex-arrow">↠</span> 15</li>
+            </ul>
+            <p class="example-total">Example total <span class="ex-arrow">↠</span> <strong>31</strong></p>
+          </div>
+        </div>
+      </div>
       <p class="scoring-total">Best possible score: <strong>~65</strong></p>
     </div>
   </div>
@@ -117,12 +150,18 @@
   </div>
 
   <footer id="footer-bar">
-    <span class="np-label">Next puzzle</span>
-    <span id="f-countdown" class="countdown">--:--:--</span>
-    <button id="past-puzzles-btn" class="btn btn-ghost-footer">Past Puzzles</button>
+    <div class="footer-game">
+      <span class="np-label">Next puzzle</span>
+      <span id="f-countdown" class="countdown">--:--:--</span>
+      <button id="past-puzzles-btn" class="btn btn-ghost-footer">Past Puzzles</button>
+    </div>
+    <div class="tmdb-attribution" aria-label="TMDB attribution">
+      <img class="tmdb-logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="TMDB">
+      <span>This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</span>
+    </div>
   </footer>
 </div>
 
-<script src="/app.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>

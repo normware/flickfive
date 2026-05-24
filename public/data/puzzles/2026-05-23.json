@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-23",
+  "slots": [
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1159559,
+      "title": "Scream 7",
+      "poster": "/jjyuk0edLiW8vOSnlfwWCCLpbh5.jpg",
+      "year": 2026,
+      "rating": 6.119,
+      "revenue": 213835967,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 114
+    },
+    {
+      "id": 744275,
+      "title": "After We Fell",
+      "poster": "/dU4HfnTEJDf9KvxGS9hgO7BVeju.jpg",
+      "year": 2021,
+      "rating": 7.003,
+      "revenue": 21753705,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 99
+    },
+    {
+      "id": 1368166,
+      "title": "The Housemaid",
+      "poster": "/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+      "year": 2025,
+      "rating": 7.241,
+      "revenue": 399644671,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 1579,
+      "title": "Apocalypto",
+      "poster": "/cRY25Q32kDNPFDkFkxAs6bgCq3L.jpg",
+      "year": 2006,
+      "rating": 7.614,
+      "revenue": 120654337,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 840464,
+      "title": "Greenland 2: Migration",
+      "poster": "/z2tqCJLsw6uEJ8nJV8BsQXGa3dr.jpg",
+      "year": 2026,
+      "rating": 6.404,
+      "revenue": 44856736,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 98
+    }
+  ]
+}

@@ -18,11 +18,11 @@ const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const SCORES_FILE = path.join(DATA_DIR, 'scores.json');
 
 const SLOTS = [
-  { id: 'year', name: 'Year Closer', desc: 'Last digit of year (e.g. 2024→4)', getValue: m => m.year % 10, maxScore: 9 },
-  { id: 'rating', name: 'Critic Darling', desc: 'Rating rounded down (e.g. 8.3→8)', getValue: m => Math.floor(m.rating), maxScore: 10 },
-  { id: 'boxOffice', name: 'Box Office Muscle', desc: '1st digit of box office $M (e.g. $711M→7)', getValue: m => { const n = Math.floor(m.revenue / 1000000); return parseInt(String(n)[0]) || 0; }, maxScore: 9 },
+  { id: 'year', name: 'Year Closer', desc: 'Last digit of year (e.g. 2024 to 4)', getValue: m => m.year % 10, maxScore: 9 },
+  { id: 'rating', name: 'Critic Darling', desc: 'Rating rounded down (e.g. 8.3 to 8)', getValue: m => Math.floor(m.rating), maxScore: 10 },
+  { id: 'boxOffice', name: 'Box Office Muscle', desc: '1st digit of box office $M (e.g. $711M to 7)', getValue: m => { const n = Math.floor(m.revenue / 1000000); return parseInt(String(n)[0]) || 0; }, maxScore: 9 },
   { id: 'genres', name: 'Genre Blender', desc: 'Number of genres listed (e.g. Action, Sci-Fi)', getValue: m => m.genreCount, maxScore: 8 },
-  { id: 'runtime', name: 'Runtime King', desc: 'Runtime ÷ 10, rounded down (e.g. 166→16)', getValue: m => Math.floor(m.runtime / 10), maxScore: 30 },
+  { id: 'runtime', name: 'Runtime King', desc: 'Runtime divided by 10, rounded down', getValue: m => Math.floor(m.runtime / 10), maxScore: 30 },
 ];
 
 function ensureDir() {
@@ -360,4 +360,4 @@ app.get('/api/me', auth, (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`SlotFlix running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`FlickFive running at http://localhost:${PORT}`));

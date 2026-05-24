@@ -4,12 +4,15 @@ on:
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       - run: npm ci
@@ -17,9 +20,12 @@ jobs:
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      - run: npm run export
+        env:
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
       - run: |
-          git config user.name "slotflix-bot"
-          git config user.email "bot@slotflix.app"
-          git add data/archive.enc
-          git diff --cached --quiet || git commit -m "Generate weekly puzzles [skip ci]"
+          git config user.name "flickfive-bot"
+          git config user.email "bot@flickfive.app"
+          git add data/archive.enc public/data
+          git diff --cached --quiet || git commit -m "Generate FlickFive puzzles"
           git push

@@ -1,0 +1,85 @@
+{
+  "date": "2026-05-27",
+  "slots": [
+    "rating",
+    "year",
+    "genres",
+    "boxOffice",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 1523145,
+      "title": "Your Heart Will Be Broken",
+      "poster": "/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+      "year": 2026,
+      "rating": 6.8,
+      "revenue": 7578000,
+      "genreCount": 2,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 424,
+      "title": "Schindler's List",
+      "poster": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "year": 1993,
+      "rating": 8.569,
+      "revenue": 321365567,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "runtime": 195
+    },
+    {
+      "id": 1234821,
+      "title": "Jurassic World Rebirth",
+      "poster": "/1RICxzeoNCAO5NpcRMIgg1XT6fm.jpg",
+      "year": 2025,
+      "rating": 6.266,
+      "revenue": 869146189,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 1404791,
+      "title": "Dollhouse",
+      "poster": "/vUs4OPpvu4Is7wIGaXkseNJHhEA.jpg",
+      "year": 2025,
+      "rating": 7.475,
+      "revenue": 11547839,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 110
+    },
+    {
+      "id": 120,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "poster": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "year": 2001,
+      "rating": 8.434,
+      "revenue": 871368364,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 179
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-17",
+  "slots": [
+    "runtime",
+    "boxOffice",
+    "genres",
+    "year",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 911430,
+      "title": "F1",
+      "poster": "/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg",
+      "year": 2025,
+      "rating": 7.764,
+      "revenue": 631627111,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 156
+    },
+    {
+      "id": 299536,
+      "title": "Avengers: Infinity War",
+      "poster": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "year": 2018,
+      "rating": 8.234,
+      "revenue": 2052415039,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 149
+    },
+    {
+      "id": 83533,
+      "title": "Avatar: Fire and Ash",
+      "poster": "/aabwWZWx6z1aYP4PX2ADvbDKktd.jpg",
+      "year": 2025,
+      "rating": 7.462,
+      "revenue": 1490477656,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 198
+    },
+    {
+      "id": 1110034,
+      "title": "Kraken",
+      "poster": "/xdZ8k5s8DTwWyPBMIcflrYLgcAK.jpg",
+      "year": 2026,
+      "rating": 5.9,
+      "revenue": 14329678,
+      "genreCount": 3,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 1316092,
+      "title": "\"Wuthering Heights\"",
+      "poster": "/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
+      "year": 2026,
+      "rating": 6.615,
+      "revenue": 241701072,
+      "genreCount": 2,
+      "genres": [
+        "Unknown"
+      ],
+      "runtime": 136
+    }
+  ]
+}
