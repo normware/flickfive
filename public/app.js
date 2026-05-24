@@ -42,7 +42,6 @@ const SLOT_RULES = {
 const BRAND = 'FlickFive';
 const STORAGE_NS = 'flickfive';
 const PROGRESS_KEY = date => `${STORAGE_NS}:board:${date}`;
-const PAST_PROGRESS_KEY = date => `${STORAGE_NS}:past:board:${date}`;
 const COMPLETE_DATES_KEY = `${STORAGE_NS}:completedDates`;
 const MAX_ATTEMPTS = 3;
 
@@ -54,8 +53,8 @@ const state = {
   activeAttempt: 0,
   gameOver: false,
   best: null,
-  isPastPuzzle: false,
-  puzzleDate: null,
+  view: 'week',
+  activeDate: null,
   showingBest: false,
 };
 
@@ -99,28 +98,29 @@ function emptyAttempts() {
 }
 
 function progressKey() {
-  return state.isPastPuzzle ? PAST_PROGRESS_KEY(state.game.date) : PROGRESS_KEY(state.game.date);
+  return PROGRESS_KEY(state.game.date);
 }
 
-function startCountdown() {
-  function tick() {
-    const now = new Date();
-    const tomorrow = new Date(now);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
-    const diff = Math.max(0, tomorrow - now);
-    const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
-    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-    const f = $('#f-countdown');
-    if (!f) return;
-    f.textContent = `${h}:${m}:${s}`;
-    f.classList.toggle('urgent', diff < 3600000);
+function getWeekRange(date = new Date()) {
+  const day = date.getDay();
+  const diff = (day === 0 ? -6 : 1 - day);
+  const monday = new Date(date);
+  monday.setDate(date.getDate() + diff);
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    days.push(d);
   }
-
-  tick();
-  setInterval(tick, 1000);
+  return days;
 }
+
+function formatDateLabel(date) {
+  const opts = { weekday: 'short', month: 'short', day: 'numeric' };
+  return date.toLocaleDateString('en-US', opts);
+}
+
+const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 async function fetchJSON(url) {
   const response = await fetch(url, { cache: 'no-store' });
@@ -139,23 +139,11 @@ async function loadPuzzle(date) {
 }
 
 async function init() {
-  startCountdown();
-
   try {
     state.index = await fetchJSON('./data/index.json');
-    const today = localISODate();
-
-    if (!state.index.dates.includes(today)) {
-      hide($('#loading'));
-      $('#no-game-msg').textContent = 'No puzzle is published for today yet. Past puzzles may still be available.';
-      show($('#no-game'));
-      return;
-    }
-
-    state.game = await loadPuzzle(today);
     hide($('#loading'));
-    show($('#game-area'));
-    startGame();
+    renderWeekView();
+    show($('#week-view'));
   } catch (err) {
     hide($('#loading'));
     $('#no-game-msg').textContent = 'Static puzzle data could not be loaded. Run npm run build before publishing.';
@@ -163,19 +151,89 @@ async function init() {
   }
 }
 
+function getWeekDateStr(date) {
+  const tzOffset = date.getTimezoneOffset() * 60000;
+  return new Date(date.getTime() - tzOffset).toISOString().slice(0, 10);
+}
+
+function renderWeekView() {
+  const today = localISODate();
+  const dates = state.index.dates;
+  const completed = new Set(getCompletedDates());
+
+  const weekDays = getWeekRange();
+  $('#week-label').textContent = `${formatDateLabel(weekDays[0])}  —  ${formatDateLabel(weekDays[6])}`;
+
+  const html = weekDays.map((day, i) => {
+    const dateStr = getWeekDateStr(day);
+    const isToday = dateStr === today;
+    const exists = dates.includes(dateStr);
+    const done = completed.has(dateStr);
+    const dayName = DAY_NAMES[day.getDay()];
+    const dayNum = day.getDate();
+
+    let statusText = '';
+    let statusClass = '';
+
+    if (!exists) {
+      statusText = '—';
+      statusClass = 'day-unavailable';
+    } else if (done) {
+      statusText = '✓';
+      statusClass = 'day-done';
+    } else if (isToday) {
+      statusText = '★';
+      statusClass = 'day-today';
+    } else {
+      statusText = '\u00A0';
+    }
+
+    return `
+      <button class="day-card ${statusClass}" data-date="${dateStr}" type="button" ${!exists ? 'disabled' : ''}>
+        <span class="day-name">${dayName}</span>
+        <span class="day-num">${dayNum}</span>
+        <span class="day-status">${statusText}</span>
+      </button>
+    `;
+  }).join('');
+
+  $('#day-grid').innerHTML = html;
+  $$('.day-card:not([disabled])').forEach(card => {
+    card.addEventListener('click', () => playDate(card.dataset.date));
+  });
+}
+
+async function playDate(date) {
+  state.view = 'game';
+  state.activeDate = date;
+  state.game = await loadPuzzle(date);
+  hide($('#week-view'));
+  $('#gb-date-label').textContent = formatDateLabel(new Date(date + 'T00:00:00'));
+  show($('#game-area'));
+  startGame();
+}
+
+async function backToWeek() {
+  state.view = 'week';
+  state.activeDate = null;
+  state.game = null;
+  hide($('#game-area'));
+  renderWeekView();
+  show($('#week-view'));
+}
+
 function startGame() {
   state.best = computeBestScore();
   state.selectedMovieIdx = null;
   state.showingBest = false;
+  state.attempts = emptyAttempts();
+  state.activeAttempt = 0;
+  state.gameOver = false;
   loadProgress();
   renderGame();
 }
 
 function loadProgress() {
-  state.attempts = emptyAttempts();
-  state.activeAttempt = 0;
-  state.gameOver = false;
-
   const saved = localStorage.getItem(progressKey());
   if (!saved) return;
 
@@ -595,7 +653,7 @@ function buildShareText() {
   if (!finalAttempt) return '';
 
   const tries = state.attempts.filter(attempt => attempt.submitted).length;
-  const dateLabel = state.isPastPuzzle ? state.game.date : localISODate();
+  const dateLabel = state.activeDate || localISODate();
   const root = new URL('.', location.href).href;
   const resultSummary = `${finalAttempt.score}/${state.best.bestTotal}`;
   const trySummary = `${tries}/${MAX_ATTEMPTS}`;
@@ -661,28 +719,18 @@ function updateSteps() {
   });
 }
 
-async function backToToday() {
-  const today = localISODate();
-  state.isPastPuzzle = false;
-  state.puzzleDate = null;
-  state.game = await loadPuzzle(today);
-  hide($('#past-puzzle-bar'));
-  show($('#game-area'));
-  startGame();
-}
-
 async function openPastPuzzles() {
   const today = localISODate();
   const dates = (state.index?.dates || [])
     .filter(date => date <= today)
     .sort()
     .reverse()
-    .slice(0, 30);
+    .slice(0, 60);
   const completed = new Set(getCompletedDates());
 
   const el = $('#pp-list');
   if (dates.length === 0) {
-    el.innerHTML = '<p class="pp-empty">No archived puzzles are available yet.</p>';
+    el.innerHTML = '<p class="pp-empty">No puzzles are available yet.</p>';
   } else {
     el.innerHTML = dates.map(date => `
       <button class="pp-item" data-date="${date}" type="button">
@@ -694,27 +742,13 @@ async function openPastPuzzles() {
       </button>
     `).join('');
     el.querySelectorAll('.pp-item').forEach(item => {
-      item.addEventListener('click', () => loadPastPuzzle(item.dataset.date));
+      item.addEventListener('click', () => {
+        hide($('#past-puzzles-modal'));
+        playDate(item.dataset.date);
+      });
     });
   }
   show($('#past-puzzles-modal'));
-}
-
-async function loadPastPuzzle(date) {
-  state.isPastPuzzle = date !== localISODate();
-  state.puzzleDate = date;
-  state.game = await loadPuzzle(date);
-  hide($('#past-puzzles-modal'));
-  show($('#game-area'));
-
-  if (state.isPastPuzzle) {
-    show($('#past-puzzle-bar'));
-    $('#pp-bar-date').textContent = `Archive: ${date}`;
-  } else {
-    hide($('#past-puzzle-bar'));
-  }
-
-  startGame();
 }
 
 window.toggleScoring = function toggleScoring() {
@@ -723,7 +757,7 @@ window.toggleScoring = function toggleScoring() {
 };
 
 $('#submit-btn').addEventListener('click', submitAttempt);
-$('#back-to-today-btn').addEventListener('click', backToToday);
+$('#back-to-week-btn').addEventListener('click', backToWeek);
 $('#past-puzzles-btn').addEventListener('click', openPastPuzzles);
 $('#pp-close-btn').addEventListener('click', () => hide($('#past-puzzles-modal')));
 $('#pp-close-bg').addEventListener('click', () => hide($('#past-puzzles-modal')));

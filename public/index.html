@@ -22,32 +22,43 @@
 
   <div id="loading" class="loading">
     <span class="loader"></span>
-    Loading today's puzzle...
+    Loading puzzles...
   </div>
 
   <div id="no-game" hidden>
     <div class="empty-state">
       <div class="empty-icon">FF</div>
-      <h2>No Game Available</h2>
-      <p id="no-game-msg">No static puzzle data is available yet.</p>
+      <h2>No Puzzles Available</h2>
+      <p id="no-game-msg">No puzzle data is available yet.</p>
     </div>
   </div>
 
+  <div id="week-view" hidden>
+    <div class="week-header">
+      <h2 id="week-label"></h2>
+    </div>
+    <div id="day-grid" class="day-grid"></div>
+  </div>
+
   <div id="game-area" hidden>
+    <div id="game-bar" class="game-bar">
+      <div class="game-bar-left">
+        <span id="gb-date-label"></span>
+      </div>
+      <div class="game-bar-right">
+        <button id="back-to-week-btn" class="btn btn-sm btn-ghost">&larr; Week</button>
+      </div>
+    </div>
     <div id="how-to">
       <div class="step step-1"><span class="step-num">1</span> Try one</div>
       <div class="step step-2"><span class="step-num">2</span> Try two</div>
       <div class="step step-3"><span class="step-num">3</span> Try three</div>
     </div>
-    <div id="past-puzzle-bar" hidden>
-      <span id="pp-bar-date"></span>
-      <button id="back-to-today-btn" class="btn btn-sm btn-secondary">Back to Today</button>
-    </div>
 
     <section class="board-panel">
       <div class="panel-header">
         <div>
-          <h2>Today's Board</h2>
+          <h2 id="board-title">Board</h2>
           <p class="panel-note">Highest possible: <strong id="best-possible-inline">--</strong></p>
         </div>
         <button id="scoring-btn" class="btn btn-scoring">Scoring Guide</button>
@@ -151,9 +162,7 @@
 
   <footer id="footer-bar">
     <div class="footer-game">
-      <span class="np-label">Next puzzle</span>
-      <span id="f-countdown" class="countdown">--:--:--</span>
-      <button id="past-puzzles-btn" class="btn btn-ghost-footer">Past Puzzles</button>
+      <button id="past-puzzles-btn" class="btn btn-ghost-footer">All Puzzles</button>
     </div>
     <div class="tmdb-attribution" aria-label="TMDB attribution">
       <img class="tmdb-logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="TMDB">

@@ -988,6 +988,124 @@ h2 {
   text-align: center;
 }
 
+#week-view {
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.week-header h2 {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.day-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.day-card {
+  width: 108px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 18px 12px;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.day-card:not(:disabled):hover {
+  transform: translateY(-4px);
+  border-color: var(--cream);
+  background: #2b2525;
+}
+
+.day-card:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.day-card.day-done {
+  border-color: rgba(90, 160, 107, 0.5);
+}
+
+.day-card.day-today {
+  border-color: var(--cream);
+  box-shadow: 0 0 0 1px rgba(245, 210, 139, 0.2);
+}
+
+.day-name {
+  font-size: 0.72rem;
+  font-weight: 950;
+  color: var(--quiet);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.day-num {
+  font-size: 2rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.day-status {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.day-done .day-status {
+  color: var(--green);
+}
+
+.day-today .day-status {
+  color: var(--cream);
+}
+
+.game-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.game-bar-left {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+.btn-ghost {
+  min-height: 34px;
+  padding: 0 12px;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 950;
+  transition: border-color 120ms ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--cream);
+}
+
 [hidden] { display: none !important; }
 
 @media (max-width: 1040px) {
