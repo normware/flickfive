@@ -714,6 +714,26 @@ h2 {
   gap: 12px;
 }
 
+.legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.76rem;
+}
+
+.legal-links a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.legal-links a:hover {
+  color: var(--cream);
+  border-bottom-color: rgba(245, 210, 139, 0.5);
+}
+
 .np-label,
 .countdown,
 .btn-ghost-footer,
@@ -1230,6 +1250,7 @@ h2 {
   }
 
   .footer-game,
+  .legal-links,
   .tmdb-attribution {
     flex-wrap: wrap;
   }
