@@ -152,13 +152,18 @@ app.post('/api/game/submit', (req, res) => {
   const { assignments } = req.body;
   if (!assignments) return res.status(400).json({ error: 'Missing assignments' });
 
+  const assignedMovies = Object.values(assignments);
+  if (new Set(assignedMovies).size !== assignedMovies.length) {
+    return res.status(400).json({ error: 'Each movie can only be assigned to one slot' });
+  }
+
   const results = [];
   let total = 0;
 
   for (const slotId of day.slots) {
     const movieIdx = assignments[slotId];
-    if (movieIdx === undefined || movieIdx === null) {
-      return res.status(400).json({ error: `Missing assignment for slot: ${slotId}` });
+    if (!Number.isInteger(movieIdx) || movieIdx < 0 || movieIdx >= day.movies.length) {
+      return res.status(400).json({ error: `Invalid assignment for slot: ${slotId}` });
     }
     const movie = day.movies[movieIdx];
     const slot = SLOTS.find(s => s.id === slotId);
@@ -186,6 +191,12 @@ app.post('/api/game/submit', (req, res) => {
   const scores = loadJSON(SCORES_FILE, []);
   const todayScores = scores.filter(s => s.date === today);
   const isHighScore = todayScores.length === 0 || total > Math.max(...todayScores.map(s => s.score));
+
+  const alreadySubmitted = todayScores.some(s => s.score === total);
+  if (alreadySubmitted) {
+    const { bestTotal } = computeBestScore(day);
+    return res.json({ date: today, results, total, bestPossible: bestTotal, isHighScore, alreadySubmitted: true });
+  }
 
   scores.push({ date: today, score: total });
   saveJSON(SCORES_FILE, scores);
@@ -236,13 +247,18 @@ app.post('/api/puzzle/:date/submit', (req, res) => {
   const { assignments } = req.body;
   if (!assignments) return res.status(400).json({ error: 'Missing assignments' });
 
+  const assignedMovies = Object.values(assignments);
+  if (new Set(assignedMovies).size !== assignedMovies.length) {
+    return res.status(400).json({ error: 'Each movie can only be assigned to one slot' });
+  }
+
   const results = [];
   let total = 0;
 
   for (const slotId of day.slots) {
     const movieIdx = assignments[slotId];
-    if (movieIdx === undefined || movieIdx === null) {
-      return res.status(400).json({ error: `Missing assignment for slot: ${slotId}` });
+    if (!Number.isInteger(movieIdx) || movieIdx < 0 || movieIdx >= day.movies.length) {
+      return res.status(400).json({ error: `Invalid assignment for slot: ${slotId}` });
     }
     const movie = day.movies[movieIdx];
     const slot = SLOTS.find(s => s.id === slotId);

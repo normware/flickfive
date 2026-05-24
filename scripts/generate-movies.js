@@ -109,7 +109,7 @@ async function generate() {
         id: d.id,
         title: d.title,
         poster: d.poster_path,
-        year: parseInt(d.release_date),
+        year: new Date(d.release_date).getFullYear(),
         rating: d.vote_average,
         revenue: d.revenue,
         genreCount: d.genres.length,
