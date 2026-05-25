@@ -4,20 +4,28 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
-const ENC_KEY = crypto.createHash('sha256').update(JWT_SECRET).digest();
+const ARCHIVE_SECRET = process.env.ARCHIVE_SECRET || process.env.JWT_SECRET || 'dev-secret';
+const ENC_KEY = crypto.createHash('sha256').update(ARCHIVE_SECRET).digest();
 const ROOT = path.join(__dirname, '..');
 const ARCHIVE_FILE = path.join(ROOT, 'data', 'archive.enc');
 const OUT_DIR = path.join(ROOT, 'public', 'data');
 const PUZZLE_DIR = path.join(OUT_DIR, 'puzzles');
 
 function decrypt(text) {
-  const { iv, tag, data } = JSON.parse(text);
-  const decipher = crypto.createDecipheriv('aes-256-gcm', ENC_KEY, Buffer.from(iv, 'hex'));
-  decipher.setAuthTag(Buffer.from(tag, 'hex'));
-  let dec = decipher.update(data, 'hex', 'utf8');
-  dec += decipher.final('utf8');
-  return dec;
+  try {
+    const { iv, tag, data } = JSON.parse(text);
+    const decipher = crypto.createDecipheriv('aes-256-gcm', ENC_KEY, Buffer.from(iv, 'hex'));
+    decipher.setAuthTag(Buffer.from(tag, 'hex'));
+    let dec = decipher.update(data, 'hex', 'utf8');
+    dec += decipher.final('utf8');
+    return dec;
+  } catch (err) {
+    throw new Error(
+      `Could not decrypt data/archive.enc. ` +
+      `Set ARCHIVE_SECRET (or JWT_SECRET) to the same value used when generating archive.enc. ` +
+      `Original error: ${err.message}`
+    );
+  }
 }
 
 function loadArchive() {
