@@ -1058,6 +1058,10 @@ h2 {
   border-color: rgba(90, 160, 107, 0.5);
 }
 
+.day-card.day-locked {
+  opacity: 0.58;
+}
+
 .day-card.day-today {
   border-color: var(--cream);
   box-shadow: 0 0 0 1px rgba(245, 210, 139, 0.2);
@@ -1078,8 +1082,13 @@ h2 {
 }
 
 .day-status {
-  font-size: 1.1rem;
-  line-height: 1;
+  min-height: 1.2em;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .day-done .day-status {

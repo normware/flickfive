@@ -56,6 +56,7 @@ const state = {
   view: 'week',
   activeDate: null,
   showingBest: false,
+  weekCountdownTimer: null,
 };
 
 const $ = selector => document.querySelector(selector);
@@ -162,9 +163,11 @@ function getWeekDateStr(date) {
 }
 
 function renderWeekView() {
+  stopWeekCountdown();
   const today = localISODate();
   const dates = state.index.dates;
   const completed = new Set(getCompletedDates());
+  const now = Date.now();
 
   const weekDays = getWeekRange();
   $('#week-label').textContent = `${formatDateLabel(weekDays[0])}  —  ${formatDateLabel(weekDays[6])}`;
@@ -179,6 +182,20 @@ function renderWeekView() {
 
     let statusText = '';
     let statusClass = '';
+
+    if (dateStr > today) {
+      const unlockAt = new Date(`${dateStr}T00:00:00`).getTime();
+      const initial = formatUnlockCountdown(unlockAt - now);
+      statusText = `Unlock ${initial}`;
+      statusClass = 'day-locked';
+      return `
+        <button class="day-card ${statusClass}" data-date="${dateStr}" data-unlock-ts="${unlockAt}" type="button" disabled>
+          <span class="day-name">${dayName}</span>
+          <span class="day-num">${dayNum}</span>
+          <span class="day-status">${statusText}</span>
+        </button>
+      `;
+    }
 
     if (!exists) {
       statusText = '—';
@@ -206,10 +223,55 @@ function renderWeekView() {
   $$('.day-card:not([disabled])').forEach(card => {
     card.addEventListener('click', () => playDate(card.dataset.date));
   });
+  startWeekCountdown();
+}
+
+function formatUnlockCountdown(ms) {
+  if (ms <= 0) return '00:00:00';
+  const total = Math.floor(ms / 1000);
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const seconds = total % 60;
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function updateWeekCountdowns() {
+  const cards = $$('.day-card[data-unlock-ts]');
+  if (cards.length === 0) return;
+  const now = Date.now();
+  let needsRefresh = false;
+
+  cards.forEach(card => {
+    const status = card.querySelector('.day-status');
+    const unlockAt = Number(card.dataset.unlockTs || 0);
+    if (!status || !unlockAt) return;
+    const remaining = unlockAt - now;
+    if (remaining <= 0) {
+      needsRefresh = true;
+      return;
+    }
+    status.textContent = `Unlock ${formatUnlockCountdown(remaining)}`;
+  });
+
+  if (needsRefresh) renderWeekView();
+}
+
+function startWeekCountdown() {
+  stopWeekCountdown();
+  if (state.view !== 'week') return;
+  if (!document.querySelector('.day-card[data-unlock-ts]')) return;
+  state.weekCountdownTimer = window.setInterval(updateWeekCountdowns, 1000);
+}
+
+function stopWeekCountdown() {
+  if (!state.weekCountdownTimer) return;
+  window.clearInterval(state.weekCountdownTimer);
+  state.weekCountdownTimer = null;
 }
 
 async function playDate(date) {
   state.view = 'game';
+  stopWeekCountdown();
   state.activeDate = date;
   state.game = await loadPuzzle(date);
   hide($('#week-view'));
