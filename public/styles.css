@@ -714,26 +714,6 @@ h2 {
   gap: 12px;
 }
 
-.legal-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.76rem;
-}
-
-.legal-links a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.legal-links a:hover {
-  color: var(--cream);
-  border-bottom-color: rgba(245, 210, 139, 0.5);
-}
-
 .np-label,
 .countdown,
 .btn-ghost-footer,
@@ -770,11 +750,27 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   color: var(--quiet);
   font-size: 0.72rem;
   line-height: 1.35;
   text-align: center;
+}
+
+.tmdb-attribution a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.tmdb-attribution a:hover {
+  color: var(--cream);
+  border-bottom-color: rgba(245, 210, 139, 0.5);
+}
+
+.tmdb-divider {
+  color: color-mix(in srgb, var(--quiet) 65%, transparent);
 }
 
 .tmdb-logo {
@@ -1250,7 +1246,6 @@ h2 {
   }
 
   .footer-game,
-  .legal-links,
   .tmdb-attribution {
     flex-wrap: wrap;
   }

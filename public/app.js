@@ -142,6 +142,11 @@ async function init() {
   try {
     state.index = await fetchJSON('./data/index.json');
     hide($('#loading'));
+    const today = localISODate();
+    if (state.index.dates.includes(today)) {
+      await playDate(today);
+      return;
+    }
     renderWeekView();
     show($('#week-view'));
   } catch (err) {
