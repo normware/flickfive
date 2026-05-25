@@ -43,6 +43,8 @@ const BRAND = 'FlickFive';
 const STORAGE_NS = 'flickfive';
 const PROGRESS_KEY = date => `${STORAGE_NS}:board:${date}`;
 const COMPLETE_DATES_KEY = `${STORAGE_NS}:completedDates`;
+const ONBOARDING_KEY = `${STORAGE_NS}:onboarded`;
+const STATS_KEY = `${STORAGE_NS}:stats`;
 const MAX_ATTEMPTS = 3;
 
 const state = {
@@ -56,7 +58,12 @@ const state = {
   view: 'week',
   activeDate: null,
   showingBest: false,
+  revealAttemptIndex: null,
+  revealCount: 0,
+  scoreCountValue: null,
+  resultCountdownTimer: null,
   weekCountdownTimer: null,
+  lastDialogTrigger: null,
 };
 
 const $ = selector => document.querySelector(selector);
@@ -167,6 +174,7 @@ function renderWeekView() {
   const today = localISODate();
   const dates = state.index.dates;
   const completed = new Set(getCompletedDates());
+  const stats = getStats();
   const now = Date.now();
 
   const weekDays = getWeekRange();
@@ -177,6 +185,7 @@ function renderWeekView() {
     const isToday = dateStr === today;
     const exists = dates.includes(dateStr);
     const done = completed.has(dateStr);
+    const dayStats = stats.byDate[dateStr];
     const dayName = DAY_NAMES[day.getDay()];
     const dayNum = day.getDate();
 
@@ -201,7 +210,7 @@ function renderWeekView() {
       statusText = '—';
       statusClass = 'day-unavailable';
     } else if (done) {
-      statusText = '✓';
+      statusText = dayStats ? `${dayStats.score}/${dayStats.bestTotal}` : '✓';
       statusClass = 'day-done';
     } else if (isToday) {
       statusText = '★';
@@ -215,6 +224,7 @@ function renderWeekView() {
         <span class="day-name">${dayName}</span>
         <span class="day-num">${dayNum}</span>
         <span class="day-status">${statusText}</span>
+        ${dayStats ? `<span class="day-substatus">${dayStats.perfect ? 'Perfect' : `${dayStats.tries}/${MAX_ATTEMPTS} tries`}</span>` : ''}
       </button>
     `;
   }).join('');
@@ -233,6 +243,62 @@ function formatUnlockCountdown(ms) {
   const minutes = Math.floor((total % 3600) / 60);
   const seconds = total % 60;
   return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function nextUnlockText() {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(0, 0, 0, 0);
+  return formatUnlockCountdown(tomorrow.getTime() - Date.now());
+}
+
+function getStats() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(STATS_KEY) || '{}');
+    return {
+      played: Number(parsed.played) || 0,
+      perfects: Number(parsed.perfects) || 0,
+      currentStreak: Number(parsed.currentStreak) || 0,
+      byDate: parsed.byDate && typeof parsed.byDate === 'object' ? parsed.byDate : {},
+    };
+  } catch {
+    return { played: 0, perfects: 0, currentStreak: 0, byDate: {} };
+  }
+}
+
+function previousISODate(dateStr) {
+  const date = new Date(`${dateStr}T00:00:00`);
+  date.setDate(date.getDate() - 1);
+  return getWeekDateStr(date);
+}
+
+function saveCompletionStats(date, score, bestTotal, tries) {
+  const stats = getStats();
+  const existing = stats.byDate[date];
+  const perfect = score === bestTotal;
+  const previousDate = previousISODate(date);
+  const hadYesterday = Boolean(stats.byDate[previousDate]);
+
+  stats.byDate[date] = {
+    score,
+    bestTotal,
+    tries,
+    perfect,
+    completedAt: new Date().toISOString(),
+  };
+
+  stats.played = Object.keys(stats.byDate).length;
+  stats.perfects = Object.values(stats.byDate).filter(entry => entry?.perfect).length;
+
+  if (!existing) {
+    stats.currentStreak = hadYesterday ? stats.currentStreak + 1 : 1;
+  }
+
+  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+}
+
+function hasSubmittedAttempt() {
+  return state.attempts.some(attempt => attempt.submitted);
 }
 
 function updateWeekCountdowns() {
@@ -272,9 +338,11 @@ function stopWeekCountdown() {
 async function playDate(date) {
   state.view = 'game';
   stopWeekCountdown();
+  stopResultCountdown();
   state.activeDate = date;
   state.game = await loadPuzzle(date);
   hide($('#week-view'));
+  hide($('#results-area'));
   $('#gb-date-label').textContent = formatDateLabel(new Date(date + 'T00:00:00'));
   show($('#game-area'));
   startGame();
@@ -284,7 +352,9 @@ async function backToWeek() {
   state.view = 'week';
   state.activeDate = null;
   state.game = null;
+  stopResultCountdown();
   hide($('#game-area'));
+  hide($('#results-area'));
   renderWeekView();
   show($('#week-view'));
 }
@@ -296,7 +366,11 @@ function startGame() {
   state.attempts = emptyAttempts();
   state.activeAttempt = 0;
   state.gameOver = false;
+  state.revealAttemptIndex = null;
+  state.revealCount = 0;
+  state.scoreCountValue = null;
   loadProgress();
+  if (state.gameOver) renderResults();
   renderGame();
 }
 
@@ -327,12 +401,26 @@ function saveProgress() {
 }
 
 function renderGame() {
+  renderOnboarding();
   renderMovies();
   renderRules();
   renderAttempts();
+  renderMobileBoard();
   renderBestReveal();
   renderActions();
   updateSteps();
+}
+
+function renderOnboarding() {
+  const el = $('#onboarding-strip');
+  if (!el) return;
+  const hasAssigned = state.attempts.some(attempt => Object.keys(attempt.assignments || {}).length > 0);
+  const dismissed = localStorage.getItem(ONBOARDING_KEY) === '1';
+  if (dismissed || hasAssigned || state.gameOver) {
+    hide(el);
+  } else {
+    show(el);
+  }
 }
 
 function renderMovies() {
@@ -341,8 +429,9 @@ function renderMovies() {
   const movieDetailsByIndex = new Map();
   const bestPickedMovieIndices = new Set();
 
-  if (state.showingBest && state.best?.bestAssign) {
-    Object.values(state.best.bestAssign).forEach(movieIdx => bestPickedMovieIndices.add(movieIdx));
+  const bestAssign = getDisplayedBestAssignment();
+  if (state.showingBest && bestAssign) {
+    Object.values(bestAssign).forEach(movieIdx => bestPickedMovieIndices.add(movieIdx));
   }
 
   state.attempts.forEach((attempt, attemptIndex) => {
@@ -369,7 +458,7 @@ function renderMovies() {
     const bestPicked = state.showingBest && bestPickedMovieIndices.has(index);
     const revealRows = state.showingBest ? buildRevealRowsForMovie(movie, index) : [];
     return `
-      <button class="movie-card ${assigned ? 'assigned' : ''} ${selected ? 'selected' : ''} ${bestPicked ? 'best-picked' : ''}" data-idx="${index}" type="button" ${assigned || state.gameOver ? 'disabled' : ''}>
+      <button class="movie-card ${assigned ? 'assigned' : ''} ${selected ? 'selected' : ''} ${bestPicked ? 'best-picked' : ''}" data-idx="${index}" type="button" aria-pressed="${selected ? 'true' : 'false'}" ${assigned || state.gameOver ? 'disabled' : ''}>
         <span class="poster">
           ${poster ? `<img src="${poster}" alt="${escapeHTML(movie.title)}" loading="lazy">` : '<span class="no-poster">FF</span>'}
         </span>
@@ -405,9 +494,10 @@ function renderMovies() {
 }
 
 function buildRevealRowsForMovie(movie, movieIndex) {
+  const bestAssign = getDisplayedBestAssignment();
   return state.game.slots.map(slot => {
     const scored = scoreFor(slot.id, movie);
-    const best = state.best?.bestAssign?.[slot.id] === movieIndex;
+    const best = bestAssign?.[slot.id] === movieIndex;
     return {
       slotShort: SLOT_RULES[slot.id].short,
       best,
@@ -460,10 +550,14 @@ function renderAttempts() {
       const movieIdx = attempt.assignments[slot.id];
       const movie = movieIdx === undefined ? null : state.game.movies[movieIdx];
       const result = attempt.results?.find(item => item.slotId === slot.id);
-      const score = result?.score;
-      const detail = result ? getCellDetailText(result) : '';
+      const slotIndex = state.game.slots.findIndex(item => item.id === slot.id);
+      const isRevealing = state.revealAttemptIndex === attemptIndex;
+      const revealReady = !isRevealing || slotIndex < state.revealCount;
+      const score = revealReady ? result?.score : undefined;
+      const detail = revealReady && result ? getCellDetailText(result) : '';
+      const canPlace = isActive && state.selectedMovieIdx !== null && movieIdx === undefined;
       return `
-        <button class="guess-cell ${movie ? 'filled' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
+        <button class="guess-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${score !== undefined ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
           <span class="cell-title">${movie ? escapeHTML(movie.title) : 'Pick film'}</span>
           <span class="cell-meta">${movie ? escapeHTML(SLOT_RULES[slot.id].short) : 'Open'}</span>
           ${result ? `<span class="cell-detail">${escapeHTML(detail)}</span>` : ''}
@@ -472,17 +566,68 @@ function renderAttempts() {
       `;
     }).join('');
 
-    const scoreText = attempt.submitted ? `${attempt.score} / ${state.best.bestTotal}` : isActive ? 'Live' : '-';
+    const scoreText = getRowScoreText(attempt, attemptIndex, isActive);
     return `
-      <div class="guess-row ${isActive ? 'active' : ''} ${attempt.submitted ? 'submitted' : ''}">
+      <div class="guess-row ${isActive ? 'active' : ''} ${attempt.submitted ? 'submitted' : ''} ${state.revealAttemptIndex === attemptIndex ? 'revealing' : ''}">
         <div class="guess-label">Try ${attemptIndex + 1}</div>
         <div class="guess-cells">${cells}</div>
-        <div class="row-score">${scoreText}</div>
+        <div class="row-score ${state.scoreCountValue !== null && state.revealAttemptIndex === attemptIndex ? 'score-counting' : ''}">${scoreText}</div>
       </div>
     `;
   }).join('');
 
   $$('.guess-cell').forEach(cell => {
+    cell.addEventListener('click', () => selectCell(parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
+  });
+}
+
+function getRowScoreText(attempt, attemptIndex, isActive) {
+  if (state.revealAttemptIndex === attemptIndex && state.scoreCountValue !== null) {
+    return `${state.scoreCountValue} / ${state.best.bestTotal}`;
+  }
+  if (state.revealAttemptIndex === attemptIndex) return '...';
+  if (attempt.submitted) return `${attempt.score} / ${state.best.bestTotal}`;
+  return isActive ? 'Live' : '-';
+}
+
+function renderMobileBoard() {
+  const el = $('#mobile-board');
+  if (!el) return;
+  el.innerHTML = state.game.slots.map((slot, slotIndex) => `
+    <section class="mobile-slot-card">
+      <div class="mobile-slot-head">
+        <span class="slot-number">${slotIndex + 1}</span>
+        <div>
+          <strong>${escapeHTML(slot.name)}</strong>
+          <small>${escapeHTML(slot.desc)}</small>
+        </div>
+      </div>
+      <div class="mobile-slot-tries">
+        ${state.attempts.map((attempt, attemptIndex) => {
+          const isActive = attemptIndex === state.activeAttempt && !state.gameOver;
+          const movieIdx = attempt.assignments[slot.id];
+          const movie = movieIdx === undefined ? null : state.game.movies[movieIdx];
+          const result = attempt.results?.find(item => item.slotId === slot.id);
+          const isRevealing = state.revealAttemptIndex === attemptIndex;
+          const revealReady = !isRevealing || slotIndex < state.revealCount;
+          const detail = revealReady && result ? getCellDetailText(result) : '';
+          const score = revealReady ? result?.score : undefined;
+          const canPlace = isActive && state.selectedMovieIdx !== null && movieIdx === undefined;
+          return `
+            <button class="mobile-try-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${score !== undefined ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
+              <span class="mobile-try-label">Try ${attemptIndex + 1}</span>
+              <span class="cell-title">${movie ? escapeHTML(movie.title) : 'Pick film'}</span>
+              <span class="cell-meta">${movie ? escapeHTML(SLOT_RULES[slot.id].short) : 'Open'}</span>
+              ${detail ? `<span class="cell-detail">${escapeHTML(detail)}</span>` : ''}
+              ${score !== undefined ? `<span class="cell-score">${score}</span>` : ''}
+            </button>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `).join('');
+
+  $$('#mobile-board [data-attempt][data-slot]').forEach(cell => {
     cell.addEventListener('click', () => selectCell(parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
   });
 }
@@ -519,23 +664,38 @@ function renderActions() {
   const reveal = $('#reveal-best-btn');
   const share = $('#share-btn');
   const reset = $('#try-again-btn');
+  reset.textContent = 'Start Over';
 
   if (state.gameOver) {
     const finalAttempt = lastSubmittedAttempt();
-    status.textContent = finalAttempt?.score === state.best.bestTotal
-      ? `Perfect. You found ${state.best.bestTotal}.`
-      : `Finished. Best possible was ${state.best.bestTotal}.`;
+    const tries = state.attempts.filter(attempt => attempt.submitted).length;
+    const gap = state.best.bestTotal - (finalAttempt?.score || 0);
+    status.innerHTML = finalAttempt?.score === state.best.bestTotal
+      ? `<strong>Perfect in ${tries} ${tries === 1 ? 'try' : 'tries'}.</strong> You found ${state.best.bestTotal}.`
+      : gap <= 3
+        ? `<strong>${gap} ${gap === 1 ? 'point' : 'points'} short.</strong> Best possible was ${state.best.bestTotal}.`
+        : `<strong>Finished.</strong> Best possible was ${state.best.bestTotal}.`;
     submit.hidden = true;
     reveal.hidden = false;
+    reveal.textContent = state.showingBest ? 'Hide Optimal Answer' : 'Show One Optimal Answer';
     share.hidden = false;
     reset.hidden = false;
   } else {
     const left = active ? state.game.slots.length - Object.keys(active.assignments).length : 0;
-    status.textContent = state.selectedMovieIdx !== null
-      ? `${state.game.movies[state.selectedMovieIdx].title} selected. Put it under a rule.`
-      : `${left} slot${left === 1 ? '' : 's'} left in try ${state.activeAttempt + 1}.`;
+    if (state.selectedMovieIdx !== null) {
+      const movie = state.game.movies[state.selectedMovieIdx];
+      const poster = posterURL(movie.poster);
+      status.innerHTML = `
+        <span class="selected-pill">
+          ${poster ? `<img src="${poster}" alt="" loading="lazy">` : '<span class="selected-pill-fallback">FF</span>'}
+          <span><strong>${escapeHTML(movie.title)}</strong><small>Tap a rule slot to place it</small></span>
+        </span>
+      `;
+    } else {
+      status.textContent = `${left} slot${left === 1 ? '' : 's'} left in try ${state.activeAttempt + 1}.`;
+    }
     submit.hidden = false;
-    submit.disabled = !ready;
+    submit.disabled = !ready || state.revealAttemptIndex !== null;
     submit.textContent = `Submit Try ${state.activeAttempt + 1}`;
     reveal.hidden = true;
     share.hidden = true;
@@ -544,7 +704,7 @@ function renderActions() {
 }
 
 function selectMovie(idx) {
-  if (state.gameOver) return;
+  if (state.gameOver || state.revealAttemptIndex !== null) return;
   const active = state.attempts[state.activeAttempt];
   if (Object.values(active.assignments).includes(idx)) return;
   state.selectedMovieIdx = idx;
@@ -553,13 +713,14 @@ function selectMovie(idx) {
 }
 
 function selectCell(attemptIndex, slotId) {
-  if (state.gameOver || attemptIndex !== state.activeAttempt) return;
+  if (state.gameOver || state.revealAttemptIndex !== null || attemptIndex !== state.activeAttempt) return;
   const active = state.attempts[state.activeAttempt];
 
   if (state.selectedMovieIdx !== null) {
     if (Object.values(active.assignments).includes(state.selectedMovieIdx)) return;
     active.assignments[slotId] = state.selectedMovieIdx;
     state.selectedMovieIdx = null;
+    localStorage.setItem(ONBOARDING_KEY, '1');
   } else if (active.assignments[slotId] !== undefined) {
     delete active.assignments[slotId];
   }
@@ -569,24 +730,80 @@ function selectCell(attemptIndex, slotId) {
 }
 
 function submitAttempt() {
-  if (state.gameOver) return;
+  if (state.gameOver || state.revealAttemptIndex !== null) return;
   const active = state.attempts[state.activeAttempt];
   if (!state.game.slots.every(slot => active.assignments[slot.id] !== undefined)) return;
 
+  const attemptIndex = state.activeAttempt;
   const scored = buildResults(active.assignments);
   active.submitted = true;
   active.score = scored.total;
   active.results = scored.results;
   state.selectedMovieIdx = null;
+  state.revealAttemptIndex = attemptIndex;
+  state.revealCount = 0;
+  state.scoreCountValue = null;
 
   if (scored.total === state.best.bestTotal || state.activeAttempt === MAX_ATTEMPTS - 1) {
     state.gameOver = true;
     markCompletedDate(state.game.date);
+    saveCompletionStats(
+      state.game.date,
+      scored.total,
+      state.best.bestTotal,
+      state.attempts.filter(attempt => attempt.submitted).length,
+    );
   } else {
     state.activeAttempt += 1;
   }
 
   saveProgress();
+  renderGame();
+  runScoreReveal(attemptIndex, scored.total);
+}
+
+function runScoreReveal(attemptIndex, total) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stepDelay = reduceMotion ? 0 : 180;
+
+  state.game.slots.forEach((slot, index) => {
+    window.setTimeout(() => {
+      state.revealCount = index + 1;
+      renderGame();
+      if (index === state.game.slots.length - 1) countUpRowScore(attemptIndex, total, reduceMotion);
+    }, stepDelay * (index + 1));
+  });
+}
+
+function countUpRowScore(attemptIndex, total, reduceMotion) {
+  if (reduceMotion) {
+    state.scoreCountValue = total;
+    renderGame();
+    finishScoreReveal(attemptIndex);
+    return;
+  }
+
+  const duration = 520;
+  const start = performance.now();
+  const tick = now => {
+    const progress = Math.min((now - start) / duration, 1);
+    state.scoreCountValue = Math.round(total * progress);
+    renderGame();
+    if (progress < 1) {
+      window.requestAnimationFrame(tick);
+    } else {
+      window.setTimeout(() => finishScoreReveal(attemptIndex), 220);
+    }
+  };
+  window.requestAnimationFrame(tick);
+}
+
+function finishScoreReveal(attemptIndex) {
+  if (state.revealAttemptIndex !== attemptIndex) return;
+  state.revealAttemptIndex = null;
+  state.revealCount = 0;
+  state.scoreCountValue = null;
+  if (state.gameOver) renderResults();
   renderGame();
 }
 
@@ -672,6 +889,22 @@ function getSlotCalcText(result) {
   }
 }
 
+function getDisplayedBestAssignment() {
+  const finalAttempt = lastSubmittedAttempt();
+  if (finalAttempt?.score === state.best.bestTotal) return finalAttempt.assignments;
+  return state.best?.bestAssign;
+}
+
+function getDisplayedBestResults() {
+  const assignment = getDisplayedBestAssignment();
+  return assignment ? buildResults(assignment).results : state.best.bestResults;
+}
+
+function differsFromComputedBest(assignments) {
+  if (!assignments || !state.best?.bestAssign) return false;
+  return state.game.slots.some(slot => assignments[slot.id] !== state.best.bestAssign[slot.id]);
+}
+
 function renderBestReveal() {
   const el = $('#best-reveal');
   if (!el) return;
@@ -681,13 +914,21 @@ function renderBestReveal() {
     return;
   }
 
+  const finalAttempt = lastSubmittedAttempt();
+  const shownResults = getDisplayedBestResults();
+  const label = finalAttempt?.score === state.best.bestTotal ? 'Your Optimal Answer' : 'One Optimal Answer';
+  const note = finalAttempt?.score === state.best.bestTotal && differsFromComputedBest(finalAttempt.assignments)
+    ? '<p class="best-note">There are multiple perfect arrangements. This keeps the one you found.</p>'
+    : '';
+
   el.innerHTML = `
     <div class="best-reveal-head">
-      <h2>Highest Possible</h2>
+      <h2>${label}</h2>
       <strong>${state.best.bestTotal}</strong>
     </div>
+    ${note}
     <div class="best-grid">
-      ${state.best.bestResults.map(result => `
+      ${shownResults.map(result => `
         <div class="best-item">
           <span>${escapeHTML(result.slotName)}</span>
           <strong>${escapeHTML(result.movieTitle)}</strong>
@@ -697,6 +938,67 @@ function renderBestReveal() {
     </div>
   `;
   show(el);
+}
+
+function renderResults() {
+  const finalAttempt = lastSubmittedAttempt();
+  if (!finalAttempt) {
+    hide($('#results-area'));
+    return;
+  }
+
+  const tries = state.attempts.filter(attempt => attempt.submitted).length;
+  const gap = state.best.bestTotal - finalAttempt.score;
+  const stats = getStats();
+  const title = gap === 0 ? `Perfect in ${tries}` : gap <= 3 ? `${gap} short` : 'Run complete';
+
+  $('#rh-title-label').textContent = title;
+  $('#result-date').textContent = formatDateLabel(new Date(`${state.game.date}T00:00:00`));
+  $('#total-score').textContent = `${finalAttempt.score}`;
+  $('#performance-tier').textContent = gap === 0
+    ? 'You found the ceiling.'
+    : gap <= 3
+      ? `So close. Best possible was ${state.best.bestTotal}.`
+      : `Best possible was ${state.best.bestTotal}.`;
+  $('#rh-best-possible').hidden = false;
+  $('#rh-best-possible').textContent = `${finalAttempt.score} / ${state.best.bestTotal} in ${tries}/${MAX_ATTEMPTS} tries`;
+  $('#high-score-badge').hidden = gap !== 0;
+
+  $('#results-list').innerHTML = `
+    <div class="stats-strip">
+      <span><strong>${stats.currentStreak}</strong> Streak</span>
+      <span><strong>${stats.perfects}</strong> Perfects</span>
+      <span><strong>${stats.played}</strong> Played</span>
+    </div>
+    <div class="result-breakdown">
+      ${finalAttempt.results.map(result => `
+        <div class="result-item">
+          <span>${escapeHTML(result.slotName)}</span>
+          <strong>${escapeHTML(result.movieTitle)}</strong>
+          <small>${escapeHTML(getSlotCalcText(result))} = ${result.score}</small>
+        </div>
+      `).join('')}
+    </div>
+    <div class="tomorrow-hook">Tomorrow unlocks in <strong id="tomorrow-countdown">${nextUnlockText()}</strong></div>
+  `;
+
+  show($('#results-area'));
+  startResultCountdown();
+}
+
+function startResultCountdown() {
+  stopResultCountdown();
+  if (!state.gameOver) return;
+  state.resultCountdownTimer = window.setInterval(() => {
+    const el = $('#tomorrow-countdown');
+    if (el) el.textContent = nextUnlockText();
+  }, 1000);
+}
+
+function stopResultCountdown() {
+  if (!state.resultCountdownTimer) return;
+  window.clearInterval(state.resultCountdownTimer);
+  state.resultCountdownTimer = null;
 }
 
 function lastSubmittedAttempt() {
@@ -755,12 +1057,18 @@ function shareResult() {
 }
 
 function tryAgain() {
+  if (hasSubmittedAttempt() && !window.confirm('Start over and clear this puzzle progress?')) return;
   localStorage.removeItem(progressKey());
   state.attempts = emptyAttempts();
   state.activeAttempt = 0;
   state.gameOver = false;
   state.selectedMovieIdx = null;
   state.showingBest = false;
+  state.revealAttemptIndex = null;
+  state.revealCount = 0;
+  state.scoreCountValue = null;
+  stopResultCountdown();
+  hide($('#results-area'));
   renderGame();
 }
 
@@ -794,20 +1102,25 @@ async function openPastPuzzles() {
     .reverse()
     .slice(0, 60);
   const completed = new Set(getCompletedDates());
+  const stats = getStats();
 
   const el = $('#pp-list');
   if (dates.length === 0) {
     el.innerHTML = '<p class="pp-empty">No puzzles are available yet.</p>';
   } else {
-    el.innerHTML = dates.map(date => `
+    el.innerHTML = dates.map(date => {
+      const entry = stats.byDate[date];
+      return `
       <button class="pp-item" data-date="${date}" type="button">
         <span class="pp-date-wrap">
           <span class="pp-date">${date}</span>
           ${completed.has(date) ? '<span class="pp-check" aria-label="Finished">✓</span>' : ''}
+          ${entry ? `<span class="pp-score">${entry.score}/${entry.bestTotal}</span>` : ''}
         </span>
-        <span class="pp-play-btn">Play</span>
+        <span class="pp-play-btn">${entry ? `${entry.tries}/${MAX_ATTEMPTS} tries` : 'Play'}</span>
       </button>
-    `).join('');
+    `;
+    }).join('');
     el.querySelectorAll('.pp-item').forEach(item => {
       item.addEventListener('click', () => {
         hide($('#past-puzzles-modal'));
@@ -815,27 +1128,53 @@ async function openPastPuzzles() {
       });
     });
   }
-  show($('#past-puzzles-modal'));
+  openDialog($('#past-puzzles-modal'), $('.pp-panel'));
+}
+
+function openDialog(el, panel) {
+  state.lastDialogTrigger = document.activeElement;
+  show(el);
+  window.setTimeout(() => panel?.focus(), 0);
+}
+
+function closeDialog(el) {
+  hide(el);
+  if (state.lastDialogTrigger && typeof state.lastDialogTrigger.focus === 'function') {
+    state.lastDialogTrigger.focus();
+  }
+  state.lastDialogTrigger = null;
 }
 
 window.toggleScoring = function toggleScoring() {
   const el = $('#scoring-ref');
-  el.hidden = !el.hidden;
+  if (el.hidden) {
+    openDialog(el, $('.scoring-panel'));
+  } else {
+    closeDialog(el);
+  }
 };
 
 $('#submit-btn').addEventListener('click', submitAttempt);
 $('#back-to-week-btn').addEventListener('click', backToWeek);
 $('#past-puzzles-btn').addEventListener('click', openPastPuzzles);
-$('#pp-close-btn').addEventListener('click', () => hide($('#past-puzzles-modal')));
-$('#pp-close-bg').addEventListener('click', () => hide($('#past-puzzles-modal')));
+$('#pp-close-btn').addEventListener('click', () => closeDialog($('#past-puzzles-modal')));
+$('#pp-close-bg').addEventListener('click', () => closeDialog($('#past-puzzles-modal')));
 $('#try-again-btn').addEventListener('click', tryAgain);
 $('#share-btn').addEventListener('click', shareResult);
 $('#scoring-btn').addEventListener('click', toggleScoring);
+$('#scoring-close-btn').addEventListener('click', toggleScoring);
+$('#scoring-close-bg').addEventListener('click', toggleScoring);
 $('#reveal-best-btn').addEventListener('click', () => {
   state.showingBest = !state.showingBest;
-  $('#reveal-best-btn').textContent = state.showingBest ? 'Hide Best' : 'Reveal Best';
+  $('#reveal-best-btn').textContent = state.showingBest ? 'Hide Optimal Answer' : 'Show One Optimal Answer';
   renderBestReveal();
   renderMovies();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  if (!$('#scoring-ref').hidden) closeDialog($('#scoring-ref'));
+  if (!$('#past-puzzles-modal').hidden) closeDialog($('#past-puzzles-modal'));
 });
 
 init();

@@ -55,6 +55,12 @@
       <div class="step step-3"><span class="step-num">3</span> Try three</div>
     </div>
 
+    <div id="onboarding-strip" class="onboarding-strip" hidden>
+      <div class="onboard-step"><span>1</span>Select poster</div>
+      <div class="onboard-step"><span>2</span>Tap rule slot</div>
+      <div class="onboard-step"><span>3</span>Submit try</div>
+    </div>
+
     <section class="board-panel">
       <div class="panel-header">
         <div>
@@ -65,6 +71,7 @@
       </div>
       <div id="rule-list" class="rule-list"></div>
       <div id="attempt-list" class="attempt-list"></div>
+      <div id="mobile-board" class="mobile-board"></div>
       <div id="best-reveal" class="best-reveal" hidden></div>
     </section>
 
@@ -79,9 +86,9 @@
       <div id="status-text">Choose a film to get started.</div>
       <div class="action-row">
         <button id="submit-btn" class="btn btn-primary" disabled>Submit Try 1</button>
-        <button id="reveal-best-btn" class="btn btn-secondary" hidden>Reveal Best</button>
+        <button id="reveal-best-btn" class="btn btn-secondary" hidden>Show One Optimal Answer</button>
         <button id="share-btn" class="btn btn-share" hidden>Share Result</button>
-        <button id="try-again-btn" class="btn btn-secondary">Reset</button>
+        <button id="try-again-btn" class="btn btn-secondary">Start Over</button>
       </div>
     </div>
   </div>
@@ -103,11 +110,11 @@
   </div>
 
   <div id="scoring-ref" hidden>
-    <div class="scoring-overlay" onclick="toggleScoring()"></div>
-    <div class="scoring-panel">
+    <div class="scoring-overlay" id="scoring-close-bg"></div>
+    <div class="scoring-panel" role="dialog" aria-modal="true" aria-labelledby="scoring-title" tabindex="-1">
       <div class="sp-header">
-        <h2>How Scoring Works</h2>
-        <button class="btn btn-sm" onclick="toggleScoring()">&times;</button>
+        <h2 id="scoring-title">How Scoring Works</h2>
+        <button id="scoring-close-btn" class="btn btn-sm" aria-label="Close scoring guide">&times;</button>
       </div>
       <table class="scoring-table">
         <thead><tr><th>Slot</th><th>Rule</th><th>Max</th></tr></thead>
@@ -149,10 +156,10 @@
 
   <div id="past-puzzles-modal" hidden>
     <div class="pp-overlay" id="pp-close-bg"></div>
-    <div class="pp-panel">
+    <div class="pp-panel" role="dialog" aria-modal="true" aria-labelledby="pp-title" tabindex="-1">
       <div class="pp-header">
-        <h2>Past Puzzles</h2>
-        <button id="pp-close-btn" class="btn btn-sm">&times;</button>
+        <h2 id="pp-title">Past Puzzles</h2>
+        <button id="pp-close-btn" class="btn btn-sm" aria-label="Close past puzzles">&times;</button>
       </div>
       <div id="pp-list" class="pp-list">
         <p class="pp-loading">Loading...</p>
