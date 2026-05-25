@@ -2,6 +2,8 @@
 
 Pick 5 movies, match 5 scoring rules, and maximize your total in up to 3 tries.
 
+Live site: [https://flickfive.normware.org](https://flickfive.normware.org)
+
 ![FlickFive app screenshot](docs/app-screenshot.png)
 
 ## Quick Start
@@ -35,6 +37,7 @@ Open: [http://localhost:3000](http://localhost:3000)
 
 ## Deployment
 
+- Public URL: [https://flickfive.normware.org](https://flickfive.normware.org)
 - GitHub Pages deploy workflow: `.github/workflows/pages.yml`
 - Weekly puzzle generation workflow: `.github/workflows/generate.yml`
 
