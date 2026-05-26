@@ -53,6 +53,7 @@ const state = {
   selectedMovieIdx: null,
   attempts: [],
   activeAttempt: 0,
+  activeSlotIndex: 0,
   gameOver: false,
   best: null,
   view: 'week',
@@ -365,6 +366,7 @@ function startGame() {
   state.showingBest = false;
   state.attempts = emptyAttempts();
   state.activeAttempt = 0;
+  state.activeSlotIndex = 0;
   state.gameOver = false;
   state.revealAttemptIndex = null;
   state.revealCount = 0;
@@ -386,7 +388,9 @@ function loadProgress() {
       ...(parsed.attempts[index] || {}),
     }));
     state.activeAttempt = Number.isInteger(parsed.activeAttempt) ? parsed.activeAttempt : 0;
+    state.activeSlotIndex = Number.isInteger(parsed.activeSlotIndex) ? parsed.activeSlotIndex : firstOpenSlotIndex();
     state.gameOver = Boolean(parsed.gameOver);
+    normalizeActiveSlot();
   } catch {
     localStorage.removeItem(progressKey());
   }
@@ -396,6 +400,7 @@ function saveProgress() {
   localStorage.setItem(progressKey(), JSON.stringify({
     attempts: state.attempts,
     activeAttempt: state.activeAttempt,
+    activeSlotIndex: state.activeSlotIndex,
     gameOver: state.gameOver,
   }));
 }
@@ -453,6 +458,10 @@ function renderMovies() {
   $('#movie-list').innerHTML = state.game.movies.map((movie, index) => {
     const poster = posterURL(movie.poster);
     const assigned = !state.gameOver && used.includes(index);
+    const assignedSlotId = active
+      ? state.game.slots.find(slot => active.assignments[slot.id] === index)?.id
+      : null;
+    const assignedSlotShort = assignedSlotId ? SLOT_RULES[assignedSlotId].short : '';
     const selected = state.selectedMovieIdx === index;
     const detailRows = movieDetailsByIndex.get(index) || [];
     const bestPicked = state.showingBest && bestPickedMovieIndices.has(index);
@@ -463,6 +472,7 @@ function renderMovies() {
           ${poster ? `<img src="${poster}" alt="${escapeHTML(movie.title)}" loading="lazy">` : '<span class="no-poster">FF</span>'}
         </span>
         <span class="title">${escapeHTML(movie.title)}</span>
+        ${assigned ? `<span class="movie-used-badge">Used in ${escapeHTML(assignedSlotShort)}</span>` : ''}
         ${state.showingBest ? `
           <span class="movie-details reveal-details">
             ${revealRows.map(row => `
@@ -556,8 +566,9 @@ function renderAttempts() {
       const score = revealReady ? result?.score : undefined;
       const detail = revealReady && result ? getCellDetailText(result) : '';
       const canPlace = isActive && state.selectedMovieIdx !== null && movieIdx === undefined;
+      const animateReveal = isRevealing && score !== undefined;
       return `
-        <button class="guess-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${score !== undefined ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
+        <button class="guess-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${animateReveal ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
           <span class="cell-title">${movie ? escapeHTML(movie.title) : 'Pick film'}</span>
           <span class="cell-meta">${movie ? escapeHTML(SLOT_RULES[slot.id].short) : 'Open'}</span>
           ${result ? `<span class="cell-detail">${escapeHTML(detail)}</span>` : ''}
@@ -593,43 +604,171 @@ function getRowScoreText(attempt, attemptIndex, isActive) {
 function renderMobileBoard() {
   const el = $('#mobile-board');
   if (!el) return;
-  el.innerHTML = state.game.slots.map((slot, slotIndex) => `
-    <section class="mobile-slot-card">
-      <div class="mobile-slot-head">
-        <span class="slot-number">${slotIndex + 1}</span>
-        <div>
-          <strong>${escapeHTML(slot.name)}</strong>
-          <small>${escapeHTML(slot.desc)}</small>
-        </div>
-      </div>
-      <div class="mobile-slot-tries">
-        ${state.attempts.map((attempt, attemptIndex) => {
-          const isActive = attemptIndex === state.activeAttempt && !state.gameOver;
-          const movieIdx = attempt.assignments[slot.id];
-          const movie = movieIdx === undefined ? null : state.game.movies[movieIdx];
-          const result = attempt.results?.find(item => item.slotId === slot.id);
-          const isRevealing = state.revealAttemptIndex === attemptIndex;
-          const revealReady = !isRevealing || slotIndex < state.revealCount;
-          const detail = revealReady && result ? getCellDetailText(result) : '';
-          const score = revealReady ? result?.score : undefined;
-          const canPlace = isActive && state.selectedMovieIdx !== null && movieIdx === undefined;
+  normalizeActiveSlot();
+  const active = state.attempts[state.activeAttempt];
+  const activeSlot = state.game.slots[state.activeSlotIndex] || state.game.slots[0];
+  const ready = active && state.game.slots.every(slot => active.assignments[slot.id] !== undefined);
+  const locked = state.gameOver || state.revealAttemptIndex !== null || !active;
+  const previousAttempt = state.attempts[state.activeAttempt - 1];
+
+  el.innerHTML = `
+    <section class="mobile-picker ${locked ? 'locked' : ''}">
+      <div class="mobile-progress-strip" aria-label="Category progress">
+        ${state.game.slots.map((slot, index) => {
+          const filled = active?.assignments[slot.id] !== undefined;
+          const current = index === state.activeSlotIndex;
           return `
-            <button class="mobile-try-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${score !== undefined ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
-              <span class="mobile-try-label">Try ${attemptIndex + 1}</span>
-              <span class="cell-title">${movie ? escapeHTML(movie.title) : 'Pick film'}</span>
-              <span class="cell-meta">${movie ? escapeHTML(SLOT_RULES[slot.id].short) : 'Open'}</span>
-              ${detail ? `<span class="cell-detail">${escapeHTML(detail)}</span>` : ''}
-              ${score !== undefined ? `<span class="cell-score">${score}</span>` : ''}
+            <button class="mobile-progress-item ${filled ? 'complete' : ''} ${current ? 'active' : ''}" data-slot-index="${index}" type="button" ${locked ? 'disabled' : ''}>
+              <span>${escapeHTML(slot.short)}</span>
             </button>
           `;
         }).join('')}
       </div>
+      <div class="mobile-active-slot">
+        <div class="mobile-slot-kicker">Slot ${state.activeSlotIndex + 1} of ${state.game.slots.length}</div>
+        <h3>${escapeHTML(activeSlot.name)}</h3>
+        <p>${escapeHTML(activeSlot.desc)}</p>
+      </div>
+      ${previousAttempt?.submitted ? renderPreviousSlotReview(previousAttempt, activeSlot.id) : ''}
+      <div class="mobile-picker-grid">
+        ${state.game.movies.map((movie, index) => renderMobileMovieCard(movie, index, active, activeSlot, locked)).join('')}
+      </div>
+      <div class="mobile-submit-hint ${ready ? 'ready' : ''}">
+        ${ready ? `Ready for Submit Try ${state.activeAttempt + 1}` : `${remainingSlots(active)} picks left`}
+      </div>
     </section>
-  `).join('');
+  `;
 
-  $$('#mobile-board [data-attempt][data-slot]').forEach(cell => {
-    cell.addEventListener('click', () => selectCell(parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
+  $$('#mobile-board [data-slot-index]').forEach(button => {
+    button.addEventListener('click', () => {
+      state.activeSlotIndex = parseInt(button.dataset.slotIndex, 10);
+      state.selectedMovieIdx = null;
+      saveProgress();
+      renderGame();
+    });
   });
+
+  $$('#mobile-board [data-mobile-movie]').forEach(card => {
+    card.addEventListener('click', () => assignMobileMovie(parseInt(card.dataset.mobileMovie, 10)));
+  });
+}
+
+function renderMobileMovieCard(movie, index, active, activeSlot, locked) {
+  const poster = posterURL(movie.poster);
+  const assignedSlot = findAssignedSlotForMovie(active, index);
+  const selected = assignedSlot?.id === activeSlot.id;
+  const usedElsewhere = assignedSlot && !selected;
+  const disabled = locked || usedElsewhere;
+  const clue = getMobileClueText(activeSlot.id, movie);
+  return `
+    <button class="mobile-movie-card ${selected ? 'selected' : ''} ${usedElsewhere ? 'used' : ''}" data-mobile-movie="${index}" type="button" ${disabled ? 'disabled' : ''} aria-pressed="${selected ? 'true' : 'false'}">
+      <span class="mobile-poster">
+        ${poster ? `<img src="${poster}" alt="${escapeHTML(movie.title)}" loading="lazy">` : '<span class="no-poster">FF</span>'}
+      </span>
+      <span class="mobile-movie-copy">
+        <strong>${escapeHTML(movie.title)}</strong>
+        <span class="mobile-clue">${escapeHTML(clue)}</span>
+        ${usedElsewhere ? `<span class="mobile-used-label">Used for ${escapeHTML(assignedSlot.short)}</span>` : ''}
+        ${selected ? '<span class="mobile-used-label selected-label">Tap to clear</span>' : ''}
+      </span>
+    </button>
+  `;
+}
+
+function renderPreviousSlotReview(attempt, slotId) {
+  const result = attempt.results?.find(item => item.slotId === slotId);
+  if (!result) return '';
+  return `
+    <div class="mobile-prev-review">
+      <span>Last try</span>
+      <strong>${escapeHTML(result.movieTitle)}</strong>
+      <small>${escapeHTML(getCellDetailText(result))}</small>
+    </div>
+  `;
+}
+
+function findAssignedSlotForMovie(attempt, movieIdx) {
+  if (!attempt) return null;
+  return state.game.slots.find(slot => attempt.assignments[slot.id] === movieIdx) || null;
+}
+
+function remainingSlots(attempt) {
+  if (!attempt) return state.game.slots.length;
+  return state.game.slots.filter(slot => attempt.assignments[slot.id] === undefined).length;
+}
+
+function firstOpenSlotIndex() {
+  const active = state.attempts[state.activeAttempt];
+  if (!active || !state.game) return 0;
+  const index = state.game.slots.findIndex(slot => active.assignments[slot.id] === undefined);
+  return index === -1 ? Math.min(state.activeSlotIndex || 0, state.game.slots.length - 1) : index;
+}
+
+function normalizeActiveSlot() {
+  if (!state.game?.slots?.length) {
+    state.activeSlotIndex = 0;
+    return;
+  }
+  if (!Number.isInteger(state.activeSlotIndex) || state.activeSlotIndex < 0 || state.activeSlotIndex >= state.game.slots.length) {
+    state.activeSlotIndex = firstOpenSlotIndex();
+  }
+}
+
+function advanceMobileSlot(fromIndex) {
+  const active = state.attempts[state.activeAttempt];
+  if (!active) return;
+  for (let offset = 1; offset <= state.game.slots.length; offset += 1) {
+    const next = (fromIndex + offset) % state.game.slots.length;
+    if (active.assignments[state.game.slots[next].id] === undefined) {
+      state.activeSlotIndex = next;
+      return;
+    }
+  }
+  state.activeSlotIndex = fromIndex;
+}
+
+function assignMobileMovie(movieIdx) {
+  if (state.gameOver || state.revealAttemptIndex !== null) return;
+  const active = state.attempts[state.activeAttempt];
+  const slot = state.game.slots[state.activeSlotIndex];
+  if (!active || !slot) return;
+
+  const assignedSlot = findAssignedSlotForMovie(active, movieIdx);
+  if (assignedSlot && assignedSlot.id !== slot.id) return;
+  if (active.assignments[slot.id] === movieIdx) {
+    delete active.assignments[slot.id];
+    state.selectedMovieIdx = null;
+    saveProgress();
+    renderGame();
+    return;
+  }
+
+  active.assignments[slot.id] = movieIdx;
+  state.selectedMovieIdx = null;
+  localStorage.setItem(ONBOARDING_KEY, '1');
+  advanceMobileSlot(state.activeSlotIndex);
+  saveProgress();
+  renderGame();
+}
+
+function getMobileClueText(slotId, movie) {
+  switch (slotId) {
+    case 'year':
+      return `${movie.year} scores ${movie.year % 10}`;
+    case 'rating':
+      return `${movie.rating.toFixed(1)} rating scores ${Math.floor(movie.rating)}`;
+    case 'boxOffice': {
+      const millions = Math.floor(movie.revenue / 1000000);
+      const firstDigit = parseInt(String(millions)[0], 10) || 0;
+      return `${formatMoney(movie.revenue)} scores ${firstDigit}`;
+    }
+    case 'genres':
+      return `${movie.genreCount} genre${movie.genreCount === 1 ? '' : 's'}`;
+    case 'runtime':
+      return `${movie.runtime} min scores ${Math.floor(movie.runtime / 10)}`;
+    default:
+      return '';
+  }
 }
 
 function getCellDetailText(result) {
@@ -665,6 +804,7 @@ function renderActions() {
   const share = $('#share-btn');
   const reset = $('#try-again-btn');
   reset.textContent = 'Start Over';
+  reset.classList.add('btn-reset');
 
   if (state.gameOver) {
     const finalAttempt = lastSubmittedAttempt();
@@ -694,12 +834,12 @@ function renderActions() {
     } else {
       status.textContent = `${left} slot${left === 1 ? '' : 's'} left in try ${state.activeAttempt + 1}.`;
     }
-    submit.hidden = false;
+    submit.hidden = isNarrowMobile() && !ready;
     submit.disabled = !ready || state.revealAttemptIndex !== null;
     submit.textContent = `Submit Try ${state.activeAttempt + 1}`;
     reveal.hidden = true;
     share.hidden = true;
-    reset.hidden = false;
+    reset.hidden = isNarrowMobile();
   }
 }
 
@@ -729,6 +869,10 @@ function selectCell(attemptIndex, slotId) {
   renderGame();
 }
 
+function isNarrowMobile() {
+  return window.matchMedia('(max-width: 520px)').matches;
+}
+
 function submitAttempt() {
   if (state.gameOver || state.revealAttemptIndex !== null) return;
   const active = state.attempts[state.activeAttempt];
@@ -755,6 +899,7 @@ function submitAttempt() {
     );
   } else {
     state.activeAttempt += 1;
+    state.activeSlotIndex = firstOpenSlotIndex();
   }
 
   saveProgress();
@@ -804,6 +949,7 @@ function finishScoreReveal(attemptIndex) {
   state.revealCount = 0;
   state.scoreCountValue = null;
   if (state.gameOver) renderResults();
+  state.activeSlotIndex = firstOpenSlotIndex();
   renderGame();
 }
 
@@ -900,6 +1046,36 @@ function getDisplayedBestResults() {
   return assignment ? buildResults(assignment).results : state.best.bestResults;
 }
 
+function resultToneClass(score, maxScore) {
+  const ratio = maxScore > 0 ? score / maxScore : 0;
+  if (ratio >= 0.82) return 'score-high';
+  if (ratio >= 0.55) return 'score-mid';
+  return 'score-low';
+}
+
+function getOptimalResultForSlot(slotId) {
+  return getDisplayedBestResults().find(result => result.slotId === slotId)
+    || state.best.bestResults.find(result => result.slotId === slotId);
+}
+
+function buildSlotComparisons(attempt) {
+  if (!attempt?.results) return [];
+  const bestAssign = getDisplayedBestAssignment();
+  return state.game.slots.map(slot => {
+    const player = attempt.results.find(result => result.slotId === slot.id);
+    const optimal = getOptimalResultForSlot(slot.id);
+    const playerMovieIdx = attempt.assignments[slot.id];
+    const optimalMovieIdx = bestAssign?.[slot.id];
+    return {
+      slot,
+      player,
+      optimal,
+      exact: playerMovieIdx !== undefined && playerMovieIdx === optimalMovieIdx,
+      diff: Math.max(0, (optimal?.score || 0) - (player?.score || 0)),
+    };
+  });
+}
+
 function differsFromComputedBest(assignments) {
   if (!assignments || !state.best?.bestAssign) return false;
   return state.game.slots.some(slot => assignments[slot.id] !== state.best.bestAssign[slot.id]);
@@ -920,6 +1096,39 @@ function renderBestReveal() {
   const note = finalAttempt?.score === state.best.bestTotal && differsFromComputedBest(finalAttempt.assignments)
     ? '<p class="best-note">There are multiple perfect arrangements. This keeps the one you found.</p>'
     : '';
+
+  if (finalAttempt?.results) {
+    const comparisons = buildSlotComparisons(finalAttempt);
+    el.innerHTML = `
+      <div class="best-reveal-head">
+        <h2>${finalAttempt.score === state.best.bestTotal ? 'Final vs Optimal' : 'Points Left'}</h2>
+        <strong>${state.best.bestTotal}</strong>
+      </div>
+      ${note}
+      <div class="compare-grid">
+        ${comparisons.map(item => `
+          <div class="compare-item ${item.exact ? 'exact' : ''} ${item.diff === 0 ? 'no-gap' : ''}">
+            <span class="compare-slot">${escapeHTML(item.slot.name)}</span>
+            <div class="compare-picks">
+              <div>
+                <small>Your pick</small>
+                <strong>${escapeHTML(item.player.movieTitle)}</strong>
+                <em>${escapeHTML(getSlotCalcText(item.player))} = ${item.player.score}</em>
+              </div>
+              <div>
+                <small>Optimal</small>
+                <strong>${escapeHTML(item.optimal.movieTitle)}</strong>
+                <em>${escapeHTML(getSlotCalcText(item.optimal))} = ${item.optimal.score}</em>
+              </div>
+            </div>
+            <b>${item.exact ? 'Matched' : item.diff === 0 ? 'No points lost' : `-${item.diff}`}</b>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    show(el);
+    return;
+  }
 
   el.innerHTML = `
     <div class="best-reveal-head">
@@ -972,10 +1181,19 @@ function renderResults() {
     </div>
     <div class="result-breakdown">
       ${finalAttempt.results.map(result => `
-        <div class="result-item">
+        <div class="result-item ${resultToneClass(result.score, result.maxScore)}">
           <span>${escapeHTML(result.slotName)}</span>
           <strong>${escapeHTML(result.movieTitle)}</strong>
           <small>${escapeHTML(getSlotCalcText(result))} = ${result.score}</small>
+        </div>
+      `).join('')}
+    </div>
+    <div class="result-breakdown compare-results">
+      ${buildSlotComparisons(finalAttempt).map(item => `
+        <div class="result-item ${item.exact ? 'score-high' : item.diff === 0 ? 'score-mid' : 'score-low'}">
+          <span>${escapeHTML(item.slot.short)} Compare</span>
+          <strong>${item.exact ? 'Optimal pick' : item.diff === 0 ? 'Matched score' : `${item.diff} point${item.diff === 1 ? '' : 's'} missed`}</strong>
+          <small>${escapeHTML(item.player.movieTitle)} vs ${escapeHTML(item.optimal.movieTitle)}</small>
         </div>
       `).join('')}
     </div>
@@ -1014,7 +1232,18 @@ function rowSymbol(attempt) {
 }
 
 function attemptShareRow(attempt) {
-  return rowSymbol(attempt).repeat(5);
+  if (!attempt?.submitted || !attempt.results) return rowSymbol(attempt).repeat(5);
+  const bestAssign = getDisplayedBestAssignment();
+  return state.game.slots.map(slot => {
+    const result = attempt.results.find(item => item.slotId === slot.id);
+    const optimal = getOptimalResultForSlot(slot.id);
+    if (!result || !optimal) return '▫️';
+    if (attempt.assignments[slot.id] === bestAssign?.[slot.id]) return '🟩';
+    if (result.score >= optimal.score) return '🟨';
+    const ratio = optimal.score > 0 ? result.score / optimal.score : 0;
+    if (ratio >= 0.75) return '🟧';
+    return '⬛';
+  }).join('');
 }
 
 function buildShareText() {
@@ -1063,6 +1292,7 @@ function tryAgain() {
   state.activeAttempt = 0;
   state.gameOver = false;
   state.selectedMovieIdx = null;
+  state.activeSlotIndex = 0;
   state.showingBest = false;
   state.revealAttemptIndex = null;
   state.revealCount = 0;
