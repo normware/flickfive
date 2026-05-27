@@ -1352,7 +1352,7 @@ h2 {
   margin-top: 8px !important;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 10000px) {
   .example-card {
     grid-template-columns: 1fr;
   }
@@ -1635,7 +1635,7 @@ h2 {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 10000px) {
   #app {
     width: min(100% - 16px, 480px);
     gap: 8px;

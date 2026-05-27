@@ -870,7 +870,7 @@ function selectCell(attemptIndex, slotId) {
 }
 
 function isNarrowMobile() {
-  return window.matchMedia('(max-width: 520px)').matches;
+  return true;
 }
 
 function submitAttempt() {
