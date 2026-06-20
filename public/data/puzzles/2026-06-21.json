@@ -1,0 +1,83 @@
+{
+  "date": "2026-06-21",
+  "slots": [
+    "boxOffice",
+    "year",
+    "runtime",
+    "genres",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1241752,
+      "title": "Rita",
+      "poster": "/pXENxAzOBrTSDJGxDcUnlNTNmWr.jpg",
+      "year": 2024,
+      "rating": 6,
+      "revenue": 2,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 808,
+      "title": "Shrek",
+      "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+      "year": 2001,
+      "rating": 7.765,
+      "revenue": 488977919,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Fantasy",
+        "Adventure",
+        "Family"
+      ],
+      "runtime": 90
+    },
+    {
+      "id": 674,
+      "title": "Harry Potter and the Goblet of Fire",
+      "poster": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+      "year": 2005,
+      "rating": 7.8,
+      "revenue": 895921036,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 157
+    },
+    {
+      "id": 672,
+      "title": "Harry Potter and the Chamber of Secrets",
+      "poster": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+      "year": 2002,
+      "rating": 7.705,
+      "revenue": 876688482,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 161
+    },
+    {
+      "id": 4247,
+      "title": "Scary Movie",
+      "poster": "/fVQFPRuw3yWXojYDJvA5EoFjUOY.jpg",
+      "year": 2000,
+      "rating": 6.414,
+      "revenue": 278023280,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 88
+    }
+  ]
+}

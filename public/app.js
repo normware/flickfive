@@ -39,7 +39,7 @@ const SLOT_RULES = {
   },
 };
 
-const BRAND = 'FlickFive';
+const BRAND = 'SlotFlix';
 const STORAGE_NS = 'flickfive';
 const PROGRESS_KEY = date => `${STORAGE_NS}:board:${date}`;
 const COMPLETE_DATES_KEY = `${STORAGE_NS}:completedDates`;
@@ -65,6 +65,9 @@ const state = {
   resultCountdownTimer: null,
   weekCountdownTimer: null,
   lastDialogTrigger: null,
+  draggingMovieIdx: null,
+  dropTargetSlotId: null,
+  weekAnchorDate: null,
 };
 
 const $ = selector => document.querySelector(selector);
@@ -131,6 +134,14 @@ function formatDateLabel(date) {
 
 const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
+function getPuzzleDates() {
+  return [...(state.index?.dates || [])].sort();
+}
+
+function getLatestPlayableDate(today = localISODate()) {
+  return getPuzzleDates().filter(date => date <= today).at(-1) || null;
+}
+
 async function fetchJSON(url) {
   const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Could not load ${url}`);
@@ -156,11 +167,16 @@ async function init() {
       await playDate(today);
       return;
     }
+    state.weekAnchorDate = getLatestPlayableDate(today) || today;
     renderWeekView();
     show($('#week-view'));
   } catch (err) {
     hide($('#loading'));
-    $('#no-game-msg').textContent = 'Static puzzle data could not be loaded. Run npm run build before publishing.';
+    if (window.location.protocol === 'file:') {
+      $('#no-game-msg').textContent = 'Local file mode cannot load puzzle JSON. Start the app server and open http://localhost:3000 instead.';
+    } else {
+      $('#no-game-msg').textContent = 'Static puzzle data could not be loaded. Run npm run build before publishing.';
+    }
     show($('#no-game'));
   }
 }
@@ -173,12 +189,16 @@ function getWeekDateStr(date) {
 function renderWeekView() {
   stopWeekCountdown();
   const today = localISODate();
-  const dates = state.index.dates;
+  const dates = getPuzzleDates();
   const completed = new Set(getCompletedDates());
   const stats = getStats();
   const now = Date.now();
 
-  const weekDays = getWeekRange();
+  if (!state.weekAnchorDate || dates.includes(today)) {
+    state.weekAnchorDate = dates.includes(today) ? today : getLatestPlayableDate(today) || today;
+  }
+
+  const weekDays = getWeekRange(new Date(`${state.weekAnchorDate}T00:00:00`));
   $('#week-label').textContent = `${formatDateLabel(weekDays[0])}  —  ${formatDateLabel(weekDays[6])}`;
 
   const html = weekDays.map((day, i) => {
@@ -467,7 +487,7 @@ function renderMovies() {
     const bestPicked = state.showingBest && bestPickedMovieIndices.has(index);
     const revealRows = state.showingBest ? buildRevealRowsForMovie(movie, index) : [];
     return `
-      <button class="movie-card ${assigned ? 'assigned' : ''} ${selected ? 'selected' : ''} ${bestPicked ? 'best-picked' : ''}" data-idx="${index}" type="button" aria-pressed="${selected ? 'true' : 'false'}" ${assigned || state.gameOver ? 'disabled' : ''}>
+      <button class="movie-card ${assigned ? 'assigned' : ''} ${selected ? 'selected' : ''} ${bestPicked ? 'best-picked' : ''}" data-idx="${index}" type="button" draggable="${(!assigned && !state.gameOver).toString()}" aria-pressed="${selected ? 'true' : 'false'}" ${assigned || state.gameOver ? 'disabled' : ''}>
         <span class="poster">
           ${poster ? `<img src="${poster}" alt="${escapeHTML(movie.title)}" loading="lazy">` : '<span class="no-poster">FF</span>'}
         </span>
@@ -500,6 +520,8 @@ function renderMovies() {
 
   $$('.movie-card').forEach(card => {
     card.addEventListener('click', () => selectMovie(parseInt(card.dataset.idx, 10)));
+    card.addEventListener('dragstart', event => handleMovieDragStart(event, parseInt(card.dataset.idx, 10)));
+    card.addEventListener('dragend', handleMovieDragEnd);
   });
 }
 
@@ -565,10 +587,11 @@ function renderAttempts() {
       const revealReady = !isRevealing || slotIndex < state.revealCount;
       const score = revealReady ? result?.score : undefined;
       const detail = revealReady && result ? getCellDetailText(result) : '';
-      const canPlace = isActive && state.selectedMovieIdx !== null && movieIdx === undefined;
+      const canPlace = isActive && (state.selectedMovieIdx !== null || state.draggingMovieIdx !== null) && movieIdx === undefined;
       const animateReveal = isRevealing && score !== undefined;
+      const dropOver = state.dropTargetSlotId === slot.id;
       return `
-        <button class="guess-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${animateReveal ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
+        <button class="guess-cell ${movie ? 'filled' : ''} ${canPlace ? 'drop-target' : ''} ${dropOver ? 'drop-over' : ''} ${animateReveal ? 'just-revealed' : ''}" data-attempt="${attemptIndex}" data-slot="${slot.id}" type="button" ${isActive ? '' : 'disabled'}>
           <span class="cell-title">${movie ? escapeHTML(movie.title) : 'Pick film'}</span>
           <span class="cell-meta">${movie ? escapeHTML(SLOT_RULES[slot.id].short) : 'Open'}</span>
           ${result ? `<span class="cell-detail">${escapeHTML(detail)}</span>` : ''}
@@ -589,7 +612,101 @@ function renderAttempts() {
 
   $$('.guess-cell').forEach(cell => {
     cell.addEventListener('click', () => selectCell(parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
+    cell.addEventListener('dragenter', event => handleCellDragEnter(event, parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
+    cell.addEventListener('dragover', event => handleCellDragOver(event, parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
+    cell.addEventListener('dragleave', event => handleCellDragLeave(event, cell.dataset.slot));
+    cell.addEventListener('drop', event => handleCellDrop(event, parseInt(cell.dataset.attempt, 10), cell.dataset.slot));
   });
+}
+
+function handleMovieDragStart(event, idx) {
+  if (state.gameOver || state.revealAttemptIndex !== null) return;
+  const active = state.attempts[state.activeAttempt];
+  if (!active || Object.values(active.assignments).includes(idx)) return;
+  state.draggingMovieIdx = idx;
+  state.dropTargetSlotId = null;
+  const movie = state.game.movies[idx];
+  if (event.dataTransfer) {
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', String(idx));
+  }
+  const ghost = $('#drag-ghost');
+  if (ghost) {
+    ghost.textContent = movie?.title || 'Movie';
+    ghost.hidden = false;
+    if (event.dataTransfer) event.dataTransfer.setDragImage(ghost, 16, 16);
+  }
+  $('#app')?.classList.add('is-dragging-movie');
+  renderAttempts();
+  renderActions();
+}
+
+function handleMovieDragEnd() {
+  state.draggingMovieIdx = null;
+  state.dropTargetSlotId = null;
+  $('#app')?.classList.remove('is-dragging-movie');
+  const ghost = $('#drag-ghost');
+  if (ghost) ghost.hidden = true;
+  renderAttempts();
+  renderActions();
+}
+
+function handleCellDragEnter(event, attemptIndex, slotId) {
+  if (!canDropIntoCell(attemptIndex, slotId)) return;
+  event.preventDefault();
+  state.dropTargetSlotId = slotId;
+  renderAttempts();
+}
+
+function handleCellDragOver(event, attemptIndex, slotId) {
+  if (!canDropIntoCell(attemptIndex, slotId)) return;
+  event.preventDefault();
+  if (event.dataTransfer) event.dataTransfer.dropEffect = 'move';
+  if (state.dropTargetSlotId !== slotId) {
+    state.dropTargetSlotId = slotId;
+    renderAttempts();
+  }
+}
+
+function handleCellDragLeave(event, slotId) {
+  const nextTarget = event.relatedTarget;
+  if (nextTarget && event.currentTarget.contains(nextTarget)) return;
+  if (state.dropTargetSlotId === slotId) {
+    state.dropTargetSlotId = null;
+    renderAttempts();
+  }
+}
+
+function handleCellDrop(event, attemptIndex, slotId) {
+  if (!canDropIntoCell(attemptIndex, slotId)) return;
+  event.preventDefault();
+  const raw = event.dataTransfer?.getData('text/plain');
+  const movieIdx = Number.isInteger(state.draggingMovieIdx) ? state.draggingMovieIdx : parseInt(raw, 10);
+  if (!Number.isInteger(movieIdx)) return;
+  placeMovieInActiveSlot(slotId, movieIdx);
+  handleMovieDragEnd();
+}
+
+function canDropIntoCell(attemptIndex, slotId) {
+  if (state.gameOver || state.revealAttemptIndex !== null) return false;
+  if (attemptIndex !== state.activeAttempt) return false;
+  const active = state.attempts[state.activeAttempt];
+  if (!active) return false;
+  const slotIsValid = state.game.slots.some(slot => slot.id === slotId);
+  if (!slotIsValid) return false;
+  return state.draggingMovieIdx !== null;
+}
+
+function placeMovieInActiveSlot(slotId, movieIdx) {
+  const active = state.attempts[state.activeAttempt];
+  if (!active) return;
+  if (Object.values(active.assignments).includes(movieIdx)) return;
+  active.assignments[slotId] = movieIdx;
+  state.selectedMovieIdx = null;
+  state.dropTargetSlotId = null;
+  localStorage.setItem(ONBOARDING_KEY, '1');
+  saveProgress();
+  renderGame();
 }
 
 function getRowScoreText(attempt, attemptIndex, isActive) {
@@ -613,6 +730,7 @@ function renderMobileBoard() {
 
   el.innerHTML = `
     <section class="mobile-picker ${locked ? 'locked' : ''}">
+      ${renderMobileTrySummary()}
       <div class="mobile-progress-strip" aria-label="Category progress">
         ${state.game.slots.map((slot, index) => {
           const filled = active?.assignments[slot.id] !== undefined;
@@ -653,13 +771,25 @@ function renderMobileBoard() {
   });
 }
 
+function renderMobileTrySummary() {
+  const submitted = state.attempts
+    .map((attempt, index) => ({ attempt, index }))
+    .filter(item => item.attempt.submitted);
+  if (!submitted.length) return '';
+  return `
+    <div class="mobile-try-summary" aria-label="Submitted try scores">
+      ${submitted.map(item => `<span class="mobile-try-pill">Try ${item.index + 1}: ${item.attempt.score}/${state.best.bestTotal}</span>`).join('')}
+    </div>
+  `;
+}
+
 function renderMobileMovieCard(movie, index, active, activeSlot, locked) {
   const poster = posterURL(movie.poster);
   const assignedSlot = findAssignedSlotForMovie(active, index);
   const selected = assignedSlot?.id === activeSlot.id;
   const usedElsewhere = assignedSlot && !selected;
   const disabled = locked || usedElsewhere;
-  const clue = getMobileClueText(activeSlot.id, movie);
+  const knownDetails = getKnownSlotDetailsForMovie(index, activeSlot.id);
   return `
     <button class="mobile-movie-card ${selected ? 'selected' : ''} ${usedElsewhere ? 'used' : ''}" data-mobile-movie="${index}" type="button" ${disabled ? 'disabled' : ''} aria-pressed="${selected ? 'true' : 'false'}">
       <span class="mobile-poster">
@@ -667,12 +797,26 @@ function renderMobileMovieCard(movie, index, active, activeSlot, locked) {
       </span>
       <span class="mobile-movie-copy">
         <strong>${escapeHTML(movie.title)}</strong>
-        <span class="mobile-clue">${escapeHTML(clue)}</span>
+        ${knownDetails.length ? `<span class="mobile-known-wrap">${knownDetails.map(item => `<span class="mobile-known-label">${escapeHTML(item)}</span>`).join('')}</span>` : ''}
         ${usedElsewhere ? `<span class="mobile-used-label">Used for ${escapeHTML(assignedSlot.short)}</span>` : ''}
         ${selected ? '<span class="mobile-used-label selected-label">Tap to clear</span>' : ''}
       </span>
     </button>
   `;
+}
+
+function getKnownSlotDetailsForMovie(movieIdx, slotId) {
+  const details = [];
+  for (let i = state.activeAttempt - 1; i >= 0; i -= 1) {
+    const attempt = state.attempts[i];
+    if (!attempt?.submitted) continue;
+    if (attempt.assignments[slotId] !== movieIdx) continue;
+    const result = attempt.results?.find(item => item.slotId === slotId);
+    if (!result) continue;
+    details.push(`Try ${i + 1}: ${getCellDetailText(result)}`);
+    if (details.length === 2) break;
+  }
+  return details;
 }
 
 function renderPreviousSlotReview(attempt, slotId) {
@@ -751,26 +895,6 @@ function assignMobileMovie(movieIdx) {
   renderGame();
 }
 
-function getMobileClueText(slotId, movie) {
-  switch (slotId) {
-    case 'year':
-      return `${movie.year} scores ${movie.year % 10}`;
-    case 'rating':
-      return `${movie.rating.toFixed(1)} rating scores ${Math.floor(movie.rating)}`;
-    case 'boxOffice': {
-      const millions = Math.floor(movie.revenue / 1000000);
-      const firstDigit = parseInt(String(millions)[0], 10) || 0;
-      return `${formatMoney(movie.revenue)} scores ${firstDigit}`;
-    }
-    case 'genres':
-      return `${movie.genreCount} genre${movie.genreCount === 1 ? '' : 's'}`;
-    case 'runtime':
-      return `${movie.runtime} min scores ${Math.floor(movie.runtime / 10)}`;
-    default:
-      return '';
-  }
-}
-
 function getCellDetailText(result) {
   switch (result.slotId) {
     case 'year':
@@ -828,7 +952,7 @@ function renderActions() {
       status.innerHTML = `
         <span class="selected-pill">
           ${poster ? `<img src="${poster}" alt="" loading="lazy">` : '<span class="selected-pill-fallback">FF</span>'}
-          <span><strong>${escapeHTML(movie.title)}</strong><small>Tap a rule slot to place it</small></span>
+          <span><strong>${escapeHTML(movie.title)}</strong><small>Drag to a slot or tap a slot to place it</small></span>
         </span>
       `;
     } else {
@@ -857,10 +981,8 @@ function selectCell(attemptIndex, slotId) {
   const active = state.attempts[state.activeAttempt];
 
   if (state.selectedMovieIdx !== null) {
-    if (Object.values(active.assignments).includes(state.selectedMovieIdx)) return;
-    active.assignments[slotId] = state.selectedMovieIdx;
-    state.selectedMovieIdx = null;
-    localStorage.setItem(ONBOARDING_KEY, '1');
+    placeMovieInActiveSlot(slotId, state.selectedMovieIdx);
+    return;
   } else if (active.assignments[slotId] !== undefined) {
     delete active.assignments[slotId];
   }
@@ -1375,14 +1497,14 @@ function closeDialog(el) {
   state.lastDialogTrigger = null;
 }
 
-window.toggleScoring = function toggleScoring() {
+function toggleScoring() {
   const el = $('#scoring-ref');
   if (el.hidden) {
     openDialog(el, $('.scoring-panel'));
   } else {
     closeDialog(el);
   }
-};
+}
 
 $('#submit-btn').addEventListener('click', submitAttempt);
 $('#back-to-week-btn').addEventListener('click', backToWeek);

@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-22",
+  "slots": [
+    "runtime",
+    "genres",
+    "year",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1325734,
+      "title": "The Drama",
+      "poster": "/qhGCY6DIemLoCi7x1GuEt98m4JF.jpg",
+      "year": 2026,
+      "rating": 6.959,
+      "revenue": 140892471,
+      "genreCount": 3,
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 105
+    },
+    {
+      "id": 12104,
+      "title": "Pink Floyd: The Wall",
+      "poster": "/aElHyIdF5jmctFGhlhhaPFsbBJC.jpg",
+      "year": 1982,
+      "rating": 7.928,
+      "revenue": 22244207,
+      "genreCount": 2,
+      "genres": [
+        "Music",
+        "Drama"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 299534,
+      "title": "Avengers: Endgame",
+      "poster": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+      "year": 2019,
+      "rating": 8.238,
+      "revenue": 2799439100,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Science Fiction",
+        "Action"
+      ],
+      "runtime": 181
+    },
+    {
+      "id": 767,
+      "title": "Harry Potter and the Half-Blood Prince",
+      "poster": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+      "year": 2009,
+      "rating": 7.68,
+      "revenue": 933959197,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 153
+    },
+    {
+      "id": 1480387,
+      "title": "undertone",
+      "poster": "/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
+      "year": 2026,
+      "rating": 6.2,
+      "revenue": 21602976,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 94
+    }
+  ]
+}

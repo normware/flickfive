@@ -1,0 +1,85 @@
+{
+  "date": "2026-06-23",
+  "slots": [
+    "year",
+    "genres",
+    "boxOffice",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 675,
+      "title": "Harry Potter and the Order of the Phoenix",
+      "poster": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+      "year": 2007,
+      "rating": 7.672,
+      "revenue": 938212738,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 936075,
+      "title": "Michael",
+      "poster": "/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg",
+      "year": 2026,
+      "rating": 8.658,
+      "revenue": 934009960,
+      "genreCount": 2,
+      "genres": [
+        "Music",
+        "Drama"
+      ],
+      "runtime": 128
+    },
+    {
+      "id": 1184918,
+      "title": "The Wild Robot",
+      "poster": "/eG9lz41mJqsI4J6ubMtVqD26q2J.jpg",
+      "year": 2024,
+      "rating": 8.315,
+      "revenue": 331982078,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Animation",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 129,
+      "title": "Spirited Away",
+      "poster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "year": 2001,
+      "rating": 8.535,
+      "revenue": 274925095,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 337167,
+      "title": "Fifty Shades Freed",
+      "poster": "/jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+      "year": 2018,
+      "rating": 6.672,
+      "revenue": 371985018,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 105
+    }
+  ]
+}

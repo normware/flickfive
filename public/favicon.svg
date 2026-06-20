@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SlotFlix">
+  <defs>
+    <linearGradient id="poster" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffcb65"/>
+      <stop offset="0.5" stop-color="#f26f3a"/>
+      <stop offset="1" stop-color="#2f86ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#111113"/>
+  <path d="M15 11h34a6 6 0 0 1 6 6v30a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6V17a6 6 0 0 1 6-6Z" fill="url(#poster)"/>
+  <path d="M10 22h44M10 42h44" stroke="#111113" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+  <path d="M19 11v42M45 11v42" stroke="#111113" stroke-width="3.5" stroke-linecap="round" opacity="0.58"/>
+  <circle cx="18" cy="22" r="2.5" fill="#fffdf8"/>
+  <circle cx="32" cy="22" r="2.5" fill="#fffdf8"/>
+  <circle cx="46" cy="22" r="2.5" fill="#fffdf8"/>
+  <circle cx="18" cy="42" r="2.5" fill="#fffdf8"/>
+  <circle cx="32" cy="42" r="2.5" fill="#fffdf8"/>
+  <circle cx="46" cy="42" r="2.5" fill="#fffdf8"/>
+  <text x="32" y="39" text-anchor="middle" fill="#fffdf8" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900">5</text>
+</svg>

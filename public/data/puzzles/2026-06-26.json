@@ -1,0 +1,90 @@
+{
+  "date": "2026-06-26",
+  "slots": [
+    "year",
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1305781,
+      "title": "Blades of the Guardians",
+      "poster": "/AbunjMKX4P1sDNlKfhYrWkIoRD9.jpg",
+      "year": 2026,
+      "rating": 7.023,
+      "revenue": 203356793,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Drama",
+        "History"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 1233413,
+      "title": "Sinners",
+      "poster": "/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg",
+      "year": 2025,
+      "rating": 7.498,
+      "revenue": 370000000,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 1226863,
+      "title": "The Super Mario Galaxy Movie",
+      "poster": "/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+      "year": 2026,
+      "rating": 8.205,
+      "revenue": 1000843925,
+      "genreCount": 5,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Adventure",
+        "Fantasy",
+        "Animation"
+      ],
+      "runtime": 98
+    },
+    {
+      "id": 27,
+      "title": "9 Songs",
+      "poster": "/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg",
+      "year": 2004,
+      "rating": 5.545,
+      "revenue": 1574623,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Music",
+        "Romance"
+      ],
+      "runtime": 70
+    },
+    {
+      "id": 301528,
+      "title": "Toy Story 4",
+      "poster": "/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+      "year": 2019,
+      "rating": 7.462,
+      "revenue": 1073841394,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "runtime": 100
+    }
+  ]
+}

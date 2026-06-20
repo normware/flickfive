@@ -1,0 +1,85 @@
+{
+  "date": "2026-06-25",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "rating",
+    "year",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 235271,
+      "title": "Addicted",
+      "poster": "/fAERrD6vvmznDoL99wlgjhSfPcH.jpg",
+      "year": 2014,
+      "rating": 5.91,
+      "revenue": 17534314,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 105
+    },
+    {
+      "id": 949536,
+      "title": "Kill Code",
+      "poster": "/bXvSKLCillha6wxY0yxoRCM2WQl.jpg",
+      "year": 2026,
+      "rating": 5.4,
+      "revenue": 19426,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 87
+    },
+    {
+      "id": 863,
+      "title": "Toy Story 2",
+      "poster": "/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg",
+      "year": 1999,
+      "rating": 7.61,
+      "revenue": 497375404,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 92
+    },
+    {
+      "id": 48650,
+      "title": "Room in Rome",
+      "poster": "/w90ItYf9qagQKVEBr1uFxPomAtf.jpg",
+      "year": 2010,
+      "rating": 6.405,
+      "revenue": 844281,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 533535,
+      "title": "Deadpool & Wolverine",
+      "poster": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+      "year": 2024,
+      "rating": 7.573,
+      "revenue": 1338073645,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 128
+    }
+  ]
+}
