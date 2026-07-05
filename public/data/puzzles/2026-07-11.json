@@ -1,0 +1,86 @@
+{
+  "date": "2026-07-11",
+  "slots": [
+    "genres",
+    "year",
+    "runtime",
+    "rating",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1091,
+      "title": "The Thing",
+      "poster": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
+      "year": 1982,
+      "rating": 8.074,
+      "revenue": 19629760,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 680493,
+      "title": "Return to Silent Hill",
+      "poster": "/mdw7bSnE11WpwWf3ViXtnavuqiT.jpg",
+      "year": 2026,
+      "rating": 5.373,
+      "revenue": 47976996,
+      "genreCount": 3,
+      "genres": [
+        "Mystery",
+        "Drama",
+        "Horror"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "poster": "/fCAURTUx3YfsJ8k9I0UamjSILiR.jpg",
+      "year": 2026,
+      "rating": 6.916,
+      "revenue": 678081840,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 372058,
+      "title": "Your Name.",
+      "poster": "/q719jXXEzOoYaps6babgKnONONX.jpg",
+      "year": 2016,
+      "rating": 8.481,
+      "revenue": 405320132,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Romance",
+        "Drama"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 39254,
+      "title": "Real Steel",
+      "poster": "/4GIeI5K5YdDUkR3mNQBoScpSFEf.jpg",
+      "year": 2011,
+      "rating": 7.116,
+      "revenue": 299300000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Drama"
+      ],
+      "runtime": 127
+    }
+  ]
+}

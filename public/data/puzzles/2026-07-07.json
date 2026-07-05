@@ -1,0 +1,91 @@
+{
+  "date": "2026-07-07",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "rating",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 150540,
+      "title": "Inside Out",
+      "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+      "year": 2015,
+      "rating": 7.908,
+      "revenue": 857611174,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 931285,
+      "title": "Mortal Kombat II",
+      "poster": "/hwRdDFIhaEmpRgoki805YvyyjZf.jpg",
+      "year": 2026,
+      "rating": 7.985,
+      "revenue": 129419161,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Adventure"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 19995,
+      "title": "Avatar",
+      "poster": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
+      "year": 2009,
+      "rating": 7.608,
+      "revenue": 2923706026,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 162
+    },
+    {
+      "id": 569094,
+      "title": "Spider-Man: Across the Spider-Verse",
+      "poster": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "year": 2023,
+      "rating": 8.337,
+      "revenue": 690897910,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 140
+    },
+    {
+      "id": 1301421,
+      "title": "The Sheep Detectives",
+      "poster": "/iKy5460GdsoknM8ppmGlJbKxAKa.jpg",
+      "year": 2026,
+      "rating": 7.753,
+      "revenue": 128377903,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Mystery",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 109
+    }
+  ]
+}
