@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-21",
+  "slots": [
+    "genres",
+    "year",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 105825,
+      "title": "Erotic Ghost Story III",
+      "poster": "/2b1Y6NbZenY45DgC5CwncoLkpo.jpg",
+      "year": 1992,
+      "rating": 5.6,
+      "revenue": 1201428,
+      "genreCount": 2,
+      "genres": [
+        "Fantasy",
+        "Horror"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 769,
+      "title": "GoodFellas",
+      "poster": "/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
+      "year": 1990,
+      "rating": 8.453,
+      "revenue": 47072327,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 145
+    },
+    {
+      "id": 1228710,
+      "title": "The Mandalorian and Grogu",
+      "poster": "/5Vi8dSauVwH1HOsiZceDMbRr1Ca.jpg",
+      "year": 2026,
+      "rating": 6.655,
+      "revenue": 342263695,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 132
+    },
+    {
+      "id": 713704,
+      "title": "Evil Dead Rise",
+      "poster": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+      "year": 2023,
+      "rating": 6.945,
+      "revenue": 147256372,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 96
+    },
+    {
+      "id": 619,
+      "title": "The Bodyguard",
+      "poster": "/ihWF0uY1xnKqw9YK7ZHNLUZOhcO.jpg",
+      "year": 1992,
+      "rating": 6.7,
+      "revenue": 411006740,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 129
+    }
+  ]
+}

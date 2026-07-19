@@ -1,0 +1,87 @@
+{
+  "date": "2026-07-24",
+  "slots": [
+    "genres",
+    "year",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1011985,
+      "title": "Kung Fu Panda 4",
+      "poster": "/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+      "year": 2024,
+      "rating": 7.006,
+      "revenue": 548040835,
+      "genreCount": 6,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 11770,
+      "title": "Shaolin Soccer",
+      "poster": "/z6ZQqwoxWy9muIxwUP4K2zWw7BU.jpg",
+      "year": 2001,
+      "rating": 7.18,
+      "revenue": 42776760,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 68726,
+      "title": "Pacific Rim",
+      "poster": "/8wo4eN8dWKaKlxhSvBz19uvj8gA.jpg",
+      "year": 2013,
+      "rating": 6.9,
+      "revenue": 411000000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 1122573,
+      "title": "In the Grey",
+      "poster": "/dQgIcW6Th08kMRf2HBoYWoFE6OD.jpg",
+      "year": 2026,
+      "rating": 7.464,
+      "revenue": 24310849,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 1368314,
+      "title": "Passenger",
+      "poster": "/2sOEJzhPzjTkZSlPbGxOJ7xgIyS.jpg",
+      "year": 2026,
+      "rating": 7.232,
+      "revenue": 31620508,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 94
+    }
+  ]
+}

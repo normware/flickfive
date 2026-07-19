@@ -1,0 +1,86 @@
+{
+  "date": "2026-07-22",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "year",
+    "genres",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 1309083,
+      "title": "Dolly",
+      "poster": "/sTPUg3XtdcKRAS5Vwsi1GYPFhNZ.jpg",
+      "year": 2026,
+      "rating": 5.828,
+      "revenue": 1062322,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 83
+    },
+    {
+      "id": 177572,
+      "title": "Big Hero 6",
+      "poster": "/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+      "year": 2014,
+      "rating": 7.726,
+      "revenue": 657870525,
+      "genreCount": 5,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Animation",
+        "Action",
+        "Comedy"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 20352,
+      "title": "Despicable Me",
+      "poster": "/b1BT309QWjtFUlJPLmXmrcHOWEL.jpg",
+      "year": 2010,
+      "rating": 7.26,
+      "revenue": 543284256,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Crime",
+        "Science Fiction",
+        "Family"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 109428,
+      "title": "Evil Dead",
+      "poster": "/1gDV0Lm9y8ufIKzyf0h0GBgb9Zj.jpg",
+      "year": 2013,
+      "rating": 6.621,
+      "revenue": 99010045,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 91
+    },
+    {
+      "id": 693134,
+      "title": "Dune: Part Two",
+      "poster": "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+      "year": 2024,
+      "rating": 8.129,
+      "revenue": 714844358,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 167
+    }
+  ]
+}

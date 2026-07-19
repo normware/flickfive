@@ -1,0 +1,82 @@
+{
+  "date": "2026-07-19",
+  "slots": [
+    "year",
+    "genres",
+    "rating",
+    "boxOffice",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 240,
+      "title": "The Godfather Part II",
+      "poster": "/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+      "year": 1974,
+      "rating": 8.572,
+      "revenue": 102600000,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 202
+    },
+    {
+      "id": 5721,
+      "title": "Vixen!",
+      "poster": "/9KMZWDA3xTrlgrScqdMisINQmsh.jpg",
+      "year": 1968,
+      "rating": 5.5,
+      "revenue": 8000000,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 72
+    },
+    {
+      "id": 872585,
+      "title": "Oppenheimer",
+      "poster": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "year": 2023,
+      "rating": 8.025,
+      "revenue": 952000000,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "runtime": 181
+    },
+    {
+      "id": 26827,
+      "title": "Who's That Girl",
+      "poster": "/2Yu6ciKKgSWIZAzUg4IrrifO23z.jpg",
+      "year": 1987,
+      "rating": 5.494,
+      "revenue": 7305209,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 438631,
+      "title": "Dune",
+      "poster": "/gDzOcq0pfeCeqMBwKIJlSmQpjkZ.jpg",
+      "year": 2021,
+      "rating": 7.782,
+      "revenue": 410668500,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "War"
+      ],
+      "runtime": 155
+    }
+  ]
+}
