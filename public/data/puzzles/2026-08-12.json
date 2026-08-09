@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-12",
+  "slots": [
+    "year",
+    "rating",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 599335,
+      "title": "OK! Madam",
+      "poster": "/Pl5mC3AptB2xsEhByYUZ4E9sXU.jpg",
+      "year": 2020,
+      "rating": 7.1,
+      "revenue": 9341543,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 822119,
+      "title": "Captain America: Brave New World",
+      "poster": "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+      "year": 2025,
+      "rating": 5.959,
+      "revenue": 415101577,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 105,
+      "title": "Back to the Future",
+      "poster": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+      "year": 1985,
+      "rating": 8.328,
+      "revenue": 381109762,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 497698,
+      "title": "Black Widow",
+      "poster": "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+      "year": 2021,
+      "rating": 7.16,
+      "revenue": 379751131,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 271110,
+      "title": "Captain America: Civil War",
+      "poster": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+      "year": 2016,
+      "rating": 7.5,
+      "revenue": 1155046416,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 147
+    }
+  ]
+}

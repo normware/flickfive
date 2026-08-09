@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-14",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "year",
+    "genres",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 1726,
+      "title": "Iron Man",
+      "poster": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+      "year": 2008,
+      "rating": 7.663,
+      "revenue": 585174222,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 986056,
+      "title": "Thunderbolts*",
+      "poster": "/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg",
+      "year": 2025,
+      "rating": 7.296,
+      "revenue": 382436917,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 12445,
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "poster": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+      "year": 2011,
+      "rating": 8.08,
+      "revenue": 1341511219,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 1083381,
+      "title": "Backrooms",
+      "poster": "/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg",
+      "year": 2026,
+      "rating": 7.111,
+      "revenue": 394954461,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 414906,
+      "title": "The Batman",
+      "poster": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+      "year": 2022,
+      "rating": 7.664,
+      "revenue": 772775278,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 177
+    }
+  ]
+}

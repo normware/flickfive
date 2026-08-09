@@ -1,0 +1,88 @@
+{
+  "date": "2026-08-11",
+  "slots": [
+    "runtime",
+    "year",
+    "genres",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 102382,
+      "title": "The Amazing Spider-Man 2",
+      "poster": "/dGjoPttcbKR5VWg1jQuNFB247KL.jpg",
+      "year": 2014,
+      "rating": 6.552,
+      "revenue": 716934779,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 284053,
+      "title": "Thor: Ragnarok",
+      "poster": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+      "year": 2017,
+      "rating": 7.582,
+      "revenue": 855301806,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 429617,
+      "title": "Spider-Man: Far From Home",
+      "poster": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+      "year": 2019,
+      "rating": 7.394,
+      "revenue": 1132723226,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 129
+    },
+    {
+      "id": 447365,
+      "title": "Guardians of the Galaxy Vol. 3",
+      "poster": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "year": 2023,
+      "rating": 7.931,
+      "revenue": 845550000,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 150
+    },
+    {
+      "id": 284054,
+      "title": "Black Panther",
+      "poster": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+      "year": 2018,
+      "rating": 7.364,
+      "revenue": 1349926083,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 135
+    }
+  ]
+}
