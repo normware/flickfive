@@ -9,6 +9,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
 const ENC_KEY = crypto.createHash('sha256').update(JWT_SECRET).digest();
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const ARCHIVE_FILE = path.join(DATA_DIR, 'archive.enc');
+const FUTURE_DAYS = 7;
 
 if (!TMDB_KEY || TMDB_KEY === '<your-api-key>') {
   console.error('Set TMDB_KEY in .env first');
@@ -55,6 +56,21 @@ function saveArchive(a) {
   fs.writeFileSync(ARCHIVE_FILE, encrypt(JSON.stringify(a)));
 }
 
+function isoDate(date) {
+  return date.toISOString().split('T')[0];
+}
+
+function utcDateFromISO(dateStr) {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return new Date(Date.UTC(year, month - 1, day));
+}
+
+function addDays(date, amount) {
+  const next = new Date(date);
+  next.setUTCDate(next.getUTCDate() + amount);
+  return next;
+}
+
 function passesBasic(m) {
   if (!m.vote_average || m.vote_average < 5) return false;
   if (!m.release_date || m.release_date < '1960-01-01') return false;
@@ -70,12 +86,17 @@ async function generate() {
   const archive = loadArchive();
   const existingDates = new Set(archive.days.map(d => d.date));
   const usedIds = new Set(archive.days.flatMap(d => d.movies.map(m => m.id)));
+  const latestDate = archive.days.reduce((latest, day) => {
+    if (!day.date) return latest;
+    return !latest || day.date > latest ? day.date : latest;
+  }, null);
+  const today = utcDateFromISO(isoDate(new Date()));
+  const startDate = latestDate ? addDays(utcDateFromISO(latestDate), 1) : today;
+  const horizonDate = addDays(today, FUTURE_DAYS - 1);
 
   const days = [];
-  for (let i = 0; i < 7; i++) {
-    const d = new Date();
-    d.setDate(d.getDate() + i);
-    const s = d.toISOString().split('T')[0];
+  for (let d = startDate; d <= horizonDate; d = addDays(d, 1)) {
+    const s = isoDate(d);
     if (!existingDates.has(s)) days.push(s);
   }
 
@@ -83,11 +104,13 @@ async function generate() {
   console.log(`Need data for ${days.length} day(s): ${days.join(', ')}`);
 
   const allMovies = [];
-  for (let page = 1; page <= 15; page++) {
+  const targetMovieCount = days.length * 5 + 5;
+  const targetPoolSize = Math.max(200, targetMovieCount * 10);
+  for (let page = 1; page <= 50; page++) {
     const data = await tmdbFetch(`/discover/movie?sort_by=popularity.desc&vote_average.gte=5&primary_release_date.gte=1960-01-01&page=${page}`);
     if (!data.results || data.results.length === 0) break;
     allMovies.push(...data.results);
-    if (allMovies.length >= 200) break;
+    if (allMovies.length >= targetPoolSize) break;
     await new Promise(r => setTimeout(r, 300));
   }
 
@@ -98,7 +121,7 @@ async function generate() {
 
   const detailed = [];
   for (const movie of candidates) {
-    if (detailed.length >= days.length * 5 + 5) break;
+    if (detailed.length >= targetMovieCount) break;
     try {
       const d = await tmdbFetch(`/movie/${movie.id}`);
       await new Promise(r => setTimeout(r, 300));

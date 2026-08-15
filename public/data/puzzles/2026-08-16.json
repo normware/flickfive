@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-16",
+  "slots": [
+    "genres",
+    "boxOffice",
+    "runtime",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1564614,
+      "title": "Leviticus",
+      "poster": "/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg",
+      "year": 2026,
+      "rating": 6.814,
+      "revenue": 8493480,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Romance"
+      ],
+      "runtime": 88
+    },
+    {
+      "id": 967941,
+      "title": "Wicked: For Good",
+      "poster": "/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+      "year": 2025,
+      "rating": 6.615,
+      "revenue": 540807971,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Romance"
+      ],
+      "runtime": 137
+    },
+    {
+      "id": 454639,
+      "title": "Masters of the Universe",
+      "poster": "/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg",
+      "year": 2026,
+      "rating": 7.195,
+      "revenue": 113763426,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Science Fiction"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 558449,
+      "title": "Gladiator II",
+      "poster": "/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+      "year": 2024,
+      "rating": 6.601,
+      "revenue": 462180717,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "runtime": 148
+    },
+    {
+      "id": 138843,
+      "title": "The Conjuring",
+      "poster": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+      "year": 2013,
+      "rating": 7.5,
+      "revenue": 321293998,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 112
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-08-21",
+  "slots": [
+    "genres",
+    "year",
+    "boxOffice",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 798645,
+      "title": "The Running Man",
+      "poster": "/dKL78O9zxczVgjtNcQ9UkbYLzqX.jpg",
+      "year": 2025,
+      "rating": 6.749,
+      "revenue": 69000000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 133
+    },
+    {
+      "id": 354912,
+      "title": "Coco",
+      "poster": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+      "year": 2017,
+      "rating": 8.197,
+      "revenue": 814641172,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Animation",
+        "Music",
+        "Adventure"
+      ],
+      "runtime": 105
+    },
+    {
+      "id": 283995,
+      "title": "Guardians of the Galaxy Vol. 2",
+      "poster": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+      "year": 2017,
+      "rating": 7.609,
+      "revenue": 863756051,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 137
+    },
+    {
+      "id": 299537,
+      "title": "Captain Marvel",
+      "poster": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+      "year": 2019,
+      "rating": 6.775,
+      "revenue": 1131416446,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 1078605,
+      "title": "Weapons",
+      "poster": "/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
+      "year": 2025,
+      "rating": 7.252,
+      "revenue": 269972492,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 129
+    }
+  ]
+}

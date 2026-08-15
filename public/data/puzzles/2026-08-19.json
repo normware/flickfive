@@ -1,0 +1,88 @@
+{
+  "date": "2026-08-19",
+  "slots": [
+    "runtime",
+    "boxOffice",
+    "rating",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1084244,
+      "title": "Toy Story 5",
+      "poster": "/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
+      "year": 2026,
+      "rating": 7.41,
+      "revenue": 1069518777,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 637649,
+      "title": "Wrath of Man",
+      "poster": "/M7SUK85sKjaStg4TKhlAVyGlz3.jpg",
+      "year": 2021,
+      "rating": 7.573,
+      "revenue": 103966489,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 552524,
+      "title": "Lilo & Stitch",
+      "poster": "/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg",
+      "year": 2025,
+      "rating": 7.189,
+      "revenue": 1038027526,
+      "genreCount": 3,
+      "genres": [
+        "Family",
+        "Science Fiction",
+        "Comedy"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 4935,
+      "title": "Howl's Moving Castle",
+      "poster": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
+      "year": 2004,
+      "rating": 8.387,
+      "revenue": 236049757,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Adventure"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 1422,
+      "title": "The Departed",
+      "poster": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+      "year": 2006,
+      "rating": 8.159,
+      "revenue": 291465000,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 151
+    }
+  ]
+}

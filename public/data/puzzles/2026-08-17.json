@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-17",
+  "slots": [
+    "rating",
+    "boxOffice",
+    "genres",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 49026,
+      "title": "The Dark Knight Rises",
+      "poster": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+      "year": 2012,
+      "rating": 7.796,
+      "revenue": 1081041287,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 165
+    },
+    {
+      "id": 1284465,
+      "title": "The Death of Robin Hood",
+      "poster": "/92Tsfx7SFafOqWsotvrlJbHyehd.jpg",
+      "year": 2026,
+      "rating": 6.309,
+      "revenue": 3200000,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Action"
+      ],
+      "runtime": 123
+    },
+    {
+      "id": 324786,
+      "title": "Hacksaw Ridge",
+      "poster": "/fnOMP6mjmOmZwmlC1n0K7ivrzt1.jpg",
+      "year": 2016,
+      "rating": 8.192,
+      "revenue": 175302354,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "runtime": 139
+    },
+    {
+      "id": 489,
+      "title": "Good Will Hunting",
+      "poster": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+      "year": 1997,
+      "rating": 8.163,
+      "revenue": 225933435,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 106646,
+      "title": "The Wolf of Wall Street",
+      "poster": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
+      "year": 2013,
+      "rating": 8.026,
+      "revenue": 407038432,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 180
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-18",
+  "slots": [
+    "rating",
+    "genres",
+    "runtime",
+    "year",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 18785,
+      "title": "The Hangover",
+      "poster": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
+      "year": 2009,
+      "rating": 7.336,
+      "revenue": 469310836,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 244786,
+      "title": "Whiplash",
+      "poster": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+      "year": 2014,
+      "rating": 8.375,
+      "revenue": 50307484,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Music",
+        "Thriller"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 198663,
+      "title": "The Maze Runner",
+      "poster": "/ode14q7WtDugFDp78fo9lCsmay9.jpg",
+      "year": 2014,
+      "rating": 7.19,
+      "revenue": 348319861,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Mystery",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 1054867,
+      "title": "One Battle After Another",
+      "poster": "/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
+      "year": 2025,
+      "rating": 7.341,
+      "revenue": 209377100,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Comedy"
+      ],
+      "runtime": 162
+    },
+    {
+      "id": 10195,
+      "title": "Thor",
+      "poster": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+      "year": 2011,
+      "rating": 6.771,
+      "revenue": 449326618,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 115
+    }
+  ]
+}
