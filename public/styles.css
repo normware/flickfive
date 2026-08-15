@@ -32,6 +32,10 @@ html, body {
 
 button { font: inherit; }
 
+[hidden] {
+  display: none !important;
+}
+
 #app {
   width: min(1180px, calc(100% - 20px));
   margin: 10px auto 28px;
