@@ -1,86 +1,88 @@
 {
   "date": "2026-08-18",
   "slots": [
-    "rating",
     "genres",
-    "runtime",
     "year",
-    "boxOffice"
+    "runtime",
+    "boxOffice",
+    "rating"
   ],
   "movies": [
     {
-      "id": 18785,
-      "title": "The Hangover",
-      "poster": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
-      "year": 2009,
-      "rating": 7.336,
-      "revenue": 469310836,
-      "genreCount": 1,
-      "genres": [
-        "Comedy"
-      ],
-      "runtime": 100
-    },
-    {
-      "id": 244786,
-      "title": "Whiplash",
-      "poster": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
-      "year": 2014,
-      "rating": 8.375,
-      "revenue": 50307484,
+      "id": 83533,
+      "title": "Avatar: Fire and Ash",
+      "poster": "/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg",
+      "year": 2025,
+      "rating": 7.645,
+      "revenue": 1485999890,
       "genreCount": 3,
       "genres": [
-        "Drama",
-        "Music",
-        "Thriller"
+        "Science Fiction",
+        "Adventure",
+        "Fantasy"
       ],
-      "runtime": 107
+      "runtime": 198
     },
     {
-      "id": 198663,
-      "title": "The Maze Runner",
-      "poster": "/ode14q7WtDugFDp78fo9lCsmay9.jpg",
-      "year": 2014,
-      "rating": 7.19,
-      "revenue": 348319861,
+      "id": 155,
+      "title": "The Dark Knight",
+      "poster": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "year": 2008,
+      "rating": 8.534,
+      "revenue": 1004558444,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 152
+    },
+    {
+      "id": 1083381,
+      "title": "Backrooms",
+      "poster": "/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg",
+      "year": 2026,
+      "rating": 7.099,
+      "revenue": 393135906,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 1110034,
+      "title": "Kraken",
+      "poster": "/xdZ8k5s8DTwWyPBMIcflrYLgcAK.jpg",
+      "year": 2026,
+      "rating": 6.285,
+      "revenue": 14329678,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 1419406,
+      "title": "The Shadow's Edge",
+      "poster": "/cHKo3m8N1fwvEy2ZEr0xGmmMODV.jpg",
+      "year": 2025,
+      "rating": 8.098,
+      "revenue": 174400000,
       "genreCount": 4,
       "genres": [
         "Action",
-        "Mystery",
-        "Science Fiction",
+        "Crime",
+        "Drama",
         "Thriller"
       ],
-      "runtime": 113
-    },
-    {
-      "id": 1054867,
-      "title": "One Battle After Another",
-      "poster": "/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
-      "year": 2025,
-      "rating": 7.341,
-      "revenue": 209377100,
-      "genreCount": 3,
-      "genres": [
-        "Thriller",
-        "Crime",
-        "Comedy"
-      ],
-      "runtime": 162
-    },
-    {
-      "id": 10195,
-      "title": "Thor",
-      "poster": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
-      "year": 2011,
-      "rating": 6.771,
-      "revenue": 449326618,
-      "genreCount": 3,
-      "genres": [
-        "Adventure",
-        "Fantasy",
-        "Action"
-      ],
-      "runtime": 115
+      "runtime": 142
     }
   ]
 }

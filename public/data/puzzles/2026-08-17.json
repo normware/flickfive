@@ -1,86 +1,86 @@
 {
   "date": "2026-08-17",
   "slots": [
-    "rating",
-    "boxOffice",
-    "genres",
     "runtime",
-    "year"
+    "year",
+    "boxOffice",
+    "rating",
+    "genres"
   ],
   "movies": [
     {
-      "id": 49026,
-      "title": "The Dark Knight Rises",
-      "poster": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
-      "year": 2012,
-      "rating": 7.796,
-      "revenue": 1081041287,
+      "id": 1084244,
+      "title": "Toy Story 5",
+      "poster": "/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
+      "year": 2026,
+      "rating": 7.412,
+      "revenue": 1069518777,
       "genreCount": 4,
       "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 102382,
+      "title": "The Amazing Spider-Man 2",
+      "poster": "/dGjoPttcbKR5VWg1jQuNFB247KL.jpg",
+      "year": 2014,
+      "rating": 6.554,
+      "revenue": 716934779,
+      "genreCount": 3,
+      "genres": [
         "Action",
-        "Crime",
-        "Drama",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 1339713,
+      "title": "Obsession",
+      "poster": "/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
+      "year": 2026,
+      "rating": 8.2,
+      "revenue": 488237715,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
         "Thriller"
       ],
-      "runtime": 165
+      "runtime": 109
     },
     {
-      "id": 1284465,
-      "title": "The Death of Robin Hood",
-      "poster": "/92Tsfx7SFafOqWsotvrlJbHyehd.jpg",
+      "id": 931285,
+      "title": "Mortal Kombat II",
+      "poster": "/hwRdDFIhaEmpRgoki805YvyyjZf.jpg",
       "year": 2026,
-      "rating": 6.309,
-      "revenue": 3200000,
+      "rating": 7.885,
+      "revenue": 129470110,
       "genreCount": 3,
       "genres": [
-        "Adventure",
-        "Drama",
-        "Action"
+        "Action",
+        "Fantasy",
+        "Adventure"
       ],
-      "runtime": 123
+      "runtime": 116
     },
     {
-      "id": 324786,
-      "title": "Hacksaw Ridge",
-      "poster": "/fnOMP6mjmOmZwmlC1n0K7ivrzt1.jpg",
-      "year": 2016,
-      "rating": 8.192,
-      "revenue": 175302354,
-      "genreCount": 3,
+      "id": 1564614,
+      "title": "Leviticus",
+      "poster": "/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg",
+      "year": 2026,
+      "rating": 6.83,
+      "revenue": 8493480,
+      "genreCount": 2,
       "genres": [
-        "Drama",
-        "History",
-        "War"
+        "Horror",
+        "Romance"
       ],
-      "runtime": 139
-    },
-    {
-      "id": 489,
-      "title": "Good Will Hunting",
-      "poster": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
-      "year": 1997,
-      "rating": 8.163,
-      "revenue": 225933435,
-      "genreCount": 1,
-      "genres": [
-        "Drama"
-      ],
-      "runtime": 127
-    },
-    {
-      "id": 106646,
-      "title": "The Wolf of Wall Street",
-      "poster": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
-      "year": 2013,
-      "rating": 8.026,
-      "revenue": 407038432,
-      "genreCount": 3,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Comedy"
-      ],
-      "runtime": 180
+      "runtime": 88
     }
   ]
 }

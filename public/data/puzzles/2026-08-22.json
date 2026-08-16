@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-22",
+  "slots": [
+    "genres",
+    "year",
+    "runtime",
+    "rating",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1275779,
+      "title": "Disclosure Day",
+      "poster": "/AnJ8IQJI23hNpYXVNaythu061Ru.jpg",
+      "year": 2026,
+      "rating": 7.448,
+      "revenue": 240659748,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 146
+    },
+    {
+      "id": 559,
+      "title": "Spider-Man 3",
+      "poster": "/sJMTTGjtjvrMZ7G0oP9D13wNUum.jpg",
+      "year": 2007,
+      "rating": 6.474,
+      "revenue": 894983373,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 139
+    },
+    {
+      "id": 454639,
+      "title": "Masters of the Universe",
+      "poster": "/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg",
+      "year": 2026,
+      "rating": 7.198,
+      "revenue": 113763426,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Science Fiction"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 1127384,
+      "title": "Deep Water",
+      "poster": "/kjcuS7xaRyqRjVaVcH4t0qHshuX.jpg",
+      "year": 2026,
+      "rating": 7.139,
+      "revenue": 2286163,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 1523145,
+      "title": "Your Heart Will Be Broken",
+      "poster": "/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+      "year": 2026,
+      "rating": 7.1,
+      "revenue": 7578000,
+      "genreCount": 1,
+      "genres": [
+        "Romance"
+      ],
+      "runtime": 134
+    }
+  ]
+}

@@ -3,87 +3,87 @@
   "slots": [
     "year",
     "boxOffice",
-    "rating",
     "runtime",
-    "genres"
+    "genres",
+    "rating"
   ],
   "movies": [
     {
-      "id": 475557,
-      "title": "Joker",
-      "poster": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-      "year": 2019,
-      "rating": 8.119,
-      "revenue": 1078958629,
+      "id": 24428,
+      "title": "The Avengers",
+      "poster": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "year": 2012,
+      "rating": 8.066,
+      "revenue": 1518815515,
       "genreCount": 3,
       "genres": [
-        "Crime",
-        "Thriller",
-        "Drama"
+        "Science Fiction",
+        "Action",
+        "Adventure"
       ],
-      "runtime": 122
+      "runtime": 143
     },
     {
-      "id": 508947,
-      "title": "Turning Red",
-      "poster": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
-      "year": 2022,
-      "rating": 7.331,
-      "revenue": 21813358,
-      "genreCount": 4,
-      "genres": [
-        "Animation",
-        "Family",
-        "Comedy",
-        "Fantasy"
-      ],
-      "runtime": 100
-    },
-    {
-      "id": 11324,
-      "title": "Shutter Island",
-      "poster": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
-      "year": 2010,
-      "rating": 8.197,
-      "revenue": 294804195,
+      "id": 157336,
+      "title": "Interstellar",
+      "poster": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+      "year": 2014,
+      "rating": 8.484,
+      "revenue": 746606706,
       "genreCount": 3,
-      "genres": [
-        "Drama",
-        "Thriller",
-        "Mystery"
-      ],
-      "runtime": 138
-    },
-    {
-      "id": 1007757,
-      "title": "Swapped",
-      "poster": "/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
-      "year": 2026,
-      "rating": 8.9,
-      "revenue": 7,
-      "genreCount": 4,
       "genres": [
         "Adventure",
-        "Animation",
-        "Family",
-        "Fantasy"
+        "Drama",
+        "Science Fiction"
       ],
-      "runtime": 102
+      "runtime": 169
     },
     {
-      "id": 293660,
-      "title": "Deadpool",
-      "poster": "/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
-      "year": 2016,
-      "rating": 7.625,
-      "revenue": 782837347,
-      "genreCount": 3,
+      "id": 324857,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "poster": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+      "year": 2018,
+      "rating": 8.395,
+      "revenue": 394884133,
+      "genreCount": 4,
       "genres": [
+        "Animation",
         "Action",
         "Adventure",
-        "Comedy"
+        "Science Fiction"
       ],
-      "runtime": 108
+      "runtime": 117
+    },
+    {
+      "id": 1311031,
+      "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "poster": "/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg",
+      "year": 2025,
+      "rating": 8.712,
+      "revenue": 733030221,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 156
+    },
+    {
+      "id": 569094,
+      "title": "Spider-Man: Across the Spider-Verse",
+      "poster": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "year": 2023,
+      "rating": 8.343,
+      "revenue": 690897910,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 140
     }
   ]
 }

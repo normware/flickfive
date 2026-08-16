@@ -1,87 +1,85 @@
 {
   "date": "2026-08-21",
   "slots": [
-    "genres",
-    "year",
     "boxOffice",
+    "rating",
+    "year",
     "runtime",
-    "rating"
+    "genres"
   ],
   "movies": [
     {
-      "id": 798645,
-      "title": "The Running Man",
-      "poster": "/dKL78O9zxczVgjtNcQ9UkbYLzqX.jpg",
-      "year": 2025,
-      "rating": 6.749,
-      "revenue": 69000000,
+      "id": 1284465,
+      "title": "The Death of Robin Hood",
+      "poster": "/92Tsfx7SFafOqWsotvrlJbHyehd.jpg",
+      "year": 2026,
+      "rating": 6.3,
+      "revenue": 3200000,
       "genreCount": 3,
       "genres": [
-        "Action",
-        "Thriller",
-        "Science Fiction"
-      ],
-      "runtime": 133
-    },
-    {
-      "id": 354912,
-      "title": "Coco",
-      "poster": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
-      "year": 2017,
-      "rating": 8.197,
-      "revenue": 814641172,
-      "genreCount": 4,
-      "genres": [
-        "Family",
-        "Animation",
-        "Music",
-        "Adventure"
-      ],
-      "runtime": 105
-    },
-    {
-      "id": 283995,
-      "title": "Guardians of the Galaxy Vol. 2",
-      "poster": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
-      "year": 2017,
-      "rating": 7.609,
-      "revenue": 863756051,
-      "genreCount": 3,
-      "genres": [
-        "Science Fiction",
         "Adventure",
+        "Drama",
         "Action"
       ],
-      "runtime": 137
+      "runtime": 123
     },
     {
-      "id": 299537,
-      "title": "Captain Marvel",
-      "poster": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
-      "year": 2019,
-      "rating": 6.775,
-      "revenue": 1131416446,
+      "id": 238,
+      "title": "The Godfather",
+      "poster": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "year": 1972,
+      "rating": 8.7,
+      "revenue": 245066411,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 175
+    },
+    {
+      "id": 1930,
+      "title": "The Amazing Spider-Man",
+      "poster": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+      "year": 2012,
+      "rating": 6.75,
+      "revenue": 758725893,
       "genreCount": 3,
       "genres": [
         "Action",
         "Adventure",
         "Science Fiction"
       ],
-      "runtime": 124
+      "runtime": 136
     },
     {
-      "id": 1078605,
-      "title": "Weapons",
-      "poster": "/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
-      "year": 2025,
-      "rating": 7.252,
-      "revenue": 269972492,
+      "id": 299536,
+      "title": "Avengers: Infinity War",
+      "poster": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "year": 2018,
+      "rating": 8.24,
+      "revenue": 2052415039,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 149
+    },
+    {
+      "id": 936075,
+      "title": "Michael",
+      "poster": "/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg",
+      "year": 2026,
+      "rating": 8.681,
+      "revenue": 1021000000,
       "genreCount": 2,
       "genres": [
-        "Horror",
-        "Mystery"
+        "Music",
+        "Drama"
       ],
-      "runtime": 129
+      "runtime": 128
     }
   ]
 }

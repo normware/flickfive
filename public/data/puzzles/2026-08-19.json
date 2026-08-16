@@ -4,85 +4,81 @@
     "runtime",
     "boxOffice",
     "rating",
-    "year",
-    "genres"
+    "genres",
+    "year"
   ],
   "movies": [
     {
-      "id": 1084244,
-      "title": "Toy Story 5",
-      "poster": "/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
-      "year": 2026,
-      "rating": 7.41,
-      "revenue": 1069518777,
-      "genreCount": 4,
+      "id": 5721,
+      "title": "Vixen!",
+      "poster": "/9KMZWDA3xTrlgrScqdMisINQmsh.jpg",
+      "year": 1968,
+      "rating": 5.486,
+      "revenue": 8000000,
+      "genreCount": 1,
       "genres": [
-        "Animation",
-        "Family",
-        "Comedy",
-        "Adventure"
-      ],
-      "runtime": 102
-    },
-    {
-      "id": 637649,
-      "title": "Wrath of Man",
-      "poster": "/M7SUK85sKjaStg4TKhlAVyGlz3.jpg",
-      "year": 2021,
-      "rating": 7.573,
-      "revenue": 103966489,
-      "genreCount": 3,
-      "genres": [
-        "Thriller",
-        "Crime",
         "Drama"
       ],
-      "runtime": 119
+      "runtime": 72
     },
     {
-      "id": 552524,
-      "title": "Lilo & Stitch",
-      "poster": "/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg",
-      "year": 2025,
-      "rating": 7.189,
-      "revenue": 1038027526,
-      "genreCount": 3,
+      "id": 1226863,
+      "title": "The Super Mario Galaxy Movie",
+      "poster": "/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+      "year": 2026,
+      "rating": 8.244,
+      "revenue": 1012203331,
+      "genreCount": 5,
       "genres": [
         "Family",
-        "Science Fiction",
-        "Comedy"
+        "Comedy",
+        "Adventure",
+        "Fantasy",
+        "Animation"
       ],
-      "runtime": 108
+      "runtime": 98
     },
     {
-      "id": 4935,
-      "title": "Howl's Moving Castle",
-      "poster": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
-      "year": 2004,
-      "rating": 8.387,
-      "revenue": 236049757,
-      "genreCount": 3,
+      "id": 687163,
+      "title": "Project Hail Mary",
+      "poster": "/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
+      "year": 2026,
+      "rating": 8.653,
+      "revenue": 684234722,
+      "genreCount": 2,
       "genres": [
-        "Fantasy",
-        "Animation",
+        "Science Fiction",
         "Adventure"
       ],
-      "runtime": 119
+      "runtime": 157
     },
     {
-      "id": 1422,
-      "title": "The Departed",
-      "poster": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
-      "year": 2006,
-      "rating": 8.159,
-      "revenue": 291465000,
+      "id": 299534,
+      "title": "Avengers: Endgame",
+      "poster": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+      "year": 2019,
+      "rating": 8.239,
+      "revenue": 2799439100,
       "genreCount": 3,
       "genres": [
-        "Drama",
-        "Thriller",
-        "Crime"
+        "Adventure",
+        "Science Fiction",
+        "Action"
       ],
-      "runtime": 151
+      "runtime": 181
+    },
+    {
+      "id": 1273221,
+      "title": "Scary Movie",
+      "poster": "/znHT8peERZRWG1ME3r0Db0EV8k8.jpg",
+      "year": 2026,
+      "rating": 6.458,
+      "revenue": 231467451,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 96
     }
   ]
 }

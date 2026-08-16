@@ -1,85 +1,90 @@
 {
   "date": "2026-08-16",
   "slots": [
-    "genres",
     "boxOffice",
+    "genres",
+    "year",
     "runtime",
-    "rating",
-    "year"
+    "rating"
   ],
   "movies": [
     {
-      "id": 1564614,
-      "title": "Leviticus",
-      "poster": "/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg",
-      "year": 2026,
-      "rating": 6.814,
-      "revenue": 8493480,
-      "genreCount": 2,
-      "genres": [
-        "Horror",
-        "Romance"
-      ],
-      "runtime": 88
-    },
-    {
-      "id": 967941,
-      "title": "Wicked: For Good",
-      "poster": "/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+      "id": 1084242,
+      "title": "Zootopia 2",
+      "poster": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
       "year": 2025,
-      "rating": 6.615,
-      "revenue": 540807971,
-      "genreCount": 3,
+      "rating": 7.683,
+      "revenue": 1868208796,
+      "genreCount": 5,
       "genres": [
-        "Fantasy",
+        "Animation",
         "Adventure",
-        "Romance"
+        "Comedy",
+        "Mystery",
+        "Family"
       ],
-      "runtime": 137
+      "runtime": 108
     },
     {
-      "id": 454639,
-      "title": "Masters of the Universe",
-      "poster": "/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg",
+      "id": 1327819,
+      "title": "Hoppers",
+      "poster": "/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
       "year": 2026,
-      "rating": 7.195,
-      "revenue": 113763426,
-      "genreCount": 3,
+      "rating": 8.177,
+      "revenue": 389685783,
+      "genreCount": 5,
       "genres": [
-        "Action",
-        "Fantasy",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family",
         "Science Fiction"
       ],
-      "runtime": 141
+      "runtime": 104
     },
     {
-      "id": 558449,
-      "title": "Gladiator II",
-      "poster": "/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
-      "year": 2024,
-      "rating": 6.601,
-      "revenue": 462180717,
+      "id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "poster": "/xTI42pmsP5EDnvsNJPEDubwWBQO.jpg",
+      "year": 2026,
+      "rating": 7.076,
+      "revenue": 691379651,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 822119,
+      "title": "Captain America: Brave New World",
+      "poster": "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+      "year": 2025,
+      "rating": 5.954,
+      "revenue": 415101577,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 634649,
+      "title": "Spider-Man: No Way Home",
+      "poster": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+      "year": 2021,
+      "rating": 7.938,
+      "revenue": 1921426073,
       "genreCount": 3,
       "genres": [
         "Action",
         "Adventure",
-        "Drama"
+        "Science Fiction"
       ],
       "runtime": 148
-    },
-    {
-      "id": 138843,
-      "title": "The Conjuring",
-      "poster": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
-      "year": 2013,
-      "rating": 7.5,
-      "revenue": 321293998,
-      "genreCount": 2,
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "runtime": 112
     }
   ]
 }
