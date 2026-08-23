@@ -1,0 +1,87 @@
+{
+  "date": "2026-08-29",
+  "slots": [
+    "runtime",
+    "genres",
+    "rating",
+    "year",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 950028,
+      "title": "The Invite",
+      "poster": "/b7Dr8Chzse8VagexAporUu2RtLx.jpg",
+      "year": 2026,
+      "rating": 7.37,
+      "revenue": 42892172,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 557,
+      "title": "Spider-Man",
+      "poster": "/or6XJBVpcEbIkma0V9zshnbEtx4.jpg",
+      "year": 2002,
+      "rating": 7.348,
+      "revenue": 821708551,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 121
+    },
+    {
+      "id": 1234821,
+      "title": "Jurassic World Rebirth",
+      "poster": "/1RICxzeoNCAO5NpcRMIgg1XT6fm.jpg",
+      "year": 2025,
+      "rating": 6.256,
+      "revenue": 869146189,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 1125257,
+      "title": "Freakier Friday",
+      "poster": "/9wV65OmsjLAqBfDnYTkMPutXH8j.jpg",
+      "year": 2025,
+      "rating": 6.774,
+      "revenue": 153176952,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Family"
+      ],
+      "runtime": 110
+    },
+    {
+      "id": 862,
+      "title": "Toy Story",
+      "poster": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+      "year": 1995,
+      "rating": 7.986,
+      "revenue": 962301978,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "runtime": 81
+    }
+  ]
+}

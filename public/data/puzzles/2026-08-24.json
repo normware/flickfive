@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-24",
+  "slots": [
+    "year",
+    "boxOffice",
+    "runtime",
+    "genres",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1612018,
+      "title": "Jackass: Best and Last",
+      "poster": "/tfgccePxnswMqhmtxafliLlcCVR.jpg",
+      "year": 2026,
+      "rating": 7.546,
+      "revenue": 310282181,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Documentary"
+      ],
+      "runtime": 92
+    },
+    {
+      "id": 1081003,
+      "title": "Supergirl",
+      "poster": "/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg",
+      "year": 2026,
+      "rating": 6.743,
+      "revenue": 126349292,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 122,
+      "title": "The Lord of the Rings: The Return of the King",
+      "poster": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+      "year": 2003,
+      "rating": 8.504,
+      "revenue": 1118888979,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 201
+    },
+    {
+      "id": 1368166,
+      "title": "The Housemaid",
+      "poster": "/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+      "year": 2025,
+      "rating": 7.273,
+      "revenue": 399644671,
+      "genreCount": 2,
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 271110,
+      "title": "Captain America: Civil War",
+      "poster": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+      "year": 2016,
+      "rating": 7.451,
+      "revenue": 1155046416,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 147
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-08-27",
+  "slots": [
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 99861,
+      "title": "Avengers: Age of Ultron",
+      "poster": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+      "year": 2015,
+      "rating": 7.276,
+      "revenue": 1405403694,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 76341,
+      "title": "Mad Max: Fury Road",
+      "poster": "/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+      "year": 2015,
+      "rating": 7.636,
+      "revenue": 378858340,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 121
+    },
+    {
+      "id": 986056,
+      "title": "Thunderbolts*",
+      "poster": "/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg",
+      "year": 2025,
+      "rating": 7.299,
+      "revenue": 382436917,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 1301421,
+      "title": "The Sheep Detectives",
+      "poster": "/iKy5460GdsoknM8ppmGlJbKxAKa.jpg",
+      "year": 2026,
+      "rating": 7.931,
+      "revenue": 131550648,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Family",
+        "Mystery"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 533535,
+      "title": "Deadpool & Wolverine",
+      "poster": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+      "year": 2024,
+      "rating": 7.585,
+      "revenue": 1338073645,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 128
+    }
+  ]
+}

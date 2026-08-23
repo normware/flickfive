@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-23",
+  "slots": [
+    "rating",
+    "genres",
+    "runtime",
+    "year",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1724,
+      "title": "The Incredible Hulk",
+      "poster": "/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+      "year": 2008,
+      "rating": 6.257,
+      "revenue": 264770996,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 114
+    },
+    {
+      "id": 872585,
+      "title": "Oppenheimer",
+      "poster": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "year": 2023,
+      "rating": 8.023,
+      "revenue": 952000000,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "runtime": 181
+    },
+    {
+      "id": 1280738,
+      "title": "The Furious",
+      "poster": "/zP19YO60jwEsfKd5Qf1UvA5uJu8.jpg",
+      "year": 2026,
+      "rating": 8.136,
+      "revenue": 36653413,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 114
+    },
+    {
+      "id": 652,
+      "title": "Troy",
+      "poster": "/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
+      "year": 2004,
+      "rating": 7.188,
+      "revenue": 497409852,
+      "genreCount": 3,
+      "genres": [
+        "War",
+        "Action",
+        "History"
+      ],
+      "runtime": 163
+    },
+    {
+      "id": 840464,
+      "title": "Greenland 2: Migration",
+      "poster": "/z2tqCJLsw6uEJ8nJV8BsQXGa3dr.jpg",
+      "year": 2026,
+      "rating": 6.402,
+      "revenue": 44856736,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 98
+    }
+  ]
+}

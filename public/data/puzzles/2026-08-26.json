@@ -1,0 +1,87 @@
+{
+  "date": "2026-08-26",
+  "slots": [
+    "rating",
+    "boxOffice",
+    "year",
+    "runtime",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1228710,
+      "title": "The Mandalorian and Grogu",
+      "poster": "/7GV5rrUJf0BRUhoh2cyFoeNthlQ.jpg",
+      "year": 2026,
+      "rating": 7.501,
+      "revenue": 345166617,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 132
+    },
+    {
+      "id": 361743,
+      "title": "Top Gun: Maverick",
+      "poster": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+      "year": 2022,
+      "rating": 8.16,
+      "revenue": 1488732821,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 1315772,
+      "title": "Minions & Monsters",
+      "poster": "/4LwvU9SZc8QQzW1X1FAPhNbXnEU.jpg",
+      "year": 2026,
+      "rating": 7.509,
+      "revenue": 493566930,
+      "genreCount": 5,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 90
+    },
+    {
+      "id": 603,
+      "title": "The Matrix",
+      "poster": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+      "year": 1999,
+      "rating": 8.255,
+      "revenue": 463517383,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 136
+    },
+    {
+      "id": 27205,
+      "title": "Inception",
+      "poster": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+      "year": 2010,
+      "rating": 8.372,
+      "revenue": 839030630,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 148
+    }
+  ]
+}

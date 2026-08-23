@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-28",
+  "slots": [
+    "year",
+    "runtime",
+    "boxOffice",
+    "rating",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 803796,
+      "title": "KPop Demon Hunters",
+      "poster": "/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg",
+      "year": 2025,
+      "rating": 8.004,
+      "revenue": 24619953,
+      "genreCount": 4,
+      "genres": [
+        "Fantasy",
+        "Music",
+        "Comedy",
+        "Animation"
+      ],
+      "runtime": 96
+    },
+    {
+      "id": 1007757,
+      "title": "Swapped",
+      "poster": "/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
+      "year": 2026,
+      "rating": 8.879,
+      "revenue": 7,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 1184918,
+      "title": "The Wild Robot",
+      "poster": "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+      "year": 2024,
+      "rating": 8.3,
+      "revenue": 331982078,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Animation",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 617126,
+      "title": "The Fantastic 4: First Steps",
+      "poster": "/nf5qaSEvyYSNeFH0YhSs5EsBLX9.jpg",
+      "year": 2025,
+      "rating": 6.947,
+      "revenue": 521858728,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 1242898,
+      "title": "Predator: Badlands",
+      "poster": "/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
+      "year": 2025,
+      "rating": 7.826,
+      "revenue": 184500000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 107
+    }
+  ]
+}
