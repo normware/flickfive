@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-01",
+  "slots": [
+    "year",
+    "runtime",
+    "boxOffice",
+    "rating",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 280,
+      "title": "Terminator 2: Judgment Day",
+      "poster": "/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+      "year": 1991,
+      "rating": 8.2,
+      "revenue": 517778573,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 137
+    },
+    {
+      "id": 278,
+      "title": "The Shawshank Redemption",
+      "poster": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "year": 1994,
+      "rating": 8.728,
+      "revenue": 28341469,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 142
+    },
+    {
+      "id": 76600,
+      "title": "Avatar: The Way of Water",
+      "poster": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "year": 2022,
+      "rating": 7.587,
+      "revenue": 2334484620,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 192
+    },
+    {
+      "id": 912649,
+      "title": "Venom: The Last Dance",
+      "poster": "/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg",
+      "year": 2024,
+      "rating": 6.673,
+      "revenue": 478937618,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 1594914,
+      "title": "Lucky Strike",
+      "poster": "/7AEBdyGYXumXWmMFeynE8227KeZ.jpg",
+      "year": 2026,
+      "rating": 6.986,
+      "revenue": 803112,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "War"
+      ],
+      "runtime": 102
+    }
+  ]
+}

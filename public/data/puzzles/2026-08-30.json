@@ -1,0 +1,86 @@
+{
+  "date": "2026-08-30",
+  "slots": [
+    "rating",
+    "genres",
+    "boxOffice",
+    "year",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 672,
+      "title": "Harry Potter and the Chamber of Secrets",
+      "poster": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+      "year": 2002,
+      "rating": 7.707,
+      "revenue": 876688482,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 161
+    },
+    {
+      "id": 1212461,
+      "title": "OBEX",
+      "poster": "/989voQxc9qAJKuBaoBHngqnpLsD.jpg",
+      "year": 2026,
+      "rating": 6,
+      "revenue": 32453,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Horror"
+      ],
+      "runtime": 91
+    },
+    {
+      "id": 453395,
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "poster": "/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+      "year": 2022,
+      "rating": 7.224,
+      "revenue": 955775804,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 49018,
+      "title": "Insidious",
+      "poster": "/1egpmVXuXed58TH2UOnX1nATTrf.jpg",
+      "year": 2011,
+      "rating": 6.953,
+      "revenue": 100106454,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 354912,
+      "title": "Coco",
+      "poster": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+      "year": 2017,
+      "rating": 8.197,
+      "revenue": 814641172,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Animation",
+        "Music",
+        "Adventure"
+      ],
+      "runtime": 105
+    }
+  ]
+}

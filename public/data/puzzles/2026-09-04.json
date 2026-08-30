@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-04",
+  "slots": [
+    "boxOffice",
+    "year",
+    "rating",
+    "runtime",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 693134,
+      "title": "Dune: Part Two",
+      "poster": "/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+      "year": 2024,
+      "rating": 8.133,
+      "revenue": 714844358,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 167
+    },
+    {
+      "id": 98,
+      "title": "Gladiator",
+      "poster": "/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+      "year": 2000,
+      "rating": 8.231,
+      "revenue": 465516248,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Drama",
+        "Adventure"
+      ],
+      "runtime": 155
+    },
+    {
+      "id": 496243,
+      "title": "Parasite",
+      "poster": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "year": 2019,
+      "rating": 8.491,
+      "revenue": 257591776,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Drama"
+      ],
+      "runtime": 133
+    },
+    {
+      "id": 614479,
+      "title": "Insidious: The Red Door",
+      "poster": "/d07phJqCx6z5wILDYqkyraorDPi.jpg",
+      "year": 2023,
+      "rating": 6.513,
+      "revenue": 189090647,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 550,
+      "title": "Fight Club",
+      "poster": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+      "year": 1999,
+      "rating": 8.4,
+      "revenue": 100853753,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 139
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-31",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "runtime",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1122573,
+      "title": "In the Grey",
+      "poster": "/dQgIcW6Th08kMRf2HBoYWoFE6OD.jpg",
+      "year": 2026,
+      "rating": 7.577,
+      "revenue": 27117528,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 120,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "poster": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "year": 2001,
+      "rating": 8.444,
+      "revenue": 871368364,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 179
+    },
+    {
+      "id": 26827,
+      "title": "Who's That Girl",
+      "poster": "/2Yu6ciKKgSWIZAzUg4IrrifO23z.jpg",
+      "year": 1987,
+      "rating": 5.504,
+      "revenue": 7305209,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 53653,
+      "title": "Prison on Fire",
+      "poster": "/59o7OyB8J37GwOAod9mhgJjhgH2.jpg",
+      "year": 1987,
+      "rating": 7,
+      "revenue": 4046485,
+      "genreCount": 2,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 101
+    },
+    {
+      "id": 218,
+      "title": "The Terminator",
+      "poster": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg",
+      "year": 1984,
+      "rating": 7.7,
+      "revenue": 78371200,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 108
+    }
+  ]
+}

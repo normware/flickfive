@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-03",
+  "slots": [
+    "boxOffice",
+    "year",
+    "genres",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 91586,
+      "title": "Insidious: Chapter 2",
+      "poster": "/w5JjiB3O1CLDXbTJe1QpU5RHmlU.jpg",
+      "year": 2013,
+      "rating": 6.696,
+      "revenue": 161921515,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 14836,
+      "title": "Coraline",
+      "poster": "/4jeFXQYytChdZYE9JYO7Un87IlW.jpg",
+      "year": 2009,
+      "rating": 7.933,
+      "revenue": 185860104,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 1168190,
+      "title": "The Wrecking Crew",
+      "poster": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "year": 2026,
+      "rating": 7.077,
+      "revenue": 89000000,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 280092,
+      "title": "Insidious: Chapter 3",
+      "poster": "/iDdGfdNvY1EX0uDdA4Ru77fwMfc.jpg",
+      "year": 2015,
+      "rating": 6.295,
+      "revenue": 120453155,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 1297842,
+      "title": "GOAT",
+      "poster": "/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
+      "year": 2026,
+      "rating": 8.076,
+      "revenue": 193566330,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 100
+    }
+  ]
+}

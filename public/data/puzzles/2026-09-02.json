@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-02",
+  "slots": [
+    "genres",
+    "boxOffice",
+    "year",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 13,
+      "title": "Forrest Gump",
+      "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+      "year": 1994,
+      "rating": 8.463,
+      "revenue": 677387716,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 142
+    },
+    {
+      "id": 406563,
+      "title": "Insidious: The Last Key",
+      "poster": "/6c9ti2JcR3dHyR3qFXoZqVMx0SH.jpg",
+      "year": 2018,
+      "rating": 6.279,
+      "revenue": 172811971,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 10138,
+      "title": "Iron Man 2",
+      "poster": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+      "year": 2010,
+      "rating": 6.854,
+      "revenue": 623933331,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 575265,
+      "title": "Mission: Impossible - The Final Reckoning",
+      "poster": "/iKPsC9EFUafRP9SrUznI61getVP.jpg",
+      "year": 2025,
+      "rating": 7.2,
+      "revenue": 598767057,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Adventure"
+      ],
+      "runtime": 170
+    },
+    {
+      "id": 1290821,
+      "title": "Shelter",
+      "poster": "/buPFnHZ3xQy6vZEHxbHgL1Pc6CR.jpg",
+      "year": 2026,
+      "rating": 7.781,
+      "revenue": 53933639,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 107
+    }
+  ]
+}

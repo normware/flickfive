@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-05",
+  "slots": [
+    "runtime",
+    "rating",
+    "year",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 49026,
+      "title": "The Dark Knight Rises",
+      "poster": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+      "year": 2012,
+      "rating": 7.797,
+      "revenue": 1081041287,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 165
+    },
+    {
+      "id": 106646,
+      "title": "The Wolf of Wall Street",
+      "poster": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
+      "year": 2013,
+      "rating": 8.026,
+      "revenue": 407039432,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 180
+    },
+    {
+      "id": 12444,
+      "title": "Harry Potter and the Deathly Hallows: Part 1",
+      "poster": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+      "year": 2010,
+      "rating": 7.732,
+      "revenue": 954305868,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 146
+    },
+    {
+      "id": 597,
+      "title": "Titanic",
+      "poster": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+      "year": 1997,
+      "rating": 7.9,
+      "revenue": 2264162353,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 194
+    },
+    {
+      "id": 390062,
+      "title": "Jungle",
+      "poster": "/tDgxknTVwrScxpCYyGUjXSn5NRk.jpg",
+      "year": 2017,
+      "rating": 6.706,
+      "revenue": 1906640,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Thriller"
+      ],
+      "runtime": 115
+    }
+  ]
+}
