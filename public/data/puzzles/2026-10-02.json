@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-02",
+  "slots": [
+    "rating",
+    "year",
+    "boxOffice",
+    "genres",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 866398,
+      "title": "The Beekeeper",
+      "poster": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
+      "year": 2024,
+      "rating": 7.281,
+      "revenue": 162619535,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 293660,
+      "title": "Deadpool",
+      "poster": "/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+      "year": 2016,
+      "rating": 7.626,
+      "revenue": 782837347,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 798645,
+      "title": "The Running Man",
+      "poster": "/dKL78O9zxczVgjtNcQ9UkbYLzqX.jpg",
+      "year": 2025,
+      "rating": 6.7,
+      "revenue": 69000000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 133
+    },
+    {
+      "id": 138843,
+      "title": "The Conjuring",
+      "poster": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+      "year": 2013,
+      "rating": 7.543,
+      "revenue": 321293998,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 112
+    },
+    {
+      "id": 425,
+      "title": "Ice Age",
+      "poster": "/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
+      "year": 2002,
+      "rating": 7.385,
+      "revenue": 383257136,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "runtime": 81
+    }
+  ]
+}

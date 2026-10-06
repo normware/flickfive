@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-14",
+  "slots": [
+    "boxOffice",
+    "runtime",
+    "genres",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1514682,
+      "title": "Above & Below",
+      "poster": "/7bOuu1SRALGwsG2fLCTvRkCmQBj.jpg",
+      "year": 2026,
+      "rating": 5.976,
+      "revenue": 328837,
+      "genreCount": 2,
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 1240889,
+      "title": "Teenage Sex and Death at Camp Miasma",
+      "poster": "/6Q6Zo6GNXMLP600OJSh6MhW21um.jpg",
+      "year": 2026,
+      "rating": 6.3,
+      "revenue": 8630000,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Horror",
+        "Romance"
+      ],
+      "runtime": 112
+    },
+    {
+      "id": 1011477,
+      "title": "Karate Kid: Legends",
+      "poster": "/c90Lt7OQGsOmhv6x4JoFdoHzw5l.jpg",
+      "year": 2025,
+      "rating": 6.97,
+      "revenue": 117105466,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 14160,
+      "title": "Up",
+      "poster": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg",
+      "year": 2009,
+      "rating": 7.96,
+      "revenue": 735103954,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "runtime": 96
+    },
+    {
+      "id": 348,
+      "title": "Alien",
+      "poster": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+      "year": 1979,
+      "rating": 8.174,
+      "revenue": 104931801,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "runtime": 117
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-13",
+  "slots": [
+    "boxOffice",
+    "runtime",
+    "rating",
+    "genres",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 121,
+      "title": "The Lord of the Rings: The Two Towers",
+      "poster": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+      "year": 2002,
+      "rating": 8.4,
+      "revenue": 926287400,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 179
+    },
+    {
+      "id": 893723,
+      "title": "PAW Patrol: The Mighty Movie",
+      "poster": "/aTvePCU7exLepwg5hWySjwxojQK.jpg",
+      "year": 2023,
+      "rating": 7,
+      "revenue": 202231360,
+      "genreCount": 5,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family",
+        "Science Fiction"
+      ],
+      "runtime": 88
+    },
+    {
+      "id": 1224993,
+      "title": "Dark Nuns",
+      "poster": "/2Abt2GgscAGtGAXTrhH44qPhugI.jpg",
+      "year": 2025,
+      "rating": 6.195,
+      "revenue": 12140335,
+      "genreCount": 4,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 845781,
+      "title": "Red One",
+      "poster": "/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
+      "year": 2024,
+      "rating": 6.949,
+      "revenue": 185700759,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 911430,
+      "title": "F1",
+      "poster": "/9PXZIUsSDh4alB80jheWX4fhZmy.jpg",
+      "year": 2025,
+      "rating": 7.8,
+      "revenue": 634142436,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "runtime": 156
+    }
+  ]
+}

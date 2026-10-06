@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-10",
+  "slots": [
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1171145,
+      "title": "Crime 101",
+      "poster": "/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
+      "year": 2026,
+      "rating": 7.024,
+      "revenue": 72900246,
+      "genreCount": 2,
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 101,
+      "title": "Léon: The Professional",
+      "poster": "/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg",
+      "year": 1994,
+      "rating": 8.289,
+      "revenue": 20330788,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Action"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 497,
+      "title": "The Green Mile",
+      "poster": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+      "year": 1999,
+      "rating": 8.505,
+      "revenue": 286801374,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 189
+    },
+    {
+      "id": 1100988,
+      "title": "28 Years Later",
+      "poster": "/n5FygjEppOvac6yEaowi26nTyw3.jpg",
+      "year": 2025,
+      "rating": 6.6,
+      "revenue": 151308832,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 9479,
+      "title": "The Nightmare Before Christmas",
+      "poster": "/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg",
+      "year": 1993,
+      "rating": 7.8,
+      "revenue": 75634409,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 76
+    }
+  ]
+}

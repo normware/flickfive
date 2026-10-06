@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-05",
+  "slots": [
+    "runtime",
+    "genres",
+    "boxOffice",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 285,
+      "title": "Pirates of the Caribbean: At World's End",
+      "poster": "/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg",
+      "year": 2007,
+      "rating": 7.278,
+      "revenue": 961691209,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 169
+    },
+    {
+      "id": 489,
+      "title": "Good Will Hunting",
+      "poster": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+      "year": 1997,
+      "rating": 8.165,
+      "revenue": 225933435,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 466420,
+      "title": "Killers of the Flower Moon",
+      "poster": "/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
+      "year": 2023,
+      "rating": 7.392,
+      "revenue": 158722599,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "History",
+        "Drama"
+      ],
+      "runtime": 206
+    },
+    {
+      "id": 383498,
+      "title": "Deadpool 2",
+      "poster": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+      "year": 2018,
+      "rating": 7.488,
+      "revenue": 785896632,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 120
+    },
+    {
+      "id": 985939,
+      "title": "Fall",
+      "poster": "/spCAxD99U1A6jsiePFoqdEcY0dG.jpg",
+      "year": 2022,
+      "rating": 7.1,
+      "revenue": 17363261,
+      "genreCount": 1,
+      "genres": [
+        "Thriller"
+      ],
+      "runtime": 107
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-21",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "genres",
+    "year",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 216015,
+      "title": "Fifty Shades of Grey",
+      "poster": "/63kGofUkt1Mx0SIL4XI4Z5AoSgt.jpg",
+      "year": 2015,
+      "rating": 5.859,
+      "revenue": 569651467,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 346698,
+      "title": "Barbie",
+      "poster": "/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "year": 2023,
+      "rating": 6.906,
+      "revenue": 1447138421,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 114
+    },
+    {
+      "id": 1175942,
+      "title": "The Bad Guys 2",
+      "poster": "/26oSPnq0ct59l07QOXZKyzsiRtN.jpg",
+      "year": 2025,
+      "rating": 7.6,
+      "revenue": 239676236,
+      "genreCount": 6,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Crime",
+        "Adventure",
+        "Animation",
+        "Action"
+      ],
+      "runtime": 104
+    },
+    {
+      "id": 11770,
+      "title": "Shaolin Soccer",
+      "poster": "/z6ZQqwoxWy9muIxwUP4K2zWw7BU.jpg",
+      "year": 2001,
+      "rating": 7.222,
+      "revenue": 42776760,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 564,
+      "title": "The Mummy",
+      "poster": "/yhIsVvcUm7QxzLfT6HW2wLf5ajY.jpg",
+      "year": 1999,
+      "rating": 6.998,
+      "revenue": 415885488,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 124
+    }
+  ]
+}

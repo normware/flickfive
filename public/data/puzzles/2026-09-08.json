@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-08",
+  "slots": [
+    "year",
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 1218925,
+      "title": "Chainsaw Man - The Movie: Reze Arc",
+      "poster": "/pHyxb2RV5wLlboAwm9ZJ9qTVEDw.jpg",
+      "year": 2025,
+      "rating": 8.541,
+      "revenue": 191400000,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Action",
+        "Romance",
+        "Fantasy"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 10193,
+      "title": "Toy Story 3",
+      "poster": "/AbbXspMOwdvwWZgVN0nabZq03Ec.jpg",
+      "year": 2010,
+      "rating": 7.817,
+      "revenue": 1067316101,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 105,
+      "title": "Back to the Future",
+      "poster": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+      "year": 1985,
+      "rating": 8.3,
+      "revenue": 391546852,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 637649,
+      "title": "Wrath of Man",
+      "poster": "/M7SUK85sKjaStg4TKhlAVyGlz3.jpg",
+      "year": 2021,
+      "rating": 7.573,
+      "revenue": 103966489,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 939243,
+      "title": "Sonic the Hedgehog 3",
+      "poster": "/d8Ryb8AunYAuycVKDp5HpdWPKgC.jpg",
+      "year": 2024,
+      "rating": 7.6,
+      "revenue": 492162604,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 110
+    }
+  ]
+}

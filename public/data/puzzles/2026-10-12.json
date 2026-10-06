@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-12",
+  "slots": [
+    "rating",
+    "year",
+    "runtime",
+    "genres",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1185806,
+      "title": "PAW Patrol: The Dino Movie",
+      "poster": "/qnin56Syy5rbG7KCaxWY7SPuy6p.jpg",
+      "year": 2026,
+      "rating": 8.203,
+      "revenue": 138326933,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Fantasy",
+        "Comedy"
+      ],
+      "runtime": 88
+    },
+    {
+      "id": 1197306,
+      "title": "A Working Man",
+      "poster": "/6FRFIogh3zFnVWn7Z6zcYnIbRcX.jpg",
+      "year": 2025,
+      "rating": 6.677,
+      "revenue": 89400711,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 1087192,
+      "title": "How to Train Your Dragon",
+      "poster": "/53dsJ3oEnBhTBVMigWJ9tkA5bzJ.jpg",
+      "year": 2025,
+      "rating": 7.9,
+      "revenue": 636596299,
+      "genreCount": 4,
+      "genres": [
+        "Fantasy",
+        "Family",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 12445,
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "poster": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+      "year": 2011,
+      "rating": 8.081,
+      "revenue": 1341511219,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 20352,
+      "title": "Despicable Me",
+      "poster": "/b1BT309QWjtFUlJPLmXmrcHOWEL.jpg",
+      "year": 2010,
+      "rating": 7.3,
+      "revenue": 543284256,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Crime",
+        "Science Fiction",
+        "Family"
+      ],
+      "runtime": 95
+    }
+  ]
+}

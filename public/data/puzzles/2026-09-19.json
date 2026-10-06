@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-19",
+  "slots": [
+    "genres",
+    "rating",
+    "year",
+    "boxOffice",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 420818,
+      "title": "The Lion King",
+      "poster": "/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg",
+      "year": 2019,
+      "rating": 7.1,
+      "revenue": 1662020819,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Family",
+        "Animation"
+      ],
+      "runtime": 118
+    },
+    {
+      "id": 1300945,
+      "title": "A Place Called Silence",
+      "poster": "/uKThqY2oRYSHOPxYryTp2550fuZ.jpg",
+      "year": 2024,
+      "rating": 7.567,
+      "revenue": 192856689,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 447365,
+      "title": "Guardians of the Galaxy Vol. 3",
+      "poster": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "year": 2023,
+      "rating": 7.9,
+      "revenue": 845550000,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 150
+    },
+    {
+      "id": 8587,
+      "title": "The Lion King",
+      "poster": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+      "year": 1994,
+      "rating": 8.251,
+      "revenue": 763455561,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Drama"
+      ],
+      "runtime": 89
+    },
+    {
+      "id": 475557,
+      "title": "Joker",
+      "poster": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+      "year": 2019,
+      "rating": 8.115,
+      "revenue": 1078958629,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "runtime": 122
+    }
+  ]
+}

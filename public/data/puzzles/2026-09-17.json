@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-17",
+  "slots": [
+    "year",
+    "runtime",
+    "boxOffice",
+    "genres",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 198663,
+      "title": "The Maze Runner",
+      "poster": "/ode14q7WtDugFDp78fo9lCsmay9.jpg",
+      "year": 2014,
+      "rating": 7.2,
+      "revenue": 348319861,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Mystery",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 1058424,
+      "title": "Hope",
+      "poster": "/1n37BJchWHLiSYQkuFxe5KjB951.jpg",
+      "year": 2026,
+      "rating": 7.2,
+      "revenue": 41212538,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Mystery",
+        "Action"
+      ],
+      "runtime": 157
+    },
+    {
+      "id": 1061474,
+      "title": "Superman",
+      "poster": "/ldyfo0BKmz5rWtJJKCvwaNS4cJT.jpg",
+      "year": 2025,
+      "rating": 7.322,
+      "revenue": 618723803,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 760104,
+      "title": "X",
+      "poster": "/lopZSVtXzhFY603E9OqF7O1YKsh.jpg",
+      "year": 2022,
+      "rating": 6.7,
+      "revenue": 14745049,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 436969,
+      "title": "The Suicide Squad",
+      "poster": "/q61qEyssk2ku3okWICKArlAdhBn.jpg",
+      "year": 2021,
+      "rating": 7.443,
+      "revenue": 168717425,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 132
+    }
+  ]
+}

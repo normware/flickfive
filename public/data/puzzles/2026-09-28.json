@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-28",
+  "slots": [
+    "rating",
+    "genres",
+    "runtime",
+    "boxOffice",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 545611,
+      "title": "Everything Everywhere All at Once",
+      "poster": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "year": 2022,
+      "rating": 7.716,
+      "revenue": 139200000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 140
+    },
+    {
+      "id": 10020,
+      "title": "Beauty and the Beast",
+      "poster": "/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg",
+      "year": 1991,
+      "rating": 7.723,
+      "revenue": 424967620,
+      "genreCount": 4,
+      "genres": [
+        "Romance",
+        "Family",
+        "Animation",
+        "Fantasy"
+      ],
+      "runtime": 84
+    },
+    {
+      "id": 315162,
+      "title": "Puss in Boots: The Last Wish",
+      "poster": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+      "year": 2022,
+      "rating": 8.219,
+      "revenue": 484700000,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 38365,
+      "title": "Grown Ups",
+      "poster": "/cQGM5k1NtU85n4TUlrOrwijSCcm.jpg",
+      "year": 2010,
+      "rating": 6.437,
+      "revenue": 271457606,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 205596,
+      "title": "The Imitation Game",
+      "poster": "/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg",
+      "year": 2014,
+      "rating": 7.978,
+      "revenue": 233555708,
+      "genreCount": 4,
+      "genres": [
+        "History",
+        "Drama",
+        "Thriller",
+        "War"
+      ],
+      "runtime": 113
+    }
+  ]
+}

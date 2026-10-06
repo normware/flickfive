@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-18",
+  "slots": [
+    "genres",
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 165,
+      "title": "Back to the Future Part II",
+      "poster": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg",
+      "year": 1989,
+      "rating": 7.8,
+      "revenue": 332861197,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 880067,
+      "title": "Strung",
+      "poster": "/exO0gvoZUXERxUaejyDchobOvjD.jpg",
+      "year": 2026,
+      "rating": 7.619,
+      "revenue": 8570,
+      "genreCount": 2,
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 629542,
+      "title": "The Bad Guys",
+      "poster": "/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg",
+      "year": 2022,
+      "rating": 7.511,
+      "revenue": 250162278,
+      "genreCount": 6,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Crime",
+        "Family"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 718930,
+      "title": "Bullet Train",
+      "poster": "/j8szC8OgrejDQjjMKSVXyaAjw3V.jpg",
+      "year": 2022,
+      "rating": 7.407,
+      "revenue": 239268602,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 350,
+      "title": "The Devil Wears Prada",
+      "poster": "/8912AsVuS7Sj915apArUFbv6F9L.jpg",
+      "year": 2006,
+      "rating": 7.434,
+      "revenue": 326588371,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 109
+    }
+  ]
+}

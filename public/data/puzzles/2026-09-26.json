@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-26",
+  "slots": [
+    "runtime",
+    "genres",
+    "rating",
+    "boxOffice",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 671,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+      "year": 2001,
+      "rating": 7.9,
+      "revenue": 1029374615,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 152
+    },
+    {
+      "id": 272,
+      "title": "Batman Begins",
+      "poster": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+      "year": 2005,
+      "rating": 7.7,
+      "revenue": 374218673,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Crime",
+        "Action"
+      ],
+      "runtime": 140
+    },
+    {
+      "id": 1265,
+      "title": "Bridge to Terabithia",
+      "poster": "/ieIoNyJvtwQ6joyG6npTKxnCtGH.jpg",
+      "year": 2007,
+      "rating": 7.4,
+      "revenue": 137587063,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Family"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 335984,
+      "title": "Blade Runner 2049",
+      "poster": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "year": 2017,
+      "rating": 7.608,
+      "revenue": 259239658,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "runtime": 164
+    },
+    {
+      "id": 585,
+      "title": "Monsters, Inc.",
+      "poster": "/wFSpyMsp7H0ttERbxY7Trlv8xry.jpg",
+      "year": 2001,
+      "rating": 7.9,
+      "revenue": 650000000,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 92
+    }
+  ]
+}

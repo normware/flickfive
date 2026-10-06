@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-20",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "year",
+    "rating",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 1542261,
+      "title": "Doraemon the Movie: New Nobita and the Castle of the Undersea Devil",
+      "poster": "/gdllrWFb9ffvGkCDQAflrdnTaAg.jpg",
+      "year": 2026,
+      "rating": 7.1,
+      "revenue": 27260879,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy",
+        "Family"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 177572,
+      "title": "Big Hero 6",
+      "poster": "/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+      "year": 2014,
+      "rating": 7.7,
+      "revenue": 657870525,
+      "genreCount": 5,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Animation",
+        "Action",
+        "Comedy"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 129,
+      "title": "Spirited Away",
+      "poster": "/jUo8cNmU400WtZiJss45HNXlQ2e.jpg",
+      "year": 2001,
+      "rating": 8.536,
+      "revenue": 274925095,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 1198994,
+      "title": "Send Help",
+      "poster": "/zbJWVHOtj3ljBzWgL1P8pxP03Up.jpg",
+      "year": 2026,
+      "rating": 7,
+      "revenue": 94041481,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Comedy"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 4348,
+      "title": "Pride & Prejudice",
+      "poster": "/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg",
+      "year": 2005,
+      "rating": 8.051,
+      "revenue": 124604345,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 128
+    }
+  ]
+}

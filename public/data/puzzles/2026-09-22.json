@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-22",
+  "slots": [
+    "year",
+    "boxOffice",
+    "runtime",
+    "rating",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 11036,
+      "title": "The Notebook",
+      "poster": "/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+      "year": 2004,
+      "rating": 7.889,
+      "revenue": 115600000,
+      "genreCount": 2,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "runtime": 123
+    },
+    {
+      "id": 93456,
+      "title": "Despicable Me 2",
+      "poster": "/5Fh4NdoEnCjCK9wLjdJ9DJNFl2b.jpg",
+      "year": 2013,
+      "rating": 6.9,
+      "revenue": 970766005,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Science Fiction"
+      ],
+      "runtime": 98
+    },
+    {
+      "id": 4935,
+      "title": "Howl's Moving Castle",
+      "poster": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
+      "year": 2004,
+      "rating": 8.4,
+      "revenue": 236049757,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Adventure"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 57800,
+      "title": "Ice Age: Continental Drift",
+      "poster": "/dfp1BZF7FxbBUyzHvMOI9t8NWDD.jpg",
+      "year": 2012,
+      "rating": 6.395,
+      "revenue": 877244782,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Adventure",
+        "Family"
+      ],
+      "runtime": 88
+    },
+    {
+      "id": 460458,
+      "title": "Resident Evil: Welcome to Raccoon City",
+      "poster": "/bArhvjRHl535XMaSh9VjInF2mSZ.jpg",
+      "year": 2021,
+      "rating": 5.9,
+      "revenue": 41914915,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Horror",
+        "Science Fiction"
+      ],
+      "runtime": 107
+    }
+  ]
+}

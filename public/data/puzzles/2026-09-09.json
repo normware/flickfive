@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-09",
+  "slots": [
+    "year",
+    "boxOffice",
+    "rating",
+    "runtime",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 466272,
+      "title": "Once Upon a Time... in Hollywood",
+      "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+      "year": 2019,
+      "rating": 7.417,
+      "revenue": 393869691,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 162
+    },
+    {
+      "id": 552524,
+      "title": "Lilo & Stitch",
+      "poster": "/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg",
+      "year": 2025,
+      "rating": 7.181,
+      "revenue": 1038027526,
+      "genreCount": 3,
+      "genres": [
+        "Family",
+        "Science Fiction",
+        "Comedy"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 429,
+      "title": "The Good, the Bad and the Ugly",
+      "poster": "/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+      "year": 1966,
+      "rating": 8.5,
+      "revenue": 38900000,
+      "genreCount": 1,
+      "genres": [
+        "Western"
+      ],
+      "runtime": 161
+    },
+    {
+      "id": 508947,
+      "title": "Turning Red",
+      "poster": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+      "year": 2022,
+      "rating": 7.327,
+      "revenue": 21813358,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Fantasy"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 1078605,
+      "title": "Weapons",
+      "poster": "/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
+      "year": 2025,
+      "rating": 7.265,
+      "revenue": 269972492,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 129
+    }
+  ]
+}

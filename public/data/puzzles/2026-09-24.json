@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-24",
+  "slots": [
+    "genres",
+    "year",
+    "boxOffice",
+    "rating",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 37165,
+      "title": "The Truman Show",
+      "poster": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+      "year": 1998,
+      "rating": 8.2,
+      "revenue": 264118712,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 1212763,
+      "title": "Evil Dead Burn",
+      "poster": "/uRxrNXQWkHoENm3nwVOZDYSCx2F.jpg",
+      "year": 2026,
+      "rating": 7.6,
+      "revenue": 71491178,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 110
+    },
+    {
+      "id": 447332,
+      "title": "A Quiet Place",
+      "poster": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+      "year": 2018,
+      "rating": 7.395,
+      "revenue": 340955294,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Drama",
+        "Science Fiction"
+      ],
+      "runtime": 91
+    },
+    {
+      "id": 126889,
+      "title": "Alien: Covenant",
+      "poster": "/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg",
+      "year": 2017,
+      "rating": 6.19,
+      "revenue": 240891763,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "runtime": 122
+    },
+    {
+      "id": 1393326,
+      "title": "Ghost in the Cell",
+      "poster": "/zxcMdx0w5Zmg8yZuuiS7CJ8vOea.jpg",
+      "year": 2026,
+      "rating": 7.1,
+      "revenue": 105743,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Thriller"
+      ],
+      "runtime": 106
+    }
+  ]
+}

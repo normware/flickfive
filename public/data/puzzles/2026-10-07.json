@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-07",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "year",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 39254,
+      "title": "Real Steel",
+      "poster": "/4GIeI5K5YdDUkR3mNQBoScpSFEf.jpg",
+      "year": 2011,
+      "rating": 7.152,
+      "revenue": 299300000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Drama"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 284052,
+      "title": "Doctor Strange",
+      "poster": "/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+      "year": 2016,
+      "rating": 7.4,
+      "revenue": 676343174,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 18785,
+      "title": "The Hangover",
+      "poster": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
+      "year": 2009,
+      "rating": 7.338,
+      "revenue": 469310836,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 1130948,
+      "title": "Rosebush Pruning",
+      "poster": "/rsHEVjzxU8cxz1sm3vboj99daNv.jpg",
+      "year": 2026,
+      "rating": 6,
+      "revenue": 85294,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 507086,
+      "title": "Jurassic World Dominion",
+      "poster": "/jbAvCACjLf1ZG0unB2tdmx5HAf1.jpg",
+      "year": 2022,
+      "rating": 6.587,
+      "revenue": 1004004592,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 147
+    }
+  ]
+}

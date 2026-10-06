@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-12",
+  "slots": [
+    "genres",
+    "boxOffice",
+    "rating",
+    "year",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 49051,
+      "title": "The Hobbit: An Unexpected Journey",
+      "poster": "/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg",
+      "year": 2012,
+      "rating": 7.384,
+      "revenue": 1021103568,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 169
+    },
+    {
+      "id": 810,
+      "title": "Shrek the Third",
+      "poster": "/n4SexGGQzI26E269tfpa80MZaGV.jpg",
+      "year": 2007,
+      "rating": 6.315,
+      "revenue": 808310187,
+      "genreCount": 5,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 68721,
+      "title": "Iron Man 3",
+      "poster": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+      "year": 2013,
+      "rating": 6.933,
+      "revenue": 1215577205,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 502356,
+      "title": "The Super Mario Bros. Movie",
+      "poster": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "year": 2023,
+      "rating": 7.6,
+      "revenue": 1360879735,
+      "genreCount": 5,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Adventure",
+        "Fantasy",
+        "Animation"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 1108427,
+      "title": "Moana",
+      "poster": "/gaet1xQ2nxrG0V1Ep9T20ZMNEIC.jpg",
+      "year": 2026,
+      "rating": 7.414,
+      "revenue": 308159595,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Fantasy",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 115
+    }
+  ]
+}

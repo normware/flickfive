@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-11",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "runtime",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 411,
+      "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "poster": "/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+      "year": 2005,
+      "rating": 7.145,
+      "revenue": 745013115,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 143
+    },
+    {
+      "id": 19995,
+      "title": "Avatar",
+      "poster": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
+      "year": 2009,
+      "rating": 7.6,
+      "revenue": 2923706026,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 162
+    },
+    {
+      "id": 674,
+      "title": "Harry Potter and the Goblet of Fire",
+      "poster": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+      "year": 2005,
+      "rating": 7.803,
+      "revenue": 895921036,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 157
+    },
+    {
+      "id": 863,
+      "title": "Toy Story 2",
+      "poster": "/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg",
+      "year": 1999,
+      "rating": 7.6,
+      "revenue": 497375404,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 92
+    },
+    {
+      "id": 10439,
+      "title": "Hocus Pocus",
+      "poster": "/by4D4Q9NlUjFSEUA1yrxq6ksXmk.jpg",
+      "year": 1993,
+      "rating": 7,
+      "revenue": 51663767,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 96
+    }
+  ]
+}

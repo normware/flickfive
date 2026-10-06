@@ -1,0 +1,87 @@
+{
+  "date": "2026-09-25",
+  "slots": [
+    "runtime",
+    "boxOffice",
+    "genres",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 244786,
+      "title": "Whiplash",
+      "poster": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+      "year": 2014,
+      "rating": 8.377,
+      "revenue": 50307484,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Music",
+        "Thriller"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 269149,
+      "title": "Zootopia",
+      "poster": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg",
+      "year": 2016,
+      "rating": 7.8,
+      "revenue": 1025521689,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 969681,
+      "title": "Spider-Man: Brand New Day",
+      "poster": "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+      "year": 2026,
+      "rating": 7.992,
+      "revenue": 2505477000,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 145
+    },
+    {
+      "id": 1288059,
+      "title": "I Want Your Sex",
+      "poster": "/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
+      "year": 2026,
+      "rating": 6.138,
+      "revenue": 2000000,
+      "genreCount": 1,
+      "genres": [
+        "Comedy"
+      ],
+      "runtime": 90
+    },
+    {
+      "id": 301528,
+      "title": "Toy Story 4",
+      "poster": "/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+      "year": 2019,
+      "rating": 7.5,
+      "revenue": 1073841394,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "runtime": 100
+    }
+  ]
+}

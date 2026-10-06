@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-15",
+  "slots": [
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1072790,
+      "title": "Anyone but You",
+      "poster": "/5qHoazZiaLe7oFBok7XlUhg96f2.jpg",
+      "year": 2023,
+      "rating": 6.7,
+      "revenue": 214891370,
+      "genreCount": 2,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 1022789,
+      "title": "Inside Out 2",
+      "poster": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+      "year": 2024,
+      "rating": 7.5,
+      "revenue": 1698863816,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 424,
+      "title": "Schindler's List",
+      "poster": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "year": 1993,
+      "rating": 8.568,
+      "revenue": 321365567,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "runtime": 195
+    },
+    {
+      "id": 1232569,
+      "title": "Pinocchio: Unstrung",
+      "poster": "/eUJXk3bTvLBi5Zcb0BCedZU7lVL.jpg",
+      "year": 2026,
+      "rating": 6.5,
+      "revenue": 822910,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Fantasy",
+        "Mystery"
+      ],
+      "runtime": 82
+    },
+    {
+      "id": 950387,
+      "title": "A Minecraft Movie",
+      "poster": "/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
+      "year": 2025,
+      "rating": 6.212,
+      "revenue": 960387780,
+      "genreCount": 4,
+      "genres": [
+        "Family",
+        "Fantasy",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 101
+    }
+  ]
+}

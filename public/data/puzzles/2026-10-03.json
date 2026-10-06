@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-03",
+  "slots": [
+    "rating",
+    "year",
+    "genres",
+    "runtime",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 9489,
+      "title": "You've Got Mail",
+      "poster": "/rJLUSpmdxSMqqEsyzeCni3vy1ca.jpg",
+      "year": 1998,
+      "rating": 6.711,
+      "revenue": 250800000,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 1124620,
+      "title": "The Monkey",
+      "poster": "/aGDekyIb0yfmnuLZciCozRPk2TE.jpg",
+      "year": 2025,
+      "rating": 5.985,
+      "revenue": 68871071,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Comedy"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 49013,
+      "title": "Cars 2",
+      "poster": "/okIz1HyxeVOMzYwwHUjH2pHi74I.jpg",
+      "year": 2011,
+      "rating": 6.193,
+      "revenue": 559852396,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Comedy"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 242,
+      "title": "The Godfather Part III",
+      "poster": "/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+      "year": 1990,
+      "rating": 7.414,
+      "revenue": 136766062,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 162
+    },
+    {
+      "id": 1433367,
+      "title": "One Night Only",
+      "poster": "/f1v8IcYcQggeq1N0unoMJMrzTd9.jpg",
+      "year": 2026,
+      "rating": 6.431,
+      "revenue": 25112730,
+      "genreCount": 2,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "runtime": 103
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-09",
+  "slots": [
+    "rating",
+    "boxOffice",
+    "year",
+    "genres",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 522627,
+      "title": "The Gentlemen",
+      "poster": "/jtrhTYB7xSrJxR1vusu99nvnZ1g.jpg",
+      "year": 2020,
+      "rating": 7.7,
+      "revenue": 115171795,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 10681,
+      "title": "WALL·E",
+      "poster": "/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+      "year": 2008,
+      "rating": 8.1,
+      "revenue": 521311860,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Science Fiction"
+      ],
+      "runtime": 98
+    },
+    {
+      "id": 807,
+      "title": "Se7en",
+      "poster": "/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+      "year": 1995,
+      "rating": 8.382,
+      "revenue": 327311859,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 72190,
+      "title": "World War Z",
+      "poster": "/aCnVdvExw6UWSeQfr0tUH3jr4qG.jpg",
+      "year": 2013,
+      "rating": 6.854,
+      "revenue": 531865000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Horror",
+        "Science Fiction"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 3933,
+      "title": "Corpse Bride",
+      "poster": "/3RAoVTxUk1OzZClscAsynuu670p.jpg",
+      "year": 2005,
+      "rating": 7.591,
+      "revenue": 118133252,
+      "genreCount": 3,
+      "genres": [
+        "Romance",
+        "Fantasy",
+        "Animation"
+      ],
+      "runtime": 77
+    }
+  ]
+}

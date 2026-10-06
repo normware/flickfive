@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-06",
+  "slots": [
+    "year",
+    "genres",
+    "rating",
+    "runtime",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 131631,
+      "title": "The Hunger Games: Mockingjay - Part 1",
+      "poster": "/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg",
+      "year": 2014,
+      "rating": 6.814,
+      "revenue": 755356711,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Thriller"
+      ],
+      "runtime": 123
+    },
+    {
+      "id": 694,
+      "title": "The Shining",
+      "poster": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg",
+      "year": 1980,
+      "rating": 8.2,
+      "revenue": 50312025,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 144
+    },
+    {
+      "id": 8966,
+      "title": "Twilight",
+      "poster": "/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg",
+      "year": 2008,
+      "rating": 6.272,
+      "revenue": 393616788,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 122
+    },
+    {
+      "id": 228150,
+      "title": "Fury",
+      "poster": "/pfte7wdMobMF4CVHuOxyu6oqeeA.jpg",
+      "year": 2014,
+      "rating": 7.544,
+      "revenue": 211817906,
+      "genreCount": 3,
+      "genres": [
+        "War",
+        "Drama",
+        "Action"
+      ],
+      "runtime": 135
+    },
+    {
+      "id": 330457,
+      "title": "Frozen II",
+      "poster": "/mINJaa34MtknCYl5AjtNJzWj8cD.jpg",
+      "year": 2019,
+      "rating": 7.2,
+      "revenue": 1453683476,
+      "genreCount": 5,
+      "genres": [
+        "Family",
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "runtime": 103
+    }
+  ]
+}

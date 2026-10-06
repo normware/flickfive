@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-30",
+  "slots": [
+    "year",
+    "rating",
+    "genres",
+    "boxOffice",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 12155,
+      "title": "Alice in Wonderland",
+      "poster": "/o0kre9wRCZz3jjSjaru7QU0UtFz.jpg",
+      "year": 2010,
+      "rating": 6.6,
+      "revenue": 1025467110,
+      "genreCount": 3,
+      "genres": [
+        "Family",
+        "Fantasy",
+        "Adventure"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 68718,
+      "title": "Django Unchained",
+      "poster": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+      "year": 2012,
+      "rating": 8.193,
+      "revenue": 425368238,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "runtime": 165
+    },
+    {
+      "id": 9806,
+      "title": "The Incredibles",
+      "poster": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+      "year": 2004,
+      "rating": 7.7,
+      "revenue": 631442092,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 156022,
+      "title": "The Equalizer",
+      "poster": "/9u4yW7yPA0BQ2pv9XwiNzItwvp8.jpg",
+      "year": 2014,
+      "rating": 7.295,
+      "revenue": 192330738,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Action",
+        "Crime"
+      ],
+      "runtime": 132
+    },
+    {
+      "id": 767,
+      "title": "Harry Potter and the Half-Blood Prince",
+      "poster": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+      "year": 2009,
+      "rating": 7.7,
+      "revenue": 933959197,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 153
+    }
+  ]
+}

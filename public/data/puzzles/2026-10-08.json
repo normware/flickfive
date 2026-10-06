@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-08",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "runtime",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1325734,
+      "title": "The Drama",
+      "poster": "/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
+      "year": 2026,
+      "rating": 6.893,
+      "revenue": 132588401,
+      "genreCount": 3,
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 105
+    },
+    {
+      "id": 926393,
+      "title": "The Equalizer 3",
+      "poster": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+      "year": 2023,
+      "rating": 7.3,
+      "revenue": 191067560,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 603692,
+      "title": "John Wick: Chapter 4",
+      "poster": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+      "year": 2023,
+      "rating": 7.7,
+      "revenue": 447316405,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 170
+    },
+    {
+      "id": 259693,
+      "title": "The Conjuring 2",
+      "poster": "/zEqyD0SBt6HL7W9JQoWwtd5Do1T.jpg",
+      "year": 2016,
+      "rating": 7.295,
+      "revenue": 322819915,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 1159559,
+      "title": "Scream 7",
+      "poster": "/jjyuk0edLiW8vOSnlfwWCCLpbh5.jpg",
+      "year": 2026,
+      "rating": 6.2,
+      "revenue": 213835967,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Crime"
+      ],
+      "runtime": 114
+    }
+  ]
+}

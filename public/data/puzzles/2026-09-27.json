@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-27",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "runtime",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 673,
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "poster": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+      "year": 2004,
+      "rating": 8.012,
+      "revenue": 789804554,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 141
+    },
+    {
+      "id": 12153,
+      "title": "White Chicks",
+      "poster": "/aHTUpo45qy9QYIOnVITGGqLoVcA.jpg",
+      "year": 2004,
+      "rating": 7,
+      "revenue": 113100000,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 122917,
+      "title": "The Hobbit: The Battle of the Five Armies",
+      "poster": "/xT98tLqatZPQApyRmlPL12LtiWp.jpg",
+      "year": 2014,
+      "rating": 7.338,
+      "revenue": 956019788,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 144
+    },
+    {
+      "id": 675,
+      "title": "Harry Potter and the Order of the Phoenix",
+      "poster": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+      "year": 2007,
+      "rating": 7.673,
+      "revenue": 938212738,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 284054,
+      "title": "Black Panther",
+      "poster": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+      "year": 2018,
+      "rating": 7.361,
+      "revenue": 1349926083,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 135
+    }
+  ]
+}

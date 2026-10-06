@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-29",
+  "slots": [
+    "rating",
+    "boxOffice",
+    "genres",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 438631,
+      "title": "Dune",
+      "poster": "/v1tRXZ4JtD2Iv6fjkPvT4GiwslV.jpg",
+      "year": 2021,
+      "rating": 7.784,
+      "revenue": 410668500,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 155
+    },
+    {
+      "id": 214756,
+      "title": "Ted 2",
+      "poster": "/38C91I7Xft0gyY7BITm8i4yvuRb.jpg",
+      "year": 2015,
+      "rating": 6.329,
+      "revenue": 215863606,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 76338,
+      "title": "Thor: The Dark World",
+      "poster": "/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+      "year": 2013,
+      "rating": 6.5,
+      "revenue": 644783140,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 112
+    },
+    {
+      "id": 11324,
+      "title": "Shutter Island",
+      "poster": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
+      "year": 2010,
+      "rating": 8.196,
+      "revenue": 294804195,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 109445,
+      "title": "Frozen",
+      "poster": "/itAKcobTYGpYT8Phwjd8c9hleTo.jpg",
+      "year": 2013,
+      "rating": 7.2,
+      "revenue": 1274219009,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 102
+    }
+  ]
+}

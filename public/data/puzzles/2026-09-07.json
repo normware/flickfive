@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-07",
+  "slots": [
+    "genres",
+    "boxOffice",
+    "rating",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1233413,
+      "title": "Sinners",
+      "poster": "/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg",
+      "year": 2025,
+      "rating": 7.5,
+      "revenue": 371368759,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 16869,
+      "title": "Inglourious Basterds",
+      "poster": "/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
+      "year": 2009,
+      "rating": 8.217,
+      "revenue": 321457747,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "War"
+      ],
+      "runtime": 153
+    },
+    {
+      "id": 10588,
+      "title": "The Cat in the Hat",
+      "poster": "/uYYLz67e5xEQMsY858VSSCDsLU6.jpg",
+      "year": 2003,
+      "rating": 5.4,
+      "revenue": 133800000,
+      "genreCount": 4,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Family",
+        "Comedy"
+      ],
+      "runtime": 82
+    },
+    {
+      "id": 549509,
+      "title": "The Brutalist",
+      "poster": "/vP7Yd6couiAaw9jgMd5cjMRj3hQ.jpg",
+      "year": 2024,
+      "rating": 6.922,
+      "revenue": 50145227,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 215
+    },
+    {
+      "id": 792307,
+      "title": "Poor Things",
+      "poster": "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+      "year": 2023,
+      "rating": 7.629,
+      "revenue": 117607117,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Romance",
+        "Comedy"
+      ],
+      "runtime": 141
+    }
+  ]
+}

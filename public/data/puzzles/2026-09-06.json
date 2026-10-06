@@ -1,0 +1,87 @@
+{
+  "date": "2026-09-06",
+  "slots": [
+    "boxOffice",
+    "genres",
+    "runtime",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 615777,
+      "title": "Babylon",
+      "poster": "/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
+      "year": 2022,
+      "rating": 7.34,
+      "revenue": 65267446,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 189
+    },
+    {
+      "id": 49521,
+      "title": "Man of Steel",
+      "poster": "/8GFtkImmK0K1VaUChR0n9O61CFU.jpg",
+      "year": 2013,
+      "rating": 6.662,
+      "revenue": 668045518,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 143
+    },
+    {
+      "id": 73723,
+      "title": "The Lorax",
+      "poster": "/tePFnZFw5JvjwjQjaKkqDPNMLPU.jpg",
+      "year": 2012,
+      "rating": 6.5,
+      "revenue": 349305397,
+      "genreCount": 2,
+      "genres": [
+        "Animation",
+        "Family"
+      ],
+      "runtime": 86
+    },
+    {
+      "id": 1495,
+      "title": "Kingdom of Heaven",
+      "poster": "/2NaFdWy9hkM35vZB1hkqsnTcms8.jpg",
+      "year": 2005,
+      "rating": 7.1,
+      "revenue": 218366336,
+      "genreCount": 5,
+      "genres": [
+        "Drama",
+        "Action",
+        "Adventure",
+        "History",
+        "War"
+      ],
+      "runtime": 144
+    },
+    {
+      "id": 505642,
+      "title": "Black Panther: Wakanda Forever",
+      "poster": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+      "year": 2022,
+      "rating": 6.988,
+      "revenue": 859102154,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 162
+    }
+  ]
+}

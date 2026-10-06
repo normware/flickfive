@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-11",
+  "slots": [
+    "year",
+    "runtime",
+    "rating",
+    "genres",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 58,
+      "title": "Pirates of the Caribbean: Dead Man's Chest",
+      "poster": "/uXEqmloGyP7UXAiphJUu2v2pcuE.jpg",
+      "year": 2006,
+      "rating": 7.392,
+      "revenue": 1066179747,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "runtime": 151
+    },
+    {
+      "id": 419430,
+      "title": "Get Out",
+      "poster": "/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+      "year": 2017,
+      "rating": 7.6,
+      "revenue": 255407969,
+      "genreCount": 3,
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "runtime": 104
+    },
+    {
+      "id": 150540,
+      "title": "Inside Out",
+      "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+      "year": 2015,
+      "rating": 7.906,
+      "revenue": 857611174,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 345,
+      "title": "Eyes Wide Shut",
+      "poster": "/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
+      "year": 1999,
+      "rating": 7.5,
+      "revenue": 162517900,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "runtime": 159
+    },
+    {
+      "id": 161,
+      "title": "Ocean's Eleven",
+      "poster": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+      "year": 2001,
+      "rating": 7.465,
+      "revenue": 450717150,
+      "genreCount": 2,
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 116
+    }
+  ]
+}

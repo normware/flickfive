@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-16",
+  "slots": [
+    "genres",
+    "rating",
+    "runtime",
+    "boxOffice",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 385687,
+      "title": "Fast X",
+      "poster": "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+      "year": 2023,
+      "rating": 6.974,
+      "revenue": 704709660,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 142
+    },
+    {
+      "id": 786892,
+      "title": "Furiosa: A Mad Max Saga",
+      "poster": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      "year": 2024,
+      "rating": 7.441,
+      "revenue": 174287546,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "runtime": 149
+    },
+    {
+      "id": 1368337,
+      "title": "The Odyssey",
+      "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      "year": 2026,
+      "rating": 8,
+      "revenue": 1767464000,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 173
+    },
+    {
+      "id": 12,
+      "title": "Finding Nemo",
+      "poster": "/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+      "year": 2003,
+      "rating": 7.821,
+      "revenue": 940335536,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 10625,
+      "title": "Mean Girls",
+      "poster": "/2ZkuQXvVhh45uSvkBej4S7Ix1NJ.jpg",
+      "year": 2004,
+      "rating": 7.23,
+      "revenue": 130195052,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 97
+    }
+  ]
+}

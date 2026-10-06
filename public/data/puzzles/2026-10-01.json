@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-01",
+  "slots": [
+    "rating",
+    "boxOffice",
+    "genres",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 11,
+      "title": "Star Wars",
+      "poster": "/fai0rspsNeJCS69wHNjOdWxcI7P.jpg",
+      "year": 1977,
+      "rating": 8.207,
+      "revenue": 775398007,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 121
+    },
+    {
+      "id": 372058,
+      "title": "Your Name.",
+      "poster": "/vfJFJPepRKapMd5G2ro7klIRysq.jpg",
+      "year": 2016,
+      "rating": 8.5,
+      "revenue": 407210429,
+      "genreCount": 3,
+      "genres": [
+        "Animation",
+        "Romance",
+        "Drama"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 539972,
+      "title": "Kraven the Hunter",
+      "poster": "/1GvBhRxY6MELDfxFrete6BNhBB5.jpg",
+      "year": 2024,
+      "rating": 6.409,
+      "revenue": 62076533,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 497698,
+      "title": "Black Widow",
+      "poster": "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+      "year": 2021,
+      "rating": 7.145,
+      "revenue": 379751131,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 6435,
+      "title": "Practical Magic",
+      "poster": "/AwmToSgf2IL3aHv0QRVsR5KvChv.jpg",
+      "year": 1998,
+      "rating": 6.811,
+      "revenue": 94400000,
+      "genreCount": 3,
+      "genres": [
+        "Romance",
+        "Fantasy",
+        "Comedy"
+      ],
+      "runtime": 104
+    }
+  ]
+}
