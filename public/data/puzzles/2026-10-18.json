@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-18",
+  "slots": [
+    "runtime",
+    "rating",
+    "year",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1124,
+      "title": "The Prestige",
+      "poster": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+      "year": 2006,
+      "rating": 8.2,
+      "revenue": 109676311,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 6479,
+      "title": "I Am Legend",
+      "poster": "/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg",
+      "year": 2007,
+      "rating": 7.223,
+      "revenue": 585410052,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 101
+    },
+    {
+      "id": 967941,
+      "title": "Wicked: For Good",
+      "poster": "/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+      "year": 2025,
+      "rating": 6.6,
+      "revenue": 540807971,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Romance"
+      ],
+      "runtime": 137
+    },
+    {
+      "id": 273248,
+      "title": "The Hateful Eight",
+      "poster": "/jIywvdPjia2t3eKYbjVTcwBQlG8.jpg",
+      "year": 2015,
+      "rating": 7.755,
+      "revenue": 155760117,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Western"
+      ],
+      "runtime": 188
+    },
+    {
+      "id": 105864,
+      "title": "The Good Dinosaur",
+      "poster": "/8RSkxOO80btfKjyiC5ZiTaCHIT8.jpg",
+      "year": 2015,
+      "rating": 6.756,
+      "revenue": 332207671,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 93
+    }
+  ]
+}

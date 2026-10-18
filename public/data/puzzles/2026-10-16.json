@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-16",
+  "slots": [
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 948,
+      "title": "Halloween",
+      "poster": "/wijlZ3HaYMvlDTPqJoTCWKFkCPU.jpg",
+      "year": 1978,
+      "rating": 7.56,
+      "revenue": 70260597,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 91
+    },
+    {
+      "id": 529203,
+      "title": "The Croods: A New Age",
+      "poster": "/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg",
+      "year": 2020,
+      "rating": 7.4,
+      "revenue": 215905815,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Fantasy",
+        "Comedy"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 360920,
+      "title": "The Grinch",
+      "poster": "/Al7DMUp8bqUN4JwXVNxfJYyv5cH.jpg",
+      "year": 2018,
+      "rating": 6.866,
+      "revenue": 552976825,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 85
+    },
+    {
+      "id": 493529,
+      "title": "Dungeons & Dragons: Honor Among Thieves",
+      "poster": "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
+      "year": 2023,
+      "rating": 7.354,
+      "revenue": 208200000,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Comedy"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 446893,
+      "title": "Trolls World Tour",
+      "poster": "/7W0G3YECgDAfnuiHG91r8WqgIOe.jpg",
+      "year": 2020,
+      "rating": 7.223,
+      "revenue": 49276818,
+      "genreCount": 6,
+      "genres": [
+        "Family",
+        "Animation",
+        "Comedy",
+        "Fantasy",
+        "Adventure",
+        "Music"
+      ],
+      "runtime": 91
+    }
+  ]
+}

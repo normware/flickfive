@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-21",
+  "slots": [
+    "rating",
+    "year",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 207703,
+      "title": "Kingsman: The Secret Service",
+      "poster": "/r6q9wZK5a2K51KFj4LWVID6Ja1r.jpg",
+      "year": 2015,
+      "rating": 7.616,
+      "revenue": 414351546,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Comedy",
+        "Action"
+      ],
+      "runtime": 129
+    },
+    {
+      "id": 194662,
+      "title": "Birdman or (The Unexpected Virtue of Ignorance)",
+      "poster": "/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg",
+      "year": 2014,
+      "rating": 7.434,
+      "revenue": 103215094,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "runtime": 120
+    },
+    {
+      "id": 335983,
+      "title": "Venom",
+      "poster": "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+      "year": 2018,
+      "rating": 6.822,
+      "revenue": 856085151,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Action"
+      ],
+      "runtime": 112
+    },
+    {
+      "id": 423108,
+      "title": "The Conjuring: The Devil Made Me Do It",
+      "poster": "/xbSuFiJbbBWCkyCCKIMfuDCA4yV.jpg",
+      "year": 2021,
+      "rating": 7.3,
+      "revenue": 206444123,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 8355,
+      "title": "Ice Age: Dawn of the Dinosaurs",
+      "poster": "/cXOLaxcNjNAYmEx1trZxOTKhK3Q.jpg",
+      "year": 2009,
+      "rating": 6.781,
+      "revenue": 886686817,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "runtime": 94
+    }
+  ]
+}

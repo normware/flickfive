@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-17",
+  "slots": [
+    "boxOffice",
+    "runtime",
+    "rating",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 417859,
+      "title": "Puss in Boots",
+      "poster": "/7a5Jzjr9TmffGy76y1SZhn3sCiz.jpg",
+      "year": 2011,
+      "rating": 6.62,
+      "revenue": 554987477,
+      "genreCount": 5,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 90
+    },
+    {
+      "id": 62177,
+      "title": "Brave",
+      "poster": "/1XAuDtMWpL0sYSFK0R6EZate2Ux.jpg",
+      "year": 2012,
+      "rating": 7.037,
+      "revenue": 538983207,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 1317288,
+      "title": "Marty Supreme",
+      "poster": "/lYWEXbQgRTR4ZQleSXAgRbxAjvq.jpg",
+      "year": 2025,
+      "rating": 7.4,
+      "revenue": 192406422,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 150
+    },
+    {
+      "id": 1422,
+      "title": "The Departed",
+      "poster": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+      "year": 2006,
+      "rating": 8.159,
+      "revenue": 291465000,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 151
+    },
+    {
+      "id": 49519,
+      "title": "The Croods",
+      "poster": "/27zvjVOtOi5ped1HSlJKNsKXkFH.jpg",
+      "year": 2013,
+      "rating": 6.95,
+      "revenue": 587204668,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy"
+      ],
+      "runtime": 99
+    }
+  ]
+}

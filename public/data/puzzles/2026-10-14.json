@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-14",
+  "slots": [
+    "genres",
+    "year",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 10192,
+      "title": "Shrek Forever After",
+      "poster": "/6HrfPZtKcGmX2tUWW3cnciZTaSD.jpg",
+      "year": 2010,
+      "rating": 6.416,
+      "revenue": 752600867,
+      "genreCount": 5,
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 522924,
+      "title": "The Art of Racing in the Rain",
+      "poster": "/mi5VN4ww0JZgRFJIaPxxTGKjUg7.jpg",
+      "year": 2019,
+      "rating": 8.148,
+      "revenue": 33800000,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 541671,
+      "title": "Ballerina",
+      "poster": "/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg",
+      "year": 2025,
+      "rating": 7.264,
+      "revenue": 137408107,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 1375646,
+      "title": "Colony",
+      "poster": "/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
+      "year": 2026,
+      "rating": 8.106,
+      "revenue": 53128238,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 123
+    },
+    {
+      "id": 558449,
+      "title": "Gladiator II",
+      "poster": "/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+      "year": 2024,
+      "rating": 6.589,
+      "revenue": 462180717,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "runtime": 148
+    }
+  ]
+}

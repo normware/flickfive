@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-20",
+  "slots": [
+    "boxOffice",
+    "year",
+    "rating",
+    "runtime",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 490132,
+      "title": "Green Book",
+      "poster": "/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg",
+      "year": 2018,
+      "rating": 8.224,
+      "revenue": 321752656,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Comedy",
+        "History"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 698687,
+      "title": "Transformers One",
+      "poster": "/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg",
+      "year": 2024,
+      "rating": 7.979,
+      "revenue": 129408392,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Adventure",
+        "Family"
+      ],
+      "runtime": 104
+    },
+    {
+      "id": 7518,
+      "title": "Over the Hedge",
+      "poster": "/lAtBFoSusJLlcViY57M2J2rpKpl.jpg",
+      "year": 2006,
+      "rating": 6.612,
+      "revenue": 343397247,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 83
+    },
+    {
+      "id": 141052,
+      "title": "Justice League",
+      "poster": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+      "year": 2017,
+      "rating": 6.1,
+      "revenue": 661326987,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 120
+    },
+    {
+      "id": 1288445,
+      "title": "Mutiny",
+      "poster": "/pu2VxGlpGwffOx292w18b1tv96j.jpg",
+      "year": 2026,
+      "rating": 7.583,
+      "revenue": 20824283,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 96
+    }
+  ]
+}

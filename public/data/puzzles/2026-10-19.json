@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-19",
+  "slots": [
+    "year",
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 24,
+      "title": "Kill Bill: Vol. 1",
+      "poster": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+      "year": 2003,
+      "rating": 7.969,
+      "revenue": 180906076,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Crime"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 18,
+      "title": "The Fifth Element",
+      "poster": "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+      "year": 1997,
+      "rating": 7.593,
+      "revenue": 263920180,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 1204680,
+      "title": "Coyote vs. Acme",
+      "poster": "/kYDCl2y0VPvhT5eYWbMRInPoB03.jpg",
+      "year": 2026,
+      "rating": 7.489,
+      "revenue": 98338086,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Family"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 954,
+      "title": "Mission: Impossible",
+      "poster": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg",
+      "year": 1996,
+      "rating": 7.033,
+      "revenue": 457696391,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 417384,
+      "title": "Scary Stories to Tell in the Dark",
+      "poster": "/uy0dNFbhRhHBLwpOGpcTw9UEwdX.jpg",
+      "year": 2019,
+      "rating": 6.5,
+      "revenue": 104545505,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 108
+    }
+  ]
+}

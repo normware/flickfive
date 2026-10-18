@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-23",
+  "slots": [
+    "genres",
+    "rating",
+    "boxOffice",
+    "runtime",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 4488,
+      "title": "Friday the 13th",
+      "poster": "/uGGpnWHOmWTARVN9wbC1nPxNgps.jpg",
+      "year": 1980,
+      "rating": 6.404,
+      "revenue": 39925100,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 95
+    },
+    {
+      "id": 85,
+      "title": "Raiders of the Lost Ark",
+      "poster": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+      "year": 1981,
+      "rating": 7.927,
+      "revenue": 389925971,
+      "genreCount": 2,
+      "genres": [
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 889737,
+      "title": "Joker: Folie à Deux",
+      "poster": "/if8QiqCI7WAGImKcJCfzp6VTyKA.jpg",
+      "year": 2024,
+      "rating": 5.397,
+      "revenue": 207500287,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "runtime": 138
+    },
+    {
+      "id": 331482,
+      "title": "Little Women",
+      "poster": "/yn5ihODtZ7ofn8pDYfxCmxh8AXI.jpg",
+      "year": 2019,
+      "rating": 7.843,
+      "revenue": 332103783,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 135
+    },
+    {
+      "id": 62,
+      "title": "2001: A Space Odyssey",
+      "poster": "/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+      "year": 1968,
+      "rating": 8.04,
+      "revenue": 71923560,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Mystery",
+        "Adventure"
+      ],
+      "runtime": 149
+    }
+  ]
+}

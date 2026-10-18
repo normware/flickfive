@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-15",
+  "slots": [
+    "genres",
+    "rating",
+    "runtime",
+    "boxOffice",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 324552,
+      "title": "John Wick: Chapter 2",
+      "poster": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+      "year": 2017,
+      "rating": 7.345,
+      "revenue": 171539887,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "runtime": 122
+    },
+    {
+      "id": 41630,
+      "title": "No Strings Attached",
+      "poster": "/9C09L1U9S13J4Ut029Qhu0oLcTQ.jpg",
+      "year": 2011,
+      "rating": 6.3,
+      "revenue": 149200000,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 857,
+      "title": "Saving Private Ryan",
+      "poster": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "year": 1998,
+      "rating": 8.233,
+      "revenue": 481840909,
+      "genreCount": 3,
+      "genres": [
+        "War",
+        "Drama",
+        "History"
+      ],
+      "runtime": 169
+    },
+    {
+      "id": 1291595,
+      "title": "Insidious: Out of the Further",
+      "poster": "/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
+      "year": 2026,
+      "rating": 7.711,
+      "revenue": 170272409,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 9016,
+      "title": "Treasure Planet",
+      "poster": "/kNhZkR3UNbXfvESQo7mJpOi4tGd.jpg",
+      "year": 2002,
+      "rating": 7.581,
+      "revenue": 109578115,
+      "genreCount": 5,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 96
+    }
+  ]
+}

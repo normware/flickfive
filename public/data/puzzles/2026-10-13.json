@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-13",
+  "slots": [
+    "genres",
+    "rating",
+    "runtime",
+    "boxOffice",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 1491920,
+      "title": "Kung Fu Soccer",
+      "poster": "/6QgJQrClh9ej357yzLWgCxrjAmJ.jpg",
+      "year": 2026,
+      "rating": 5.84,
+      "revenue": 325523144,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "runtime": 106
+    },
+    {
+      "id": 1101383,
+      "title": "The End of Oak Street",
+      "poster": "/hkPxuAMEqIqo1HCtIi4sqx0GRuP.jpg",
+      "year": 2026,
+      "rating": 7.092,
+      "revenue": 120363694,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Mystery",
+        "Thriller"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 1470424,
+      "title": "Virtual Assistant",
+      "poster": "/x3J1bIGoN8ES7aWeGHlLTgIg5C3.jpg",
+      "year": 2025,
+      "rating": 7.133,
+      "revenue": 1011203,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Horror"
+      ],
+      "runtime": 104
+    },
+    {
+      "id": 566525,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "poster": "/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+      "year": 2021,
+      "rating": 7.5,
+      "revenue": 432243292,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 132
+    },
+    {
+      "id": 2034,
+      "title": "Training Day",
+      "poster": "/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
+      "year": 2001,
+      "rating": 7.533,
+      "revenue": 104900000,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 122
+    }
+  ]
+}

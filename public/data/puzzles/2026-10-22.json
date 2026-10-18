@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-22",
+  "slots": [
+    "runtime",
+    "boxOffice",
+    "rating",
+    "genres",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 497828,
+      "title": "Triangle of Sadness",
+      "poster": "/k9eLozCgCed5FGTSdHu0bBElAV8.jpg",
+      "year": 2022,
+      "rating": 6.999,
+      "revenue": 24733572,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 147
+    },
+    {
+      "id": 604079,
+      "title": "The Long Walk",
+      "poster": "/wobVTa99eW0ht6c1rNNzLkazPtR.jpg",
+      "year": 2025,
+      "rating": 6.843,
+      "revenue": 63103084,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Horror"
+      ],
+      "runtime": 108
+    },
+    {
+      "id": 318846,
+      "title": "The Big Short",
+      "poster": "/scVEaJEwP8zUix8vgmMoJJ9Nq0w.jpg",
+      "year": 2015,
+      "rating": 7.375,
+      "revenue": 133346506,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 580489,
+      "title": "Venom: Let There Be Carnage",
+      "poster": "/pzKsRuKLFmYrW5Q0q8E8G78Tcgo.jpg",
+      "year": 2021,
+      "rating": 6.726,
+      "revenue": 506863592,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 97
+    },
+    {
+      "id": 381284,
+      "title": "Hidden Figures",
+      "poster": "/9lfz2W2uGjyow3am00rsPJ8iOyq.jpg",
+      "year": 2016,
+      "rating": 8.053,
+      "revenue": 235957472,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "runtime": 127
+    }
+  ]
+}

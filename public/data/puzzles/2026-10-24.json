@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-24",
+  "slots": [
+    "boxOffice",
+    "runtime",
+    "genres",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 82702,
+      "title": "How to Train Your Dragon 2",
+      "poster": "/d13Uj86LdbDLrfDoHR5aDOFYyJC.jpg",
+      "year": 2014,
+      "rating": 7.684,
+      "revenue": 621537519,
+      "genreCount": 5,
+      "genres": [
+        "Fantasy",
+        "Action",
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 102
+    },
+    {
+      "id": 152601,
+      "title": "Her",
+      "poster": "/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+      "year": 2013,
+      "rating": 7.833,
+      "revenue": 47351251,
+      "genreCount": 3,
+      "genres": [
+        "Romance",
+        "Science Fiction",
+        "Drama"
+      ],
+      "runtime": 126
+    },
+    {
+      "id": 284053,
+      "title": "Thor: Ragnarok",
+      "poster": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+      "year": 2017,
+      "rating": 7.579,
+      "revenue": 855301806,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "runtime": 131
+    },
+    {
+      "id": 713704,
+      "title": "Evil Dead Rise",
+      "poster": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+      "year": 2023,
+      "rating": 7,
+      "revenue": 147256372,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "runtime": 96
+    },
+    {
+      "id": 8392,
+      "title": "My Neighbor Totoro",
+      "poster": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
+      "year": 1988,
+      "rating": 8.069,
+      "revenue": 41000000,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "runtime": 86
+    }
+  ]
+}
