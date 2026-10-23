@@ -20,10 +20,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 18
+          node-version: '24.22.1'
+          check-latest: true
       - run: npm ci
       - run: npm run generate
         env:
@@ -39,9 +40,9 @@ jobs:
           git add data/archive.enc public/data
           git diff --cached --quiet || git commit -m "Generate FlickFive puzzles"
           git push
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6.0.0
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: public
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.1
