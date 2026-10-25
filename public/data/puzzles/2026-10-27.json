@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-27",
+  "slots": [
+    "rating",
+    "runtime",
+    "boxOffice",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 128,
+      "title": "Princess Mononoke",
+      "poster": "/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
+      "year": 1997,
+      "rating": 8.321,
+      "revenue": 231379818,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Animation"
+      ],
+      "runtime": 134
+    },
+    {
+      "id": 2539,
+      "title": "Spanglish",
+      "poster": "/x3OTaBvjqzhRL53Q39fOoIYqxyO.jpg",
+      "year": 2004,
+      "rating": 6.061,
+      "revenue": 55470154,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 242582,
+      "title": "Nightcrawler",
+      "poster": "/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
+      "year": 2014,
+      "rating": 7.708,
+      "revenue": 47425835,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 118
+    },
+    {
+      "id": 29154,
+      "title": "Stand and Deliver",
+      "poster": "/A9pfzwk02iNl6i9wyk8lNcBkvc.jpg",
+      "year": 1988,
+      "rating": 7.809,
+      "revenue": 13994920,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 15196,
+      "title": "Clue",
+      "poster": "/aRxbYOYHS8T73nzR8hsLousoplR.jpg",
+      "year": 1985,
+      "rating": 7.219,
+      "revenue": 14647963,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "runtime": 94
+    }
+  ]
+}

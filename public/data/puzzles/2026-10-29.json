@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-29",
+  "slots": [
+    "year",
+    "runtime",
+    "genres",
+    "boxOffice",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 44629,
+      "title": "Animal Kingdom",
+      "poster": "/zhj8YPQKuRev5N3KoHacsPnF4mB.jpg",
+      "year": 2010,
+      "rating": 6.79,
+      "revenue": 1000000,
+      "genreCount": 2,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 1401459,
+      "title": "Fjord",
+      "poster": "/rhKlzjAJCEKUjxEk1qwr4bgbXlG.jpg",
+      "year": 2026,
+      "rating": 7.2,
+      "revenue": 407491,
+      "genreCount": 1,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 146
+    },
+    {
+      "id": 9023,
+      "title": "Spirit: Stallion of the Cimarron",
+      "poster": "/bBEkKDQFianNYwGWR7gJfPVakmG.jpg",
+      "year": 2002,
+      "rating": 7.711,
+      "revenue": 122563539,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Drama",
+        "Western"
+      ],
+      "runtime": 83
+    },
+    {
+      "id": 10601,
+      "title": "Peter Pan",
+      "poster": "/6QdU3TZZrIvXFzoHOwafZAynFjB.jpg",
+      "year": 2003,
+      "rating": 7.128,
+      "revenue": 121975011,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Family"
+      ],
+      "runtime": 113
+    },
+    {
+      "id": 240,
+      "title": "The Godfather Part II",
+      "poster": "/8a1lJs7mFyGhGhZZDT1azJUoQiZ.jpg",
+      "year": 1974,
+      "rating": 8.572,
+      "revenue": 102600000,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "runtime": 202
+    }
+  ]
+}

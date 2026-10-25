@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-25",
+  "slots": [
+    "genres",
+    "rating",
+    "runtime",
+    "year",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 78,
+      "title": "Blade Runner",
+      "poster": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
+      "year": 1982,
+      "rating": 7.936,
+      "revenue": 41722424,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 118
+    },
+    {
+      "id": 80321,
+      "title": "Madagascar 3: Europe's Most Wanted",
+      "poster": "/ekraj4ksvIKeuvQVEevEJkuybZd.jpg",
+      "year": 2012,
+      "rating": 6.651,
+      "revenue": 746921274,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Adventure"
+      ],
+      "runtime": 93
+    },
+    {
+      "id": 667538,
+      "title": "Transformers: Rise of the Beasts",
+      "poster": "/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "year": 2023,
+      "rating": 7.154,
+      "revenue": 441381193,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 940721,
+      "title": "Godzilla Minus One",
+      "poster": "/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
+      "year": 2023,
+      "rating": 7.605,
+      "revenue": 113676322,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Horror",
+        "Action"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 1054867,
+      "title": "One Battle After Another",
+      "poster": "/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
+      "year": 2025,
+      "rating": 7.337,
+      "revenue": 209377100,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Comedy"
+      ],
+      "runtime": 162
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-26",
+  "slots": [
+    "year",
+    "genres",
+    "rating",
+    "boxOffice",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 937287,
+      "title": "Challengers",
+      "poster": "/H6vke7zGiuLsz4v4RPeReb9rsv.jpg",
+      "year": 2024,
+      "rating": 6.911,
+      "revenue": 94182533,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 132
+    },
+    {
+      "id": 1145899,
+      "title": "Marsupilami",
+      "poster": "/kMhVs1XqmzXlD0mDQ4rTJh4Kvf1.jpg",
+      "year": 2026,
+      "rating": 6.273,
+      "revenue": 22174000,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 99
+    },
+    {
+      "id": 945961,
+      "title": "Alien: Romulus",
+      "poster": "/2uSWRTtCG336nuBiG8jOTEUKSy8.jpg",
+      "year": 2024,
+      "rating": 7.156,
+      "revenue": 350865342,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 519182,
+      "title": "Despicable Me 4",
+      "poster": "/wWba3TaojhK7NdycRhoQpsG0FaH.jpg",
+      "year": 2024,
+      "rating": 6.962,
+      "revenue": 972021410,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Action",
+        "Science Fiction",
+        "Family"
+      ],
+      "runtime": 94
+    },
+    {
+      "id": 1690,
+      "title": "Hostel",
+      "poster": "/dDrtuWUKhgUGp12kgUWuP0NpTdF.jpg",
+      "year": 2006,
+      "rating": 5.97,
+      "revenue": 81979826,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 94
+    }
+  ]
+}

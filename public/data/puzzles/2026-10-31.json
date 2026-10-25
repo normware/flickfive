@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-31",
+  "slots": [
+    "rating",
+    "runtime",
+    "genres",
+    "year",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1440050,
+      "title": "The Breadwinner",
+      "poster": "/4apG9Xk6HQvV48JKEjSUeiebju7.jpg",
+      "year": 2026,
+      "rating": 7.063,
+      "revenue": 20247080,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 8913,
+      "title": "Pet Sematary",
+      "poster": "/8ZtH1V4rhrtP53ezlEWrCaMALXF.jpg",
+      "year": 1989,
+      "rating": 6.656,
+      "revenue": 57500000,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 103
+    },
+    {
+      "id": 1246049,
+      "title": "Dracula",
+      "poster": "/ykyRfv7JDofLxXLAwtLXaSuaFfM.jpg",
+      "year": 2025,
+      "rating": 7.27,
+      "revenue": 42415061,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Fantasy",
+        "Romance"
+      ],
+      "runtime": 130
+    },
+    {
+      "id": 290098,
+      "title": "The Handmaiden",
+      "poster": "/dLlH4aNHdnmf62umnInL8xPlPzw.jpg",
+      "year": 2016,
+      "rating": 8.176,
+      "revenue": 38600000,
+      "genreCount": 3,
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 145
+    },
+    {
+      "id": 1062722,
+      "title": "Frankenstein",
+      "poster": "/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
+      "year": 2025,
+      "rating": 7.6,
+      "revenue": 480678,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Horror"
+      ],
+      "runtime": 150
+    }
+  ]
+}

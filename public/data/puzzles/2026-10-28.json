@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-28",
+  "slots": [
+    "runtime",
+    "rating",
+    "boxOffice",
+    "year",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 1857,
+      "title": "The Transformers: The Movie",
+      "poster": "/xJ5W0mOAWCVaXmU0pBZh4NjSRv2.jpg",
+      "year": 1986,
+      "rating": 7.15,
+      "revenue": 10024103,
+      "genreCount": 5,
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Action",
+        "Adventure",
+        "Family"
+      ],
+      "runtime": 85
+    },
+    {
+      "id": 701387,
+      "title": "Bugonia",
+      "poster": "/rSdOua3wKMEaFWDcKAYWRjXQWOt.jpg",
+      "year": 2025,
+      "rating": 7.297,
+      "revenue": 43500000,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Comedy"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 313369,
+      "title": "La La Land",
+      "poster": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+      "year": 2016,
+      "rating": 7.894,
+      "revenue": 509183536,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 129
+    },
+    {
+      "id": 1514026,
+      "title": "Buddy",
+      "poster": "/1BdZbNvl1SfrrX8J9X5tQzN6Ivu.jpg",
+      "year": 2026,
+      "rating": 7.081,
+      "revenue": 26848371,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Fantasy"
+      ],
+      "runtime": 96
+    },
+    {
+      "id": 402431,
+      "title": "Wicked",
+      "poster": "/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
+      "year": 2024,
+      "rating": 6.906,
+      "revenue": 763963597,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Romance",
+        "Fantasy"
+      ],
+      "runtime": 162
+    }
+  ]
+}

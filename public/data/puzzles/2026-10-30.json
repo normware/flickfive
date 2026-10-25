@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-30",
+  "slots": [
+    "runtime",
+    "rating",
+    "year",
+    "genres",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 686,
+      "title": "Contact",
+      "poster": "/bCpMIywuNZeWt3i5UMLEIc0VSwM.jpg",
+      "year": 1997,
+      "rating": 7.45,
+      "revenue": 171120329,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "runtime": 150
+    },
+    {
+      "id": 359724,
+      "title": "Ford v Ferrari",
+      "poster": "/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+      "year": 2019,
+      "rating": 8.008,
+      "revenue": 225508210,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "History",
+        "Action"
+      ],
+      "runtime": 153
+    },
+    {
+      "id": 7485,
+      "title": "Shooter",
+      "poster": "/2aWGxo1E5polpBjPvtBRkWp7qaS.jpg",
+      "year": 2007,
+      "rating": 7.13,
+      "revenue": 95700000,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 2062,
+      "title": "Ratatouille",
+      "poster": "/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+      "year": 2007,
+      "rating": 7.85,
+      "revenue": 623726000,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 111
+    },
+    {
+      "id": 1340206,
+      "title": "Tuner",
+      "poster": "/5OvA3i9wZs5jHu0DCrfmXlzAM67.jpg",
+      "year": 2026,
+      "rating": 7.598,
+      "revenue": 13505364,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "runtime": 108
+    }
+  ]
+}
