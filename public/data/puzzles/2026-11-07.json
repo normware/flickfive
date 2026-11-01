@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-07",
+  "slots": [
+    "year",
+    "rating",
+    "runtime",
+    "boxOffice",
+    "genres"
+  ],
+  "movies": [
+    {
+      "id": 574475,
+      "title": "Final Destination Bloodlines",
+      "poster": "/6WxhEvFsauuACfv8HyoVX6mZKFj.jpg",
+      "year": 2025,
+      "rating": 7,
+      "revenue": 317854739,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 110
+    },
+    {
+      "id": 1034541,
+      "title": "Terrifier 3",
+      "poster": "/ju10W5gl3PPK3b7TjEmVOZap51I.jpg",
+      "year": 2024,
+      "rating": 6.747,
+      "revenue": 90322103,
+      "genreCount": 1,
+      "genres": [
+        "Horror"
+      ],
+      "runtime": 125
+    },
+    {
+      "id": 572802,
+      "title": "Aquaman and the Lost Kingdom",
+      "poster": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+      "year": 2023,
+      "rating": 6.482,
+      "revenue": 440181226,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 124
+    },
+    {
+      "id": 1284046,
+      "title": "Onslaught",
+      "poster": "/eAs7G3yFaULpfwfVdGvPo5HmFJS.jpg",
+      "year": 2026,
+      "rating": 5.571,
+      "revenue": 3426239,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "runtime": 92
+    },
+    {
+      "id": 1380417,
+      "title": "By Any Means",
+      "poster": "/85CvGoeXAcSSWy6So2DRD8ItJAN.jpg",
+      "year": 2026,
+      "rating": 6.612,
+      "revenue": 16731497,
+      "genreCount": 4,
+      "genres": [
+        "Thriller",
+        "History",
+        "Crime",
+        "Drama"
+      ],
+      "runtime": 107
+    }
+  ]
+}

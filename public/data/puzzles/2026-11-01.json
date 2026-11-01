@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-01",
+  "slots": [
+    "runtime",
+    "genres",
+    "boxOffice",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 6977,
+      "title": "No Country for Old Men",
+      "poster": "/6d5XOczc226jECq0LIX0siKtgHR.jpg",
+      "year": 2007,
+      "rating": 7.95,
+      "revenue": 171627166,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Western"
+      ],
+      "runtime": 122
+    },
+    {
+      "id": 1417,
+      "title": "Pan's Labyrinth",
+      "poster": "/khBQ6nN5FLfg9XgPXIZDkABJjqo.jpg",
+      "year": 2006,
+      "rating": 7.771,
+      "revenue": 83258226,
+      "genreCount": 3,
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "War"
+      ],
+      "runtime": 118
+    },
+    {
+      "id": 198287,
+      "title": "After the Dark",
+      "poster": "/mTSBjTriWuvYp27dsTWF9hs25HB.jpg",
+      "year": 2013,
+      "rating": 6.016,
+      "revenue": 1770376,
+      "genreCount": 4,
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "runtime": 107
+    },
+    {
+      "id": 48650,
+      "title": "Room in Rome",
+      "poster": "/w90ItYf9qagQKVEBr1uFxPomAtf.jpg",
+      "year": 2010,
+      "rating": 6.411,
+      "revenue": 844281,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 137113,
+      "title": "Edge of Tomorrow",
+      "poster": "/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+      "year": 2014,
+      "rating": 7.645,
+      "revenue": 370541256,
+      "genreCount": 2,
+      "genres": [
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 114
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-05",
+  "slots": [
+    "runtime",
+    "genres",
+    "year",
+    "rating",
+    "boxOffice"
+  ],
+  "movies": [
+    {
+      "id": 1865,
+      "title": "Pirates of the Caribbean: On Stranger Tides",
+      "poster": "/keGfSvCmYj7CvdRx36OdVrAEibE.jpg",
+      "year": 2011,
+      "rating": 6.576,
+      "revenue": 1046721266,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "runtime": 136
+    },
+    {
+      "id": 1477712,
+      "title": "Ice Cream Man",
+      "poster": "/w2dr5aFRtRB1ojcHbCEPlfTXkbf.jpg",
+      "year": 2026,
+      "rating": 5.288,
+      "revenue": 7788193,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Thriller"
+      ],
+      "runtime": 86
+    },
+    {
+      "id": 1437696,
+      "title": "Fatherland",
+      "poster": "/oNejN1l69nBF8LdQwy5FkAQZT44.jpg",
+      "year": 2026,
+      "rating": 7.298,
+      "revenue": 6756618,
+      "genreCount": 2,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "runtime": 82
+    },
+    {
+      "id": 101299,
+      "title": "The Hunger Games: Catching Fire",
+      "poster": "/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
+      "year": 2013,
+      "rating": 7.424,
+      "revenue": 865011746,
+      "genreCount": 3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "runtime": 146
+    },
+    {
+      "id": 546554,
+      "title": "Knives Out",
+      "poster": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+      "year": 2019,
+      "rating": 7.843,
+      "revenue": 312897920,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "runtime": 131
+    }
+  ]
+}

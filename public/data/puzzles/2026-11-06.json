@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-06",
+  "slots": [
+    "boxOffice",
+    "rating",
+    "runtime",
+    "genres",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 445466,
+      "title": "Idiots",
+      "poster": "/l1JFNC1SdgyXVr7BaD5ehaYBvOC.jpg",
+      "year": 2026,
+      "rating": 6.345,
+      "revenue": 1194626,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 120467,
+      "title": "The Grand Budapest Hotel",
+      "poster": "/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+      "year": 2014,
+      "rating": 8.027,
+      "revenue": 174600318,
+      "genreCount": 2,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "runtime": 100
+    },
+    {
+      "id": 11932,
+      "title": "Bride of Chucky",
+      "poster": "/yaIPNOcC7ZRuwH3maNwP9qzIo5G.jpg",
+      "year": 1998,
+      "rating": 6.135,
+      "revenue": 50688658,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Comedy"
+      ],
+      "runtime": 89
+    },
+    {
+      "id": 329865,
+      "title": "Arrival",
+      "poster": "/pEzNVQfdzYDzVK0XqxERIw2x2se.jpg",
+      "year": 2016,
+      "rating": 7.638,
+      "revenue": 203388186,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "runtime": 116
+    },
+    {
+      "id": 118,
+      "title": "Charlie and the Chocolate Factory",
+      "poster": "/iKP6wg3c6COUe8gYutoGG7qcPnO.jpg",
+      "year": 2005,
+      "rating": 7,
+      "revenue": 475000000,
+      "genreCount": 4,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 115
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-04",
+  "slots": [
+    "genres",
+    "year",
+    "boxOffice",
+    "runtime",
+    "rating"
+  ],
+  "movies": [
+    {
+      "id": 823464,
+      "title": "Godzilla x Kong: The New Empire",
+      "poster": "/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
+      "year": 2024,
+      "rating": 7.032,
+      "revenue": 571750016,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "runtime": 115
+    },
+    {
+      "id": 695721,
+      "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+      "poster": "/mBaXZ95R2OxueZhvQbcEWy2DqyO.jpg",
+      "year": 2023,
+      "rating": 7,
+      "revenue": 337371917,
+      "genreCount": 2,
+      "genres": [
+        "Science Fiction",
+        "Action"
+      ],
+      "runtime": 157
+    },
+    {
+      "id": 1165369,
+      "title": "De Gaulle: Liberté",
+      "poster": "/297x0HIqSCp19pN9wlduK9PONRv.jpg",
+      "year": 2026,
+      "rating": 7.8,
+      "revenue": 13764497,
+      "genreCount": 3,
+      "genres": [
+        "History",
+        "Drama",
+        "War"
+      ],
+      "runtime": 159
+    },
+    {
+      "id": 270303,
+      "title": "It Follows",
+      "poster": "/iwnQ1JH1wdWrGYkgWySptJ5284A.jpg",
+      "year": 2015,
+      "rating": 6.581,
+      "revenue": 23374076,
+      "genreCount": 2,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 101
+    },
+    {
+      "id": 9502,
+      "title": "Kung Fu Panda",
+      "poster": "/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+      "year": 2008,
+      "rating": 7.344,
+      "revenue": 632091832,
+      "genreCount": 4,
+      "genres": [
+        "Action",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "runtime": 90
+    }
+  ]
+}

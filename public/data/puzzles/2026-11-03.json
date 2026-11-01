@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-03",
+  "slots": [
+    "genres",
+    "runtime",
+    "boxOffice",
+    "rating",
+    "year"
+  ],
+  "movies": [
+    {
+      "id": 4232,
+      "title": "Scream",
+      "poster": "/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+      "year": 1996,
+      "rating": 7.439,
+      "revenue": 173046663,
+      "genreCount": 3,
+      "genres": [
+        "Crime",
+        "Horror",
+        "Mystery"
+      ],
+      "runtime": 112
+    },
+    {
+      "id": 1118031,
+      "title": "Apocalypse Z: The Beginning of the End",
+      "poster": "/wIGJnIFQlESkC2rLpfA8EDHqk4g.jpg",
+      "year": 2024,
+      "rating": 6.77,
+      "revenue": 500000,
+      "genreCount": 3,
+      "genres": [
+        "Drama",
+        "Action",
+        "Horror"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 772,
+      "title": "Home Alone 2: Lost in New York",
+      "poster": "/uuitWHpJwxD1wruFl2nZHIb4UGN.jpg",
+      "year": 1992,
+      "rating": 6.796,
+      "revenue": 358994850,
+      "genreCount": 3,
+      "genres": [
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "runtime": 120
+    },
+    {
+      "id": 1101412,
+      "title": "Fall 2: Deadpoint",
+      "poster": "/fgSm5ylwiXbIHn8UbUXDjk9RRu4.jpg",
+      "year": 2026,
+      "rating": 7.304,
+      "revenue": 9256541,
+      "genreCount": 1,
+      "genres": [
+        "Thriller"
+      ],
+      "runtime": 98
+    },
+    {
+      "id": 76492,
+      "title": "Hotel Transylvania",
+      "poster": "/eJGvzGrsfe2sqTUPv5IwLWXjVuR.jpg",
+      "year": 2012,
+      "rating": 6.972,
+      "revenue": 358375603,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "runtime": 91
+    }
+  ]
+}

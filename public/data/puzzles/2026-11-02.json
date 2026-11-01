@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-02",
+  "slots": [
+    "boxOffice",
+    "year",
+    "genres",
+    "rating",
+    "runtime"
+  ],
+  "movies": [
+    {
+      "id": 494656,
+      "title": "The Legend of the Black Charro",
+      "poster": "/fDLJ5vIeRL68cIHlob11w2pBzH0.jpg",
+      "year": 2018,
+      "rating": 8.3,
+      "revenue": 5300000,
+      "genreCount": 4,
+      "genres": [
+        "Animation",
+        "Fantasy",
+        "Action",
+        "Family"
+      ],
+      "runtime": 85
+    },
+    {
+      "id": 1091,
+      "title": "The Thing",
+      "poster": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
+      "year": 1982,
+      "rating": 8.075,
+      "revenue": 19629760,
+      "genreCount": 3,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "runtime": 109
+    },
+    {
+      "id": 1384216,
+      "title": "The Dog Stars",
+      "poster": "/5O616X9vmRzQdB68PHzBewPittd.jpg",
+      "year": 2026,
+      "rating": 7.044,
+      "revenue": 37416959,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "runtime": 119
+    },
+    {
+      "id": 624860,
+      "title": "The Matrix Resurrections",
+      "poster": "/8c4a8kE7PizaGQQnditMmI1xbRp.jpg",
+      "year": 2021,
+      "rating": 6.295,
+      "revenue": 156497322,
+      "genreCount": 3,
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "runtime": 148
+    },
+    {
+      "id": 293167,
+      "title": "Kong: Skull Island",
+      "poster": "/r2517Vz9EhDhj88qwbDVj8DCRZN.jpg",
+      "year": 2017,
+      "rating": 6.56,
+      "revenue": 566652812,
+      "genreCount": 3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "runtime": 118
+    }
+  ]
+}
